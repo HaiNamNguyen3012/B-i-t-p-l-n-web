@@ -14,43 +14,52 @@
         <section class="signup">
             <div class="container">
                 <div class="signup-content">
-                    <form action="" method="post" id="signup-form" class="signup-form">
+                    <form action="" method="post" id="signup-form" class="signup-form" name="signup-form">
                         <h1>Đăng ký</h1>
                         <div class="form-group">
-                            <input type="text" class="form-input" name="user-name" id="user-name" placeholder="Tên đăng nhập" required/>
+                            <input type="text" class="form-input info" name="user-name" id="user-name" placeholder="Tên đăng nhập" />
+                            <p id="user-name1"></p>
                         </div>
 
                         <div class="form-group">
-                            <input type="email" class="form-input" name="email" id="email" placeholder="Email" required/>
+                            <input type="email" class="form-input info" name="email" id="email" placeholder="Email" />
+                            <p id="email1"></p>
                         </div>
 
                         <div class="form-group">
-                            <input type="text" class="form-input" name="last-name" id="last-name" placeholder="Họ" required/>
+                            <input type="text" class="form-input info" name="last-name" id="last-name" placeholder="Họ" />
+                            <p id="last-name1"></p>
                         </div>
 
                         <div class="form-group">
-                            <input type="text" class="form-input" name="first-name" id="first-name" placeholder="Tên" required/>
+                            <input type="text" class="form-input info" name="first-name" id="first-name" placeholder="Tên" />
+                            <p id="first-name1"></p>
                         </div>
 
                         <div class="form-group">
-                            <input type="tel" class="form-input" name="tel" id="tel" placeholder="Số điện thoại" required/>
-
+                            <input type="tel" class="form-input info" name="tel" id="tel" placeholder="Số điện thoại" />
+                            <p id="tel1"></p>
                         </div>
 
                         <div class="form-group">
-                            <input type="text" class="form-input" name="diachi" id="diachi" placeholder="Địa chỉ" required/>
+                            <input type="text" class="form-input info" name="diachi" id="diachi" placeholder="Địa chỉ" />
+                            <p id="diachi1"></p>
                         </div>
 
                         <div class="form-group">
-                            <input type="text" class="form-input" name="cmt" id="cmt" placeholder="Chứng minh thư" required/>
+                            <input type="text" class="form-input info" name="cmt" id="cmt" placeholder="Chứng minh thư" />
+                            <p id="cmt1"></p>
                         </div>
 
                         <div class="form-group">
-                            <input type="password" class="form-input" name="password" id="password" placeholder="Password" required/>
+                            <input type="password" class="form-input info" name="password" id="password" pattern=".{8,12}" placeholder="Password" required/>
+                            <input type="checkbox" onclick="showPassword()" id="showpwd"> Hiển thị mật khẩu
+                            <p id="password1"></p>
                         </div>
 
                         <div class="form-group">
-                            <input type="password" class="form-input" name="re-password" id="re-password" placeholder="Xác minh lại password" required/>
+                            <input type="password" class="form-input info" name="re-password" id="re-password" placeholder="Xác minh lại password" />
+                            <p id="re-password1"></p>
                         </div>
 
                         <div class="form-group">
@@ -58,21 +67,24 @@
                                 <option value="users">Bạn là.....</option>
                                 <option value="nct">Người cho thuê</option>
                                 <option value="ndi">Người đi thuê</option>
-                              </select>
+                            </select>
+                            <p id="users1"></p>
                         </div>
 
-                        <div class="form-group">
-                            <input type="submit" name="submit" id="submit" class="form-submit" value="Đăng ký" />
+                        <div class="form-group ">
+                            <input type="submit" name="submit" id="submit" class="form-submit" value="Đăng ký" onclick="validate()" />
                         </div>
 
                         <p class="loginhere">
-                            Have already an account ? <a href="../dangnhap/dangnhap.html" class="loginhere-link">Login here</a>
+                            Bạn đã có tài khoản? <a href="../dangnhap/dangnhap.html" class="loginhere-link">Đăng nhập</a>
                         </p>
                     </form>
                 </div>
             </div>
         </section>
     </div>
+
+    <script src="./dangky.js "></script>
 </body>
 
 </html>
