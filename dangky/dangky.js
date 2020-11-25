@@ -78,3 +78,19 @@ function showPassword() {
         password.type = "password";
     }
 }
+
+var infor = document.querySelectorAll('.required');
+for (var i = 0; i < infor.length; ++i) {
+    infor[i].onblur = function() {
+        var button = document.forms["signup-form"]["submit"];
+        if (this.value === '') {
+            this.style.borderColor = "red";
+            this.nextSibling.nextSibling.innerHTML = "Hãy điền đầy đủ thông tin";
+            button.disabled = true;
+        } else {
+            this.style.borderColor = "black";
+            this.nextSibling.nextSibling.innerHTML = "";
+            button.disabled = false;
+        }
+    };
+}
