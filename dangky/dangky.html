@@ -17,48 +17,48 @@
                     <form action="" method="post" id="signup-form" class="signup-form" name="signup-form">
                         <h1>Đăng ký</h1>
                         <div class="form-group">
-                            <input type="text" class="form-input info" name="user-name" id="user-name" placeholder="Tên đăng nhập" />
+                            <input type="text" class="form-input info required" name="user-name" id="user-name" placeholder="Tên đăng nhập" />
                             <p id="user-name1"></p>
                         </div>
 
                         <div class="form-group">
-                            <input type="email" class="form-input info" name="email" id="email" placeholder="Email" />
+                            <input type="email" class="form-input info required" name="email" id="email" placeholder="Email" />
                             <p id="email1"></p>
                         </div>
 
                         <div class="form-group">
-                            <input type="text" class="form-input info" name="last-name" id="last-name" placeholder="Họ" />
+                            <input type="text" class="form-input info required" name="last-name" id="last-name" placeholder="Họ" />
                             <p id="last-name1"></p>
                         </div>
 
                         <div class="form-group">
-                            <input type="text" class="form-input info" name="first-name" id="first-name" placeholder="Tên" />
+                            <input type="text" class="form-input info required" name="first-name" id="first-name" placeholder="Tên" />
                             <p id="first-name1"></p>
                         </div>
 
                         <div class="form-group">
-                            <input type="tel" class="form-input info" name="tel" id="tel" placeholder="Số điện thoại" />
+                            <input type="tel" class="form-input info required" name="tel" id="tel" placeholder="Số điện thoại" />
                             <p id="tel1"></p>
                         </div>
 
                         <div class="form-group">
-                            <input type="text" class="form-input info" name="diachi" id="diachi" placeholder="Địa chỉ" />
+                            <input type="text" class="form-input info required" name="diachi" id="diachi" placeholder="Địa chỉ" />
                             <p id="diachi1"></p>
                         </div>
 
                         <div class="form-group">
-                            <input type="text" class="form-input info" name="cmt" id="cmt" placeholder="Chứng minh thư" />
+                            <input type="text" class="form-input info required" name="cmt" id="cmt" placeholder="Chứng minh thư" />
                             <p id="cmt1"></p>
                         </div>
 
                         <div class="form-group">
-                            <input type="password" class="form-input info" name="password" id="password" pattern=".{8,12}" placeholder="Password" required/>
+                            <input type="password" class="form-input info required" name="password" id="password" pattern=".{8,12}" placeholder="Password" />
                             <input type="checkbox" onclick="showPassword()" id="showpwd"> Hiển thị mật khẩu
                             <p id="password1"></p>
                         </div>
 
                         <div class="form-group">
-                            <input type="password" class="form-input info" name="re-password" id="re-password" placeholder="Xác minh lại password" />
+                            <input type="password" class="form-input info required" name="re-password" id="re-password" placeholder="Xác minh lại password" />
                             <p id="re-password1"></p>
                         </div>
 
@@ -66,7 +66,7 @@
                             <select class="form-input" name="users" id="users">
                                 <option value="users">Bạn là.....</option>
                                 <option value="nct">Người cho thuê</option>
-                                <option value="ndi">Người đi thuê</option>
+                                <option value="ndt">Người đi thuê</option>
                             </select>
                             <p id="users1"></p>
                         </div>
