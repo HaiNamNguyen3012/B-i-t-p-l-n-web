@@ -13,6 +13,12 @@ class PostsController extends BaseController
 
   public function index()
   {
+    session_start();
+    //tiến hành kiểm tra là người dùng đã đăng nhập hay chưa
+    //nếu chưa, chuyển hướng người dùng ra lại trang đăng nhập
+    if (!isset($_SESSION['username'])) {
+      header('Location: index.php?controller=login&action=index');
+    }
     $posts = Post::all();
     $data = array('posts' => $posts);
     $this->render('index', $data);

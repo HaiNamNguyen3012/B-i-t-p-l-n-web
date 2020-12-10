@@ -6,6 +6,7 @@ $controllers = array(
   'posts' => ['index','showPost'],
   'post_details' => ['showPost'] ,
   'register' => ['index'],
+  'login'  => ['index'],
   
   // bổ sung thêm
 ); // Các controllers trong hệ thống và các action có thể gọi ra từ controller đó.

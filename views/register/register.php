@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="dangky.css">
+    <link rel="stylesheet" href="./assets/stylesheets/dangky.css">
     <title>Đăng ký</title>
 </head>
 
@@ -63,10 +63,10 @@
                         </div>
 
                         <div class="form-group">
-                            <select class="form-input" name="users" id="users">
-                                <option value="users">Bạn là.....</option>
-                                <option value="nct">Người cho thuê</option>
-                                <option value="ndt">Người đi thuê</option>
+                            <select class="form-input" name="users" id="users" >
+                                <option  style="display:none" disabled selected value>Bạn là...</option>
+                                <option value="nguoi_cho_thue">Người cho thuê</option>
+                                <option value="nguoi_thue_phong">Người đi thuê</option>
                             </select>
                             <p id="users1"></p>
                         </div>
@@ -84,7 +84,7 @@
         </section>
     </div>
 
-    <script src="./dangky.js "></script>
+    <script src="../assets/javascripts/dangky.js "></script>
 </body>
 
 </html>
