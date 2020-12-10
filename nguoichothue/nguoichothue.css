@@ -5,6 +5,9 @@
     font-family: 'Roboto Condensed', sans-serif;
 }
 
+
+/* header */
+
 header {
     height: 125px;
     background: #FFBA00;
@@ -74,20 +77,203 @@ header .down .left #icon-search {
     margin-top: 7px;
 }
 
+
+/* header .down .center {} */
+
 header .down .center a {
     padding: 5px;
     font-size: 20px;
     color: #0D0D0D;
+    border: 3px solid #0D0D0D;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+header .down .center a:hover {
+    padding: 5px;
+    font-size: 20px;
+    color: #f2f2f2;
+    border: 3px solid #f2f2f2;
+    padding: 10px;
+    border-radius: 10px;
 }
 
 header .down .right {
     text-align: center;
     height: 45px;
     background: #fc9807;
+    padding-top: 7px;
 }
 
 header .down .right a {
     color: #f2f2f2;
     font-weight: 900;
     font-size: 20px;
+}
+
+header .down .right a {
+    color: #f2f2f2;
+    font-weight: 900;
+    font-size: 20px;
+}
+
+
+/* filter */
+
+.filter {
+    height: 50px;
+}
+
+.filter .filter-children {
+    height: 100%;
+    align-items: center;
+}
+
+.filter .filter-children .filter-children-children button {
+    width: 70px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    background: #ffffff;
+    border: 2px solid black;
+    border-radius: 4px;
+}
+
+.filter i {
+    width: 65px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.filter .filter-children .city #city {
+    width: 135px;
+    height: 36px;
+    margin-left: 12px;
+    padding: 5px;
+    border: 2px solid black;
+    border-radius: 4px;
+}
+
+.filter .filter-children .price #price {
+    width: 70px;
+    height: 36px;
+    background: #ffffff;
+    border: 2px solid black;
+    border-radius: 4px;
+}
+
+.filter .filter-children .square #square {
+    width: 70px;
+    height: 36px;
+    background: #ffffff;
+    border: 2px solid black;
+    border-radius: 4px;
+}
+
+.filter .filter-children .type-room #type-room {
+    width: 125px;
+    height: 36px;
+    margin-left: 12px;
+    padding: 5px;
+    border: 2px solid black;
+    border-radius: 4px;
+}
+
+
+/* content */
+
+.content {
+    background-color: #f2f2f2;
+    margin-top: 10px;
+}
+
+.content .main-content {
+    width: 100%;
+}
+
+.content .main-content #phong1,
+.content .main-content #phong2,
+.content .main-content #phong3,
+.content .main-content #phong4,
+.content .main-content #phong5,
+.content .main-content #phong6,
+.content .main-content #phong7,
+.content .main-content #phong8,
+.content .main-content #phong9,
+.content .main-content #phong10 {
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #000000;
+}
+
+.content .main-content #phong11 {
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin-top: 10px;
+    border: 1px solid #000000;
+}
+
+.content .main-content #phong1 .left,
+.content .main-content #phong2 .left,
+.content .main-content #phong3 .left,
+.content .main-content #phong4 .left,
+.content .main-content #phong5 .left,
+.content .main-content #phong6 .left,
+.content .main-content #phong7 .left,
+.content .main-content #phong8 .left,
+.content .main-content #phong9 .left,
+.content .main-content #phong10 .left,
+.content .main-content #phong11 .left {
+    width: 120px;
+    height: 120px;
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color: #f2f2f2;
+}
+
+.content .main-content #phong1 .right #thong-tin-co-ban1,
+.content .main-content #phong2 .right #thong-tin-co-ban2,
+.content .main-content #phong3 .right #thong-tin-co-ban3,
+.content .main-content #phong4 .right #thong-tin-co-ban4,
+.content .main-content #phong5 .right #thong-tin-co-ban5,
+.content .main-content #phong6 .right #thong-tin-co-ban6,
+.content .main-content #phong7 .right #thong-tin-co-ban7,
+.content .main-content #phong8 .right #thong-tin-co-ban8,
+.content .main-content #phong9 .right #thong-tin-co-ban9,
+.content .main-content #phong10 .right #thong-tin-co-ban10,
+.content .main-content #phong11 .right #thong-tin-co-ban11 {
+    display: flex;
+}
+
+.content .main-content #phong1 .right #thong-tin-co-ban1 p,
+.content .main-content #phong2 .right #thong-tin-co-ban2 p,
+.content .main-content #phong3 .right #thong-tin-co-ban3 p,
+.content .main-content #phong4 .right #thong-tin-co-ban4 p,
+.content .main-content #phong5 .right #thong-tin-co-ban5 p,
+.content .main-content #phong6 .right #thong-tin-co-ban6 p,
+.content .main-content #phong7 .right #thong-tin-co-ban7 p,
+.content .main-content #phong8 .right #thong-tin-co-ban8 p,
+.content .main-content #phong9 .right #thong-tin-co-ban9 p,
+.content .main-content #phong10 .right #thong-tin-co-ban10 p,
+.content .main-content #phong11 .right #thong-tin-co-ban11 p {
+    padding: 0 10px;
+}
+
+footer {
+    width: 100%;
+    height: 100px;
+    background-color: #0D0D0D;
+}
+
+footer p {
+    color: #ffffff;
+    text-align: center;
+    font-size: 24px;
+    padding-top: 20px;
 }
