@@ -8,6 +8,9 @@
 
 /* header */
 
+
+/* up */
+
 header {
     height: 125px;
     background: #FFBA00;
@@ -55,9 +58,15 @@ header .up .right ul li a:hover {
     color: #F2F2F2;
 }
 
+
+/* header down */
+
 header .down {
     height: 60px;
 }
+
+
+/* header down left */
 
 header .down .left #search {
     width: 90%;
@@ -78,25 +87,28 @@ header .down .left #icon-search {
 }
 
 
-/* header .down .center {} */
+/* header down center */
 
 header .down .center a {
-    padding: 5px;
-    font-size: 20px;
     color: #0D0D0D;
-    border: 3px solid #0D0D0D;
+    border: 2px solid black;
+    border-radius: 4px;
     padding: 10px;
-    border-radius: 10px;
 }
 
 header .down .center a:hover {
-    padding: 5px;
-    font-size: 20px;
     color: #f2f2f2;
-    border: 3px solid #f2f2f2;
+    border: 2px solid #f2f2f2;
+    border-radius: 4px;
     padding: 10px;
-    border-radius: 10px;
 }
+
+header .down .center a i {
+    margin-top: 13px;
+}
+
+
+/* header down right */
 
 header .down .right {
     text-align: center;
@@ -130,27 +142,31 @@ header .down .right a {
 }
 
 .filter .filter-children .filter-children-children button {
-    width: 70px;
+    width: 80px;
     height: 36px;
     display: flex;
     align-items: center;
     background: #ffffff;
-    border: 2px solid black;
+    border: 1.5px solid black;
     border-radius: 4px;
 }
 
-.filter i {
-    width: 65px;
+.filter .filter-children .filter-children-children button i {
+    width: 45px;
     padding-left: 5px;
     padding-right: 5px;
 }
 
+.filter .filter-children .filter-children-children button p {
+    margin: 0;
+}
+
 .filter .filter-children .city #city {
-    width: 135px;
+    width: 75%;
     height: 36px;
     margin-left: 12px;
     padding: 5px;
-    border: 2px solid black;
+    border: 1.5px solid black;
     border-radius: 4px;
 }
 
@@ -158,7 +174,7 @@ header .down .right a {
     width: 70px;
     height: 36px;
     background: #ffffff;
-    border: 2px solid black;
+    border: 1.5px solid black;
     border-radius: 4px;
 }
 
@@ -166,7 +182,7 @@ header .down .right a {
     width: 70px;
     height: 36px;
     background: #ffffff;
-    border: 2px solid black;
+    border: 1.5px solid black;
     border-radius: 4px;
 }
 
@@ -175,7 +191,7 @@ header .down .right a {
     height: 36px;
     margin-left: 12px;
     padding: 5px;
-    border: 2px solid black;
+    border: 1.5px solid black;
     border-radius: 4px;
 }
 
@@ -191,6 +207,15 @@ header .down .right a {
     width: 100%;
 }
 
+.main-content .main-content-header {
+    width: 100%;
+    height: 70px;
+}
+
+.main-content .main-content-header h4 {
+    margin-top: 10px;
+}
+
 .content .main-content #phong1,
 .content .main-content #phong2,
 .content .main-content #phong3,
@@ -201,6 +226,7 @@ header .down .right a {
 .content .main-content #phong8,
 .content .main-content #phong9,
 .content .main-content #phong10 {
+    width: 55%;
     background-color: #ffffff;
     display: flex;
     align-items: center;
@@ -211,6 +237,7 @@ header .down .right a {
 }
 
 .content .main-content #phong11 {
+    width: 700px;
     background-color: #ffffff;
     display: flex;
     align-items: center;
@@ -230,8 +257,8 @@ header .down .right a {
 .content .main-content #phong9 .left,
 .content .main-content #phong10 .left,
 .content .main-content #phong11 .left {
-    width: 120px;
-    height: 120px;
+    width: 140px;
+    height: 140px;
     margin-left: 10px;
     margin-right: 10px;
     background-color: #f2f2f2;
@@ -262,7 +289,8 @@ header .down .right a {
 .content .main-content #phong9 .right #thong-tin-co-ban9 p,
 .content .main-content #phong10 .right #thong-tin-co-ban10 p,
 .content .main-content #phong11 .right #thong-tin-co-ban11 p {
-    padding: 0 10px;
+    padding-left: 0;
+    padding-right: 10px;
 }
 
 footer {
