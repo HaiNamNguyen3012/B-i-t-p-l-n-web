@@ -1,4 +1,4 @@
-# views/layouts/application.php
+# views/layouts/application.php</br>
 
 <DOCTYPE html>
 <html>
@@ -12,3 +12,5 @@
     <?= @$content ?>
   </body>
 </html>
+
+### views/layouts/application.php</br>

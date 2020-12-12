@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="/icon/css/all.min.css">
     <link rel="stylesheet" href="./nguoichothue.css">
@@ -54,11 +54,9 @@
                         <i class="fas fa-search"></i>
                     </span>
                 </div>
-                <div class="col-sm-3 center">
+                <div class="col-sm-2 center">
                     <a href="../dangnhap/dangnhap.html">
-                        <i class="fas fa-user-secret"> 
-                            Đăng nhập
-                        </i>
+                        <i class="fas fa-user">Đăng nhập</i>
                     </a>
                 </div>
                 <div class="col-sm-2 right">
@@ -69,6 +67,200 @@
             </div>
         </div>
     </header>
+    <div class="filter container">
+        <div class="row filter-children">
+            <div class="col-sm-1 filter-children-children">
+                <button>
+                    <i class="fas fa-filter"></i>
+                    <p>Lọc</p>
+                </button>
+            </div>
+            <div class="col-sm-2 city">
+                <select name="city" id="city">
+                    <option value="thanhpho">Tỉnh/thành phố</option>
+                </select>
+            </div>
+            <div class="col-sm-1 price">
+                <button type="button" id="price">Giá</button>
+            </div>
+            <div class="col-sm-1 square">
+                <button type="button" id="square">Diện tích</button>
+            </div>
+            <div class="col-sm-2 type-room">
+                <select name="type-room" id="type-room">
+                    <option value="type-room">Loại phòng</option>
+                    <option value="phongtro">Phòng trọ</option>
+                    <option value="chungcumini">Chung cư mini</option>
+                    <option value="nhanguyencan">Nhà nguyên căn</option>
+                    <option value="chungcunguyencan">Chung cư nguyên căn</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid content">
+        <div class="container main-content-header">
+            <h4>Cho thuê phòng trọ toàn quốc</h4>
+        </div>
+        <div class="container main-content">
+            <div id="phong1">
+                <div class="left">Ảnh</div>
+                <div class="right">
+                    <h4>Miêu tả</h4>
+                    <p>Diện tích</p>
+                    <h4>Giá</h4>
+                    <div id="thong-tin-co-ban1">
+                        <p id="infor-owner1">Người đăng</p>
+                        <p id="time1">Thời gian đăng</p>
+                        <p id="city1">Tỉnh thành phố phòng cho thuê</p>
+                        <i class="far fa-heart"></i>
+                    </div>
+                </div>
+            </div>
+            <div id="phong2">
+                <div class="left">Ảnh</div>
+                <div class="right">
+                    <h4>Miêu tả</h4>
+                    <p>Diện tích</p>
+                    <h4>Giá</h4>
+                    <div id="thong-tin-co-ban2">
+                        <p id="infor-owner2">Người đăng</p>
+                        <p id="time2">Thời gian đăng</p>
+                        <p id="city2">Tỉnh thành phố phòng cho thuê</p>
+                        <i class="far fa-heart"></i>
+                    </div>
+                </div>
+            </div>
+            <div id="phong3">
+                <div class="left">Ảnh</div>
+                <div class="right">
+                    <h4>Miêu tả</h4>
+                    <p>Diện tích</p>
+                    <h4>Giá</h4>
+                    <div id="thong-tin-co-ban3">
+                        <p id="infor-owner3">Người đăng</p>
+                        <p id="time3">Thời gian đăng</p>
+                        <p id="city3">Tỉnh thành phố phòng cho thuê</p>
+                        <i class="far fa-heart"></i>
+                    </div>
+                </div>
+            </div>
+            <div id="phong4">
+                <div class="left">Ảnh</div>
+                <div class="right">
+                    <h4>Miêu tả</h4>
+                    <p>Diện tích</p>
+                    <h4>Giá</h4>
+                    <div id="thong-tin-co-ban4">
+                        <p id="infor-owner4">Người đăng</p>
+                        <p id="time4">Thời gian đăng</p>
+                        <p id="city4">Tỉnh thành phố phòng cho thuê</p>
+                        <i class="far fa-heart"></i>
+                    </div>
+                </div>
+            </div>
+            <div id="phong5">
+                <div class="left">Ảnh</div>
+                <div class="right">
+                    <h4>Miêu tả</h4>
+                    <p>Diện tích</p>
+                    <h4>Giá</h4>
+                    <div id="thong-tin-co-ban5">
+                        <p id="infor-owner5">Người đăng</p>
+                        <p id="time5">Thời gian đăng</p>
+                        <p id="city5">Tỉnh thành phố phòng cho thuê</p>
+                        <i class="far fa-heart"></i>
+                    </div>
+                </div>
+            </div>
+            <div id="phong6">
+                <div class="left">Ảnh</div>
+                <div class="right">
+                    <h4>Miêu tả</h4>
+                    <p>Diện tích</p>
+                    <h4>Giá</h4>
+                    <div id="thong-tin-co-ban6">
+                        <p id="infor-owner6">Người đăng</p>
+                        <p id="time6">Thời gian đăng</p>
+                        <p id="city6">Tỉnh thành phố phòng cho thuê</p>
+                        <i class="far fa-heart"></i>
+                    </div>
+                </div>
+            </div>
+            <div id="phong7">
+                <div class="left">Ảnh</div>
+                <div class="right">
+                    <h4>Miêu tả</h4>
+                    <p>Diện tích</p>
+                    <h4>Giá</h4>
+                    <div id="thong-tin-co-ban7">
+                        <p id="infor-owner7">Người đăng</p>
+                        <p id="time7">Thời gian đăng</p>
+                        <p id="city7">Tỉnh thành phố phòng cho thuê</p>
+                        <i class="far fa-heart"></i>
+                    </div>
+                </div>
+            </div>
+            <div id="phong8">
+                <div class="left">Ảnh</div>
+                <div class="right">
+                    <h4>Miêu tả</h4>
+                    <p>Diện tích</p>
+                    <h4>Giá</h4>
+                    <div id="thong-tin-co-ban8">
+                        <p id="infor-owner8">Người đăng</p>
+                        <p id="time8">Thời gian đăng</p>
+                        <p id="city8">Tỉnh thành phố phòng cho thuê</p>
+                        <i class="far fa-heart"></i>
+                    </div>
+                </div>
+            </div>
+            <div id="phong9">
+                <div class="left">Ảnh</div>
+                <div class="right">
+                    <h4>Miêu tả</h4>
+                    <p>Diện tích</p>
+                    <h4>Giá</h4>
+                    <div id="thong-tin-co-ban9">
+                        <p id="infor-owner9">Người đăng</p>
+                        <p id="time9">Thời gian đăng</p>
+                        <p id="city9">Tỉnh thành phố phòng cho thuê</p>
+                        <i class="far fa-heart"></i>
+                    </div>
+                </div>
+            </div>
+            <div id="phong10">
+                <div class="left">Ảnh</div>
+                <div class="right">
+                    <h4>Miêu tả</h4>
+                    <p>Diện tích</p>
+                    <h4>Giá</h4>
+                    <div id="thong-tin-co-ban10">
+                        <p id="infor-owner10">Người đăng</p>
+                        <p id="time10">Thời gian đăng</p>
+                        <p id="city10">Tỉnh thành phố phòng cho thuê</p>
+                        <i class="far fa-heart"></i>
+                    </div>
+                </div>
+            </div>
+            <div id="phong11">
+                <div class="left">Ảnh</div>
+                <div class="right">
+                    <h4>Miêu tả</h4>
+                    <p>Diện tích</p>
+                    <h4>Giá</h4>
+                    <div id="thong-tin-co-ban11">
+                        <p id="infor-owner11">Người đăng</p>
+                        <p id="time11">Thời gian đăng</p>
+                        <p id="city11">Tỉnh thành phố phòng cho thuê</p>
+                        <i class="far fa-heart"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>Thuê trọ 24h - trang web cho thuê trọ</p>
+    </footer>
 </body>
 
 </html>

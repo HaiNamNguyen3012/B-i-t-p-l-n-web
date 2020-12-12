@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./dangtin.css">
+    <title>Thông tin về phòng cần cho thuê</title>
+</head>
+
+<body>
+    <div class="main">
+        <section class="dangtin">
+            <div class="container">
+                <div class="dangtin-content">
+                    <form action="" method="post" id="formchothuephong" class="formchothuephong">
+                        <h1>Thông tin về phòng cần cho thuê</h1>
+
+                        <!-- địa chỉ -->
+
+                        <div class="form-group">
+                            <label for="diachi" id="lb-diachi">Địa chỉ phòng thuê</label> <br>
+                            <input type="text" name="diachi" class="form-input" id="diachi" placeholder="Địa chỉ(Số nhà - Tên đường)">
+                            <select name="thanh-pho" id="thanh-pho" class="form-input">
+                                <option value="city" >Tỉnh/Thành phố</option>
+                            </select>
+                            <select name="quan" id="quan" class="form-input">
+                                <option value="district">Quận/huyện</option>
+                            </select>
+                            <select name="phuong" id="phuong" class="form-input">
+                                <option value="district">Phường/Xã</option>
+                            </select>
+                        </div>
+
+                        <!-- Loại phòng -->
+
+                        <div class="form-group">
+                            <label for="loaiphong" id="lb-loaiphong">Loại phòng cho thuê</label>
+                            <br>
+                            <select name="loaiphong" id="loaiphong" class="form-input">
+                                <option value="loaiphongcanchothue">Loại phòng bạn cho thuê là......</option>
+                                <option value="phongtro">Phòng trọ</option>
+                                <option value="chungcumini">Chung cư mini</option>
+                                <option value="nhanguyencan">Nhà nguyên căn</option>
+                                <option value="chungcunguyencan">Chung cư nguyên căn</option>
+                            </select>
+                            <input type="number" name="soluong" id="soluong" class="form-input" placeholder="số lượng phòng">
+                        </div>
+
+                        <!-- giá cả -->
+
+                        <div class="form-group">
+                            <label for="price" id="lb-price">Giá cả</label>
+                            <br>
+                            <input type="text" name="price" id="price" class="form-input" placeholder="Giá cả">
+                            <select name="price-time" id="price-time" class="form-input">
+                                <option value="gia-tinh-theo">Giá tính theo.....</option>
+                                <option value="thang">Tháng</option>
+                                <option value="quy">Quý</option>
+                                <option value="nhanguyencan">Năm</option>
+                            </select>
+                        </div>
+
+                        <!-- Diện tích -->
+
+                        <div class="form-group">
+                            <label for="dientich" id="lb-dientich">Diện tích</label>
+                            <br/>
+                            <input type="text" name="dientich" id="dientich" class="form-input" placeholder="Diện tích">
+                            <!-- <p id="unit">m2</p> -->
+                        </div>
+
+                        <!-- chung với chủ -->
+
+                        <div class="form-group">
+                            <h4 class="chung-chu-hay-khong">Chung với chủ</h4>
+                            <br/>
+                            <input type="radio" id="chung-chu" name="chung-hay-khong" value="chung-voi-chu">
+                            <label for="chung" id="lb-chung-chu">Chung</label>
+                            <input type="radio" id="khong-chung" name="chung-hay-khong" value="khong-chung">
+                            <label for="khong-chung" id="lb-khong-chung">Không chung</label>
+                        </div>
+
+                        <!-- Điều kiện vật chất -->
+
+                        <div class="form-group">
+                            <h2 class="dieu-kien-vat-chat">điều kiện vật chất</h2>
+
+                            <!-- Phòng tắm -->
+                            <div class="dieu-kien-vat-chat-radio">
+                                <h4 class="phongtam">Phòng tắm</h4>
+                                <br/>
+                                <input type="radio" id="chung-phong-tam" name="chung-hay-khepkin" value="chung-phong-tam">
+                                <label for="chung" id="lb-chung-phong-tam">Chung</label>
+                                <input type="radio" id="khep-kin" name="chung-hay-khepkin" value="phong-tam-rieng">
+                                <label for="khep-kin" id="lb-khep-kin">Khép kín</label>
+                            </div>
+
+
+                            <!-- Bếp -->
+                            <div class="dieu-kien-vat-chat-radio">
+                                <h4 class="bep">Bếp</h4>
+                                <input type="radio" id="chung-khu-bep" name="chung-hay-rieng-hay-khong-co" value="chung-khu-bep">
+                                <label for="chung-khu-bep" id="lb-chung-khu-bep">Chung nhà bếp</label>
+                                <input type="radio" id="rieng-khu-bep" name="chung-hay-rieng-hay-khong-co" value="rieng-khu-bep">
+                                <label for="rieng-khu-bep" id="lb-rieng-khu-bep">Khu bếp riêng</label>
+                                <input type="radio" id="khong-nau-an" name="chung-hay-rieng-hay-khong-co" value="khong-nau-an">
+                                <label for="khong-nau-an" id="lb-khong-nau-an">Không nấu ăn</label>
+                            </div>
+
+
+                            <!-- Điều hòa -->
+                            <div class="dieu-kien-vat-chat-radio">
+                                <h4 class="dieu-hoa">Điều hòa</h4>
+                                <input type="radio" id="co-dieu-hoa" name="co-va-khong-dieu-hoa" value="co-dieu-hoa">
+                                <label for="co-dieu-hoa" id="lb-co-dieu-hoa">Có điều hòa</label>
+                                <input type="radio" id="khong-dieu-hoa" name="co-va-khong-dieu-hoa" value="khong-dieu-hoa">
+                                <label for="khong-dieu-hoa" id="lb-khong-dieu-hoa">Không có điều hòa</label>
+                            </div>
+
+
+                            <!-- Ban công -->
+                            <div class="dieu-kien-vat-chat-radio">
+                                <h4 class="ban-cong">Ban công</h4>
+                                <input type="radio" id="co-ban-cong" name="co-va-khong-ban-cong" value="co-ban-cong">
+                                <label for="co-ban-cong" id="lb-co-ban-cong">Có ban công</label>
+                                <input type="radio" id="khong-ban-cong" name="co-va-khong-ban-cong" value="khong-ban-cong">
+                                <label for="khong-ban-cong" id="lb-khong-ban-cong">Không có ban công</label>
+                            </div>
+
+
+                            <!-- Tiện ích khác -->
+                            <h4 class="other">Tiện ích khác</h4>
+                            <input type="checkbox" id="tu-lanh" name="tu-lanh" value="tu-lanh">
+                            <label for="tu-lanh" id="lb-tu-lanh"> Tủ lạnh </label>
+                            <input type="checkbox" id="may-giat" name="may-giat" value="may-giat">
+                            <label for="may-giat" id="lb-may-giat"> Máy giặt </label>
+                            <input type="checkbox" id="giuong-tu" name="giuong-tu" value="giuong-tu">
+                            <label for="giuong-tu" id="lb-giuong-tu"> Giường tủ </label>
+
+                            <!-- Ảnh -->
+
+                            <input type="submit" name="submit" id="submit" class="form-submit" value="Đăng tin"/>
+
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>
