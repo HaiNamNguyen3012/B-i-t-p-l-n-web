@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./assets/stylesheets/dangnhap.css">
+   <!-- <link rel="stylesheet" href="./assets/stylesheets/dangnhap.css">        -->
     <title>Đăng nhập</title>
 </head>
 
@@ -38,7 +38,7 @@
                         </div>
 
                         <div class="form-group">
-                            <input type="submit" name="submit" id="submit" class="form-submit" value="Đăng ký" />
+                            <input type="submit" name="submit" id="submit" class="form-submit" value="Đăng nhập" />
                         </div>
 
                         <p class="loginhere">

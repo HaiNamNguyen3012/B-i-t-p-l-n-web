@@ -15,6 +15,7 @@ class Login{
     }
     
     static function checkUser(){
+        var_dump($_POST);
         if(enoughInfo()){
             $db = DB::getInstance();
            // $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -47,13 +48,7 @@ class Login{
             echo "vui long nhap du thong tin";
         }
     }
-
-
-
-
-    
-
-
+  
 }
 function enoughInfo(){
         return (isset($_POST['user-name'])&&isset($_POST['password'])&&isset($_POST['users']));
