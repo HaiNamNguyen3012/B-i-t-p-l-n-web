@@ -15,11 +15,19 @@ class Login{
     }
     
     static function checkUser(){
+        
         var_dump($_POST);
         if(enoughInfo()){
             $db = DB::getInstance();
            // $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             $user = new Login();
+
+            if($user->vai_tro = "nguoi_cho_thue"){
+
+            }
+            else if($user->vai_tro = "nguoi_thue_phong"){
+                
+            }
 
             $query="SELECT * , count(*) as tong from $user->vai_tro where ten_tai_khoan='$user->ten_tai_khoan'";
             echo $query;//////////////////////// loi loi
@@ -32,6 +40,7 @@ class Login{
                 
                     if(password_verify($user->mat_khau,$info['mat_khau'])){
                         //lưu vào session
+                        session_start();
                         $_SESSION['username']=$user->ten_tai_khoan;
                         echo "đăng nhập thành công";
                         header('Location: index.php?controller=posts');
