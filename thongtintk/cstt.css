@@ -62,6 +62,8 @@ nav{
 .btn.mainbutton{
     border: 1px solid #d7d9dc;
     margin-top:10px;
+    color:black;
+    background-color: #f1f1f1;
 }
 .btn{
     text-align: center;
@@ -117,12 +119,15 @@ nav{
     padding: 100px 0;
 }
 .found .alert-warning{
-    border-color: darksalmon;
+    border-color: burlywood;
 }
 .btn.btn-block {
     border: 1px solid #d7d9dc;
-    border-radius: 0px;
+    border-radius: 2px;
     height: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    
 }
 footer.container-fluid{
    width: 100%;
