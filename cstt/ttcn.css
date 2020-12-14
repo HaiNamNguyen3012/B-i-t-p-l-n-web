@@ -1,4 +1,6 @@
-
+nav{
+    height: 40px;
+}
 .file-upload{
     height: 50px;
     width: 50px;
@@ -101,5 +103,5 @@ ul li{
     margin-top: 30px;
 }
 .btn:hover{
-    background-color: #c0c0c0;
+    background-color: #c0c0c0;   
 }
