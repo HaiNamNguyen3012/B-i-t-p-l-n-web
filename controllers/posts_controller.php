@@ -29,7 +29,23 @@ class PostsController extends BaseController
     $data = array('post' => $post);
     $this->render('show', $data);
   }
+  public function createPost(){
+    if (!isset($_SESSION['username'])) {
+      header('Location: index.php?controller=login&action=index');
+    }
+      require_once('models/createpost.php');
+      $this->folder = 'createpost';
+      $post = CreatePost::insertPost();
+      $data = array('createpost',$post);
+      $this->render('createpost',$data);
+    }
+    
 }
+
+
+
+
+
 ?>
 
 
