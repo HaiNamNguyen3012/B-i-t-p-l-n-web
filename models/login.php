@@ -22,15 +22,18 @@ class Login{
            // $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             $user = new Login();
 
-            if($user->vai_tro = "nguoi_cho_thue"){
+            echo "vai tro".$user->vai_tro;
 
+            if($user->vai_tro == "nguoi_cho_thue"){
+                $query="SELECT * , count(*) as tong from $user->vai_tro where ten_tai_khoan='$user->ten_tai_khoan' and duoc_duyet=1";
             }
-            else if($user->vai_tro = "nguoi_thue_phong"){
-                
+            else{
+                $query="SELECT * , count(*) as tong from $user->vai_tro where ten_tai_khoan='$user->ten_tai_khoan'";
             }
+            
 
-            $query="SELECT * , count(*) as tong from $user->vai_tro where ten_tai_khoan='$user->ten_tai_khoan'";
-            echo $query;//////////////////////// loi loi
+            
+            echo $query;
             
             $req = $db->query($query);
             $info= $req->fetch();
@@ -48,6 +51,7 @@ class Login{
                     else{
                         echo "mat khau ko dung";
                     }
+                
             }
             else{
                 echo "ten dang nhap khong dung";

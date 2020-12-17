@@ -66,7 +66,7 @@
                             <select class="form-input" name="users" id="users" >
                                 <option  style="display:none" disabled selected value>Bạn là...</option>
                                 <option value="nguoi_cho_thue">Người cho thuê</option>
-                                <option value="nguoi_thue_phong">Người đi thuê</option>
+                                <option value="nguoi_thue_phong">Người thuê phòng</option>
                             </select>
                             <p id="users1"></p>
                         </div>
@@ -76,7 +76,7 @@
                         </div>
 
                         <p class="loginhere">
-                            Bạn đã có tài khoản? <a href="../dangnhap/dangnhap.html" class="loginhere-link">Đăng nhập</a>
+                            Bạn đã có tài khoản? <a href="/bai-tap-lon-web/index.php?controller=login" class="loginhere-link">Đăng nhập</a>
                         </p>
                     </form>
                 </div>

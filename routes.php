@@ -3,7 +3,7 @@
 <?php
 $controllers = array(
   'pages' => ['home', 'error'],
-  'posts' => ['index','showPost'],
+  'posts' => ['index','showPost','createPost'],
   'post_details' => ['showPost'] ,
   'register' => ['index'],
   'login'  => ['index'],

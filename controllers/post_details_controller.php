@@ -18,6 +18,8 @@ class PostDetailsController extends BaseController
   }*/
   public function showPost()
   {
+
+    echo "id = ".$_GET['id'];
     $post_details = PostDetail::find($_GET['id']);
     $data = array('post_details' => $post_details);
     $this->render('show', $data);

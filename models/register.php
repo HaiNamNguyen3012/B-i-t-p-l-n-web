@@ -59,7 +59,7 @@ static function insertdb(){
           $user->so_CCCD."</br> ". $user->dia_chi."</br> ".$user->sdt."</br> ". $user->email;
 */
 
-          if($user->la_nguoi_thue="nct"){
+          if($user->la_nguoi_thue=="nguoi_thue_phong"){
 
             $addUser = "INSERT INTO nguoi_thue_phong (id_nguoi_thue_phong, ten_tai_khoan, mat_khau, ho, ten,
                                   so_CCCD, dia_chi, sdt, email) 

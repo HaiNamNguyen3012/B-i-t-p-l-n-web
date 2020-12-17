@@ -11,9 +11,7 @@
     </br>
     Diện tích: '.$post_details->dien_tich.' m<sup>2</sup>
     </br>
-    Số nhà:'.$post_details->so_nha.'
-    </br>
-    Đường: '.$post_details->duong.'
+    Địa chỉ:'.$post_details->dia_chi.'
     </br>
     '.$post_details->tentp.'
     </br>
@@ -62,6 +60,7 @@
    
    
    ';
+   var_dump($_POST);
     var_dump($post_details->cac_hinh_anh);
 ?>
 ###views/post_details_details/show.php

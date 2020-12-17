@@ -42,7 +42,7 @@
                         </div>
 
                         <p class="loginhere">
-                            Bạn chưa có tài khoản? <a href="../index.php?controller=register&action=index" class="signuphere-link">Đăng ký</a>
+                            Bạn chưa có tài khoản? <a href="/bai-tap-lon-web/index.php?controller=register" class="signuphere-link">Đăng ký</a>
                         </p>
                     </form>
                 </div>

@@ -33,7 +33,7 @@ class CreatePost
     
     {
        
-        $this->nguoi_cho_thue = $_SESSION['user-name']; 
+        $this->nguoi_cho_thue = $_SESSION['username']; 
         $this->dia_chi = $_POST['dia_chi'];
         $this->xa_phuong = $_POST['xa_phuong'];
         $this->quan_huyen = $_POST['quan_huyen'];
@@ -53,10 +53,10 @@ class CreatePost
         $this->dieu_hoa = $_POST['dieu_hoa'];
         $this->ban_cong = $_POST['ban_cong'];
         $this->dien_nuoc = $_POST['dien_nuoc'];
-        $this->tu_lanh = $_POST['tu_lanh'];
-        $this->may_giat = $_POST['may_giat'];
-        $this->giuong_tu = $_POST['giuong_tu'];
-        
+        if(isset($_POST['tu_lanh'])) $this->tu_lanh = $_POST['tu_lanh'];
+        if(isset($_POST['may_giat'])) $this->may_giat = $_POST['may_giat'];
+        if(isset($_POST['giuong_tu'])) $this->giuong_tu = $_POST['giuong_tu'];
+        $this->cac_anh = $_FILES['cac_anh'];
 
         
    //     echo "TẠO CONSTRUCT REGISTER";
@@ -64,12 +64,18 @@ class CreatePost
 
     
 static function insertPost(){
-    
+    var_dump($_SESSION);
+    echo $_SESSION['username'];
   if(enoughInfo()){
       $db = DB::getInstance();
       $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
       $post = new CreatePost();
       
+      
+      $id = getId($db);
+      imageHandling($db,$id);
+
+
       $query="INSERT INTO phong (id_phong, id_nguoi_cho_thue, dia_chi, id_xa, id_qh, id_tp, gan_dia_diem, loai_phong, so_luong_phong, gia, tinh_theo, dien_tich,
                            thoi_gian_hien_thi, thoi_gian_dang_bai, duoc_duyet, duoc_thue, tieu_de, noi_dung, 
                            chung_chu, phong_tam_chung, nong_lanh, phong_bep, dieu_hoa, ban_cong, dien_nuoc, tu_lanh, may_giat, giuong_tu) 
@@ -77,43 +83,16 @@ static function insertPost(){
                           '', now(), '0', '0', '$post->tieu_de', '$post->noi_dung', 
                             '$post->chung_chu', '$post->phong_tam_chung', '$post->nong_lanh', '$post->phong_bep', '$post->dieu_hoa', '$post->ban_cong', '$post->dien_nuoc', '$post->tu_lanh', '$post->may_giat', '$post->giuong_tu')";
       echo $query;
-      /*try{
+   
+      try{
         $db->exec($query);
         echo "New record created successfully";
       }
       catch(PDOException $e){
         echo $query . "<br>" . $e->getMessage();
-      } */
+      } 
 
-/*
-          if($user->la_nguoi_thue="nct"){
 
-            $addUser = "INSERT INTO nguoi_thue_phong (id_nguoi_thue_phong, ten_tai_khoan, mat_khau, ho, ten,
-                                  so_CCCD, dia_chi, sdt, email) 
-                        VALUES (NULL, '$user->ten_tai_khoan', '$hash_password', '$user->ho' , '$user->ten', 
-                        $user->so_CCCD, '$user->dia_chi','$user->sdt', '$user->email')";
-           // echo "INSERT người thuê phòng";
-            
-            }
-            else{
-              
-              $addUser = "INSERT INTO nguoi_cho_thue (id_nguoi_cho_thue, ten_tai_khoan, mat_khau, ho, ten,
-                                    so_CCCD, dia_chi, sdt, email, duoc_duyet) 
-                          VALUES (NULL, '$user->ten_tai_khoan', '$hash_password', '$user->ho' , '$user->ten', 
-                          $user->so_CCCD, '$user->dia_chi', '$user->sdt', '$user->email', 0)";
-           //   echo "INSERT người cho thuê phòng";
-            
-            } 
-            try{
-              $db->exec($addUser);
-              echo "New record created successfully";
-            }
-            catch(PDOException $e){
-              echo $addUser . "<br>" . $e->getMessage();
-            }
-
-      
-      }*/
     }
     else{
       echo "Vui lòng nhập số liệu";
@@ -126,7 +105,54 @@ function enoughInfo(){
   return (isset($_POST['dia_chi'])); 
   
 }
+function getId($db){
+  $query = "SELECT AUTO_INCREMENT
+            FROM information_schema.tables
+            WHERE table_name = 'phong'
+            AND table_schema = 'phong_tro' ;";
+  
+  $id =  $db->query($query)->fetch();
+  return $id['AUTO_INCREMENT'];
 
+}
+function imageHandling($db,$id_phong){
+  extract($_POST);
+  $error=array();
+  $extension=array("jpeg","jpg","png","gif");
+  foreach($_FILES["cac_anh"]["tmp_name"] as $key=>$tmp_name) {
+      $file_name=$_FILES["cac_anh"]["name"][$key];
+      $file_tmp=$_FILES["cac_anh"]["tmp_name"][$key];
+      $ext=pathinfo($file_name,PATHINFO_EXTENSION);
+
+      if(in_array($ext,$extension)) {
+          if(!file_exists("assets/images/phong_tro/".$file_name)) {
+              move_uploaded_file($file_tmp=$_FILES["cac_anh"]["tmp_name"][$key],"assets/images/phong_tro/".$file_name);
+              echo "filename".$file_name;
+              insertImageToDb($db,$id_phong,$file_name);
+          }
+          else {
+              $filename=basename($file_name,$ext);
+              $newFileName=$filename.time().".".$ext;
+              echo "newfilename".$newFileName;
+              move_uploaded_file($file_tmp=$_FILES["cac_anh"]["tmp_name"][$key],"assets/images/phong_tro/".$newFileName);
+              insertImageToDb($db,$id_phong,$newFileName);
+          }
+      }
+      else {
+          array_push($error,"$file_name, ");
+      }
+  }
+}
+function insertImageToDb($db,$id_phong,$ten_anh){
+  $query = "INSERT INTO hinh_anh (id_hinh_anh, ten_hinh_anh, id_phong) VALUES (NULL, '$ten_anh', '$id_phong')";
+  try{
+    $db->exec($query);
+    echo "New record created successfully";
+  }
+  catch(PDOException $e){
+    echo $query . "<br>" . $e->getMessage();
+  } 
+}
 
 ?>
 ###models/createpost.php

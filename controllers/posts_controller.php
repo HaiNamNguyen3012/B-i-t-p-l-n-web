@@ -30,9 +30,12 @@ class PostsController extends BaseController
     $this->render('show', $data);
   }
   public function createPost(){
+    session_start();
     if (!isset($_SESSION['username'])) {
       header('Location: index.php?controller=login&action=index');
     }
+
+    
       require_once('models/createpost.php');
       $this->folder = 'createpost';
       $post = CreatePost::insertPost();

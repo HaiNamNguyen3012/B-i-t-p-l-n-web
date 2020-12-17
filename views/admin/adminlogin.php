@@ -17,7 +17,7 @@
             <div class="container">
                 <div class="signin-content">
                     <form action="" method="post" id="signin-form" class="signin-form" onsubmit="return validate()">
-                        <h1>Đăng nhập</h1>
+                        <h1>Đăng nhập ADMIN</h1>
                         <div class="form-group">
                             <input type="text" class="form-input" name="user-name" id="user-name" placeholder="Tên đăng nhập" required/>
                         </div>
@@ -34,9 +34,6 @@
                             <input type="submit" name="submit" id="submit" class="form-submit" value="Đăng nhập" />
                         </div>
 
-                        <p class="loginhere">
-                            Bạn chưa có tài khoản? <a href="../index.php?controller=register&action=index" class="signuphere-link">Đăng ký</a>
-                        </p>
                     </form>
                 </div>
             </div>
