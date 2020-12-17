@@ -237,7 +237,7 @@ header .down .right a {
 }
 
 .content .main-content #phong11 {
-    width: 700px;
+    width: 55%;
     background-color: #ffffff;
     display: flex;
     align-items: center;
@@ -293,15 +293,175 @@ header .down .right a {
     padding-right: 10px;
 }
 
-footer {
+.main-content #phong1 .right .description-and-link-to-information-of-room,
+.main-content #phong2 .right .description-and-link-to-information-of-room,
+.main-content #phong3 .right .description-and-link-to-information-of-room,
+.main-content #phong4 .right .description-and-link-to-information-of-room,
+.main-content #phong5 .right .description-and-link-to-information-of-room,
+.main-content #phong6 .right .description-and-link-to-information-of-room,
+.main-content #phong7 .right .description-and-link-to-information-of-room,
+.main-content #phong8 .right .description-and-link-to-information-of-room,
+.main-content #phong9 .right .description-and-link-to-information-of-room,
+.main-content #phong10 .right .description-and-link-to-information-of-room,
+.main-content #phong11 .right .description-and-link-to-information-of-room {
     width: 100%;
-    height: 100px;
-    background-color: #0D0D0D;
+    display: flex;
 }
+
+.main-content #phong1 .right .description-and-link-to-information-of-room .description,
+.main-content #phong2 .right .description-and-link-to-information-of-room .description,
+.main-content #phong3 .right .description-and-link-to-information-of-room .description,
+.main-content #phong4 .right .description-and-link-to-information-of-room .description,
+.main-content #phong5 .right .description-and-link-to-information-of-room .description,
+.main-content #phong6 .right .description-and-link-to-information-of-room .description,
+.main-content #phong7 .right .description-and-link-to-information-of-room .description,
+.main-content #phong8 .right .description-and-link-to-information-of-room .description,
+.main-content #phong9 .right .description-and-link-to-information-of-room .description,
+.main-content #phong10 .right .description-and-link-to-information-of-room .description,
+.main-content #phong11 .right .description-and-link-to-information-of-room .description {
+    width: 60%;
+}
+
+.main-content #phong1 .right .description-and-link-to-information-of-room h4,
+.main-content #phong2 .right .description-and-link-to-information-of-room h4,
+.main-content #phong3 .right .description-and-link-to-information-of-room h4,
+.main-content #phong4 .right .description-and-link-to-information-of-room h4,
+.main-content #phong5 .right .description-and-link-to-information-of-room h4,
+.main-content #phong6 .right .description-and-link-to-information-of-room h4,
+.main-content #phong7 .right .description-and-link-to-information-of-room h4,
+.main-content #phong8 .right .description-and-link-to-information-of-room h4,
+.main-content #phong9 .right .description-and-link-to-information-of-room h4,
+.main-content #phong10 .right .description-and-link-to-information-of-room h4,
+.main-content #phong11 .right .description-and-link-to-information-of-room h4 {
+    margin-right: 5px;
+    margin-top: 6px;
+}
+
+.main-content #phong1 .right .description-and-link-to-information-of-room .link-to-information-of-room,
+.main-content #phong2 .right .description-and-link-to-information-of-room .link-to-information-of-room,
+.main-content #phong3 .right .description-and-link-to-information-of-room .link-to-information-of-room,
+.main-content #phong4 .right .description-and-link-to-information-of-room .link-to-information-of-room,
+.main-content #phong5 .right .description-and-link-to-information-of-room .link-to-information-of-room,
+.main-content #phong6 .right .description-and-link-to-information-of-room .link-to-information-of-room,
+.main-content #phong7 .right .description-and-link-to-information-of-room .link-to-information-of-room,
+.main-content #phong8 .right .description-and-link-to-information-of-room .link-to-information-of-room,
+.main-content #phong9 .right .description-and-link-to-information-of-room .link-to-information-of-room,
+.main-content #phong10 .right .description-and-link-to-information-of-room .link-to-information-of-room,
+.main-content #phong11 .right .description-and-link-to-information-of-room .link-to-information-of-room {
+    margin-top: 10px;
+}
+
+.main-content #phong1 .right .description-and-link-to-information-of-room a,
+.main-content #phong2 .right .description-and-link-to-information-of-room a,
+.main-content #phong3 .right .description-and-link-to-information-of-room a,
+.main-content #phong4 .right .description-and-link-to-information-of-room a,
+.main-content #phong5 .right .description-and-link-to-information-of-room a,
+.main-content #phong6 .right .description-and-link-to-information-of-room a,
+.main-content #phong7 .right .description-and-link-to-information-of-room a,
+.main-content #phong8 .right .description-and-link-to-information-of-room a,
+.main-content #phong9 .right .description-and-link-to-information-of-room a,
+.main-content #phong10 .right .description-and-link-to-information-of-room a,
+.main-content #phong11 .right .description-and-link-to-information-of-room a {
+    margin-left: 5px;
+    padding: 5px;
+    border: 2px solid red;
+    border-radius: 7px;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: 700;
+    color: red;
+}
+
+
+/* footer */
 
 footer p {
     color: #ffffff;
     text-align: center;
     font-size: 24px;
     padding-top: 20px;
+}
+
+footer.container-fluid {
+    width: 100%;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (min-width: 768px) {
+    .appWrapper-DesktopFooter {
+        display: block;
+    }
+}
+
+.appWrapper-DesktopFooter {
+    background-color: #ffff;
+    border-top: 20px solid #f1f1f1;
+    font-size: 12;
+    width: 100%;
+}
+
+.appWrapper-DesktopFooter-container-top {
+    display: grid;
+    grid-template-columns: repeat(3, 2fr);
+    padding: 12px 12px 12px 100px;
+}
+
+.appWrapper-DesktopFooter-heading {
+    font-size: 14px;
+    margin-bottom: 12px;
+    font-weight: bold;
+    font-style: normal;
+    line-height: 1.29;
+    text-transform: uppercase;
+}
+
+.appWrapper-DesktopFooter-item {
+    text-align: left;
+    padding: 20px;
+}
+
+.appWrapper-Footer-ul {
+    list-style-type: none;
+    margin: 0;
+    display: flex;
+    padding: 0;
+    flex-direction: column;
+}
+
+.appWrapper-Footer li {
+    font-size: 14px;
+    margin: 0;
+    line-height: 1.29;
+    padding: 0;
+    margin-bottom: 12px;
+}
+
+.appWrapper-Footer a {
+    color: #4a4a4a;
+    text-decoration: none;
+}
+
+.appWrapper-Footer a:hover {
+    color: black;
+}
+
+.approw {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.appWrapper-Footer-icon {
+    width: 32px;
+    height: 32px;
+    margin-right: 5px;
+}
+
+.appWrapper-DesktopFooter-container-bottom {
+    color: #9b9b9b;
+    line-height: 1.5;
+    text-align: center;
 }
