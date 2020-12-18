@@ -117,12 +117,6 @@ header .down .right a {
     font-size: 20px;
 }
 
-header .down .right a {
-    color: #f2f2f2;
-    font-weight: 900;
-    font-size: 20px;
-}
-
 
 /* Content */
 
@@ -285,9 +279,9 @@ header .down .right a {
     height: 100%;
 }
 
-.information .dientich-va-gia button {
+.information .dientich-va-gia .statistivs {
     display: flex;
-    width: 75px;
+    width: 135px;
     height: 40px;
     border: 2px solid red;
     border-radius: 20px;
@@ -295,14 +289,16 @@ header .down .right a {
     background-color: #fff;
 }
 
-.information .dientich-va-gia button p {
-    margin: 0;
-    font-size: 14px;
-    padding: 5px;
+.information .dientich-va-gia .statistivs i {
+    margin-left: 9px;
+    margin-right: 5px;
     color: red;
 }
 
-.information .dientich-va-gia button i {
+.information .dientich-va-gia .statistivs p {
+    margin: 0;
+    font-size: 14px;
+    padding: 3px;
     color: red;
 }
 
