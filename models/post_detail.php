@@ -59,6 +59,7 @@
           }
         static function find($id_phong) {    
             echo "dùng find id";
+            echo "haha";
             $db = DB::getInstance();
             
             $req = $db->prepare('SELECT 
@@ -77,14 +78,14 @@
                                 inner join info on info.id_info= phong.id_phong
                                 WHERE id_phong = :id_phong');  ///////
             $req->execute(array('id_phong' => $id_phong));
+            
+            
 
             
-            $req2 = $db->prepare('SELECT * from hinh_anh where id_phong=:id_phong limit 10');
+            $req2 = $db->prepare('SELECT ten_hinh_anh from hinh_anh where id_phong=:id_phong limit 10');
             $req2->execute(array('id_phong' => $id_phong));
             $img = $req2->fetchAll();
-            echo '</br>';
-            var_dump($img);
-            echo '</br>';
+            
             
             
             $item = $req->fetch();
@@ -92,7 +93,9 @@
             
 
             if (isset($item['id_phong'])) {
+                $item = handlingRawData($item);
                 
+
                 return new PostDetail($item['id_phong'], $item['tieu_de'], $item['noi_dung'], 
                             $item['gia'], $item['loai_phong'], $item['dien_tich'], $item['dia_chi'], $item['gan_dia_diem'],
                             $item['so_luong_phong'], $item['tinh_theo'], $item['thoi_gian_dang_bai'], $item['duoc_thue'],
@@ -104,6 +107,60 @@
             return null;
         }
         
+    }
+    function handlingRawData($item){
+        
+        $item['tieu_de'] = mb_ucfirst($item['tieu_de']);
+        $item['noi_dung']= mb_ucfirst($item['noi_dung']);
+        $item['loai_phong']= mb_ucfirst($item['loai_phong']);
+        $item['dia_chi']= mb_ucfirst($item['dia_chi']);
+        $item['gan_dia_diem']= mb_ucfirst($item['gan_dia_diem']);
+        $item['dien_nuoc'] = "Điện nước: ".mb_ucfirst($item['dien_nuoc']);
+        $item['sdt'] = "Số điện thoại: ".$item['sdt'];
+        $item['thoi_gian_dang_bai'];
+        
+        if($item['chung_chu']==1) $item['chung_chu'] = "Chung chủ";
+        else $item['chung_chu'] = "Không chung chủ";
+
+        if($item['phong_tam_chung']==1)  $item['phong_tam_chung'] = "Phòng tắm chung";
+        else $item['phong_tam_chung'] = "Phòng tắm khép kín";
+
+        if($item['nong_lanh']==1) $item['nong_lanh'] = "Có bình nóng lạnh";
+        else $item['nong_lanh'] = "Không có bình nóng lạnh";
+
+        if ($item['phong_bep']==2) $item['phong_bep'] = "Chung nhà bếp";
+        else if ($item['phong_bep']==1) $item['phong_bep'] = "Khu bếp riêng";
+        else $item['phong_bep'] = "Không nấu ăn";
+
+        if($item['dieu_hoa'] == 1) $item['dieu_hoa'] = "Có điều hòa";
+        else $item['dieu_hoa'] = "Không có điều hòa";
+
+        if($item['ban_cong'] == 1) $item['ban_cong'] = "Có ban công";
+        else $item['ban_cong'] = "Không có ban công";
+
+        
+
+        if($item['tu_lanh'] == 1) $item['tu_lanh']= "tủ lạnh";
+        else $item['tu_lanh'] = "";
+
+        if($item['may_giat'] == 1)  $item['may_giat']= "máy giặt";
+        else $item['may_giat'] = "";
+
+        if($item['giuong_tu'] == 1) $item['giuong_tu']= "giường tủ";
+        else $item['giuong_tu'] = "";
+
+
+        if($item['gia'] >= 1000000000) $item['gia'] = round($item['gia']/1000000000,3)." tỷ";
+        else if ($item['gia'] >= 1000000) $item['gia'] = round($item['gia']/1000000,2). " triệu";
+        else  $item['gia'] = round($item['gia']/1000,1). " ngàn";
+        return $item;
+    }
+
+    function mb_ucfirst($string)
+    {
+        $firstChar = mb_substr($string, 0, 1, "UTF-8");
+        $then = mb_substr($string, 1, null, "UTF-8");
+        return mb_strtoupper($firstChar, "UTF-8") . $then;
     }
 
 ?>

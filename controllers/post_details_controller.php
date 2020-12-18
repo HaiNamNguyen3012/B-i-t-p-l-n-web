@@ -10,7 +10,7 @@ class PostDetailsController extends BaseController
     $this->folder = 'post_details';
   }
 
-/*  public function index()
+ /* public function index()
   {
     $posts = Post::all();
     $data = array('posts' => $posts);
@@ -18,7 +18,7 @@ class PostDetailsController extends BaseController
   }*/
   public function showPost()
   {
-
+    
     echo "id = ".$_GET['id'];
     $post_details = PostDetail::find($_GET['id']);
     $data = array('post_details' => $post_details);

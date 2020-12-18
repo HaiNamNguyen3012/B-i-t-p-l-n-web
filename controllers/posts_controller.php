@@ -19,16 +19,16 @@ class PostsController extends BaseController
  /*   if (!isset($_SESSION['username'])) {
       header('Location: index.php?controller=login&action=index');
     }*/
-    $posts = Post::all();
+    $posts = Post::showAllForUser();
     $data = array('posts' => $posts);
     $this->render('index', $data);
   }
-  public function showPost()
+  /*public function showPost()
   {
     $post = Post::find($_GET['id']);
     $data = array('post' => $post);
     $this->render('show', $data);
-  }
+  }*/
   public function createPost(){
     session_start();
     if (!isset($_SESSION['username'])) {

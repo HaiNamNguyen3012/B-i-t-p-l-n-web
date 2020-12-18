@@ -61,10 +61,10 @@
                             <select name="loai_phong" id="loaiphong" class="form-input" required>
                                 <option  style="display:none" disabled selected value>Loại phòng bạn cho thuê là......</option>
                                 
-                                <option value="phongtro">Phòng trọ</option>
-                                <option value="chungcumini">Chung cư mini</option>
-                                <option value="nhanguyencan">Nhà nguyên căn</option>
-                                <option value="chungcunguyencan">Chung cư nguyên căn</option>
+                                <option value="Phòng trọ">Phòng trọ</option>
+                                <option value="Chung cư mini">Chung cư mini</option>
+                                <option value="Nhà nguyên căn">Nhà nguyên căn</option>
+                                <option value="Chung cư nguyên căn">Chung cư nguyên căn</option>
                             </select>
                             <input type="number" name="so_luong_phong" id="soluong" class="form-input" placeholder="số lượng phòng" min="1" max="99" required>
                         </div>

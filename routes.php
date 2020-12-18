@@ -3,11 +3,11 @@
 <?php
 $controllers = array(
   'pages' => ['home', 'error'],
-  'posts' => ['index','showPost','createPost'],
+  'posts' => ['index'/*,'showPost'*/,'createPost'],
   'post_details' => ['showPost'] ,
   'register' => ['index'],
   'login'  => ['index'],
-  'admin' =>  ['login','showUncheckUsers'],
+  'admin' =>  ['login','showUncheckUsers','index','showUncheckPosts'],
   
   // bổ sung thêm
 ); // Các controllers trong hệ thống và các action có thể gọi ra từ controller đó.
