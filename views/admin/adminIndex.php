@@ -10,8 +10,8 @@
     </br>
     <a href="/bai-tap-lon-web/index.php?controller=admin&action=showUncheckPosts">Duyệt các phòng</a>
     </br>
-    <a href="">Duyệt các bình luận</a>
+    <a href="/bai-tap-lon-web/index.php?controller=admin&action=showUncheckComments">Duyệt các bình luận</a>
     </br>
-    <a href="">Duyệt các báo cáo</a>
+    <a href="/bai-tap-lon-web/index.php?controller=admin&action=showUncheckReports">Duyệt các báo cáo</a>
 </body>
 </html>

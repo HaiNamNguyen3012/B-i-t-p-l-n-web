@@ -39,6 +39,41 @@
             $a++;
             }
             ?>
+            <tr>
+                <td>huyvip2000ht</td>
+                <td>123123123123123123</td>
+                <td>Trần </td>
+                <td>Huy</td>
+                <td>234567844234567844</td>
+                <td>322 Mỹ Đình</td>
+                <td>09644049750964404975</td>
+                <td>huyvip2000ht@gmail.comcom</td>
+                <td><input type="checkbox" name="user'.$a.'" value="'.$uncheckUser->ten_tai_khoan.'"></td>
+            </tr>
+            <tr>
+                <td>huyvip2000ht</td>
+                <td>123123123123123123</td>
+                <td>Trần </td>
+                <td>Huy</td>
+                <td>234567844234567844</td>
+                <td>322 Mỹ Đình</td>
+                <td>09644049750964404975</td>
+                <td>huyvip2000ht@gmail.comcom</td>
+                <td><input type="checkbox" name="user'.$a.'" value="'.$uncheckUser->ten_tai_khoan.'"></td>
+            </tr>
+            <tr>
+                <td>huyvip2000ht</td>
+                <td>123123123123123123</td>
+                <td>Trần </td>
+                <td>Huy</td>
+                <td>234567844234567844</td>
+                <td>322 Mỹ Đình</td>
+                <td>09644049750964404975</td>
+                <td>huyvip2000ht@gmail.comcom</td>
+                <td><input type="checkbox" name="user'.$a.'" value="'.$uncheckUser->ten_tai_khoan.'"></td>
+            </tr>
+
+
 
         </table>
         <input type="submit" value="Xác nhận">
