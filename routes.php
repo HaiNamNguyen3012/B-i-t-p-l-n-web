@@ -7,7 +7,8 @@ $controllers = array(
   'post_details' => ['showPost'] ,
   'register' => ['index'],
   'login'  => ['index'],
-  'admin' =>  ['login','showUncheckUsers','index','showUncheckPosts'],
+  'admin' =>  ['login','showUncheckUsers','index','showUncheckPosts','showUncheckComments','showUncheckReports'],
+  'info'  =>  ['editInfo','showInfo'],
   
   // bổ sung thêm
 ); // Các controllers trong hệ thống và các action có thể gọi ra từ controller đó.

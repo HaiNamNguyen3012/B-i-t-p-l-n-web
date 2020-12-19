@@ -5,15 +5,12 @@ class AdminUnCheck{
  
     public $ten_tai_khoan;
     public $mat_khau;
-    
     public $ho;
     public $ten;
     public $so_CCCD;
     public $dia_chi;
     public $sdt;
     public $email;
-
-
 
     public function __construct($ten_tai_khoan,$mat_khau,$ho,$ten,$so_CCCD,$dia_chi,$sdt,$email)
     {

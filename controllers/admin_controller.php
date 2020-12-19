@@ -12,9 +12,7 @@ class AdminController extends BaseController
 
   public function index(){
     session_start();
-    if (!isset($_SESSION['username'])) {
-        header('Location: index.php?controller=admin&action=login');
-    }
+    isLogin();
 
     $data = array(null) ;
     $this->render('adminIndex',$data);
@@ -28,26 +26,54 @@ class AdminController extends BaseController
     $data = array('admin' => $login);
     $this->render('adminlogin', $data);
   }
+
   public function showUncheckUsers(){
-    require_once('models/adminuncheck.php');
+    require_once('models/adminUncheckUsers.php');
     
-    session_start();
-    if (!isset($_SESSION['username'])) {
-        header('Location: index.php?controller=admin&action=login');
-    }
+    isLogin();
     
     $uncheckUsers = AdminUnCheck::showAll();
     $data = array('uncheckUsers'  => $uncheckUsers);
-    $this->render('adminuncheck',$data);
+    $this->render('adminUncheckUsers',$data);
   }
+
   public function showUncheckPosts(){
     require_once('models/post.php');
+    isLogin();
     $posts = Post::showAllForAdmin();
     $data = array('posts' => $posts);
     $this->render('adminUncheckPosts', $data);
   }
 
+  public function showUncheckComments(){
+    require_once('models/adminUncheckComments.php');
+    isLogin();
+    $uncheckComments = AdminUnCheckComments::showAll();
+    $data = array('uncheckComments'  => $uncheckComments);
+    $this->render('adminUncheckComments',$data);
+  }
+  
+  public function showUncheckReports(){
+    require_once('models/adminUncheckReports.php');
+    isLogin();
+    $uncheckReports = AdminUnCheckReports::showAll();
+    $data = array('uncheckReports'  => $uncheckReports);
+    $this->render('adminUncheckReports',$data);
+
+  }
+
   
 }
+
+function isLogin(){
+    session_start();
+    if (isset($_SESSION['username']) && isset($_SESSION['vai_tro'])) {
+      if ($_SESSION['username'] == "admin" && $_SESSION['vai_tro'] == "admin"){
+        return true;
+      }
+    }
+    return
+    header('Location: index.php?controller=admin&action=login');
+  }
 ?>
 ###controllers/admin_controller.php</br>

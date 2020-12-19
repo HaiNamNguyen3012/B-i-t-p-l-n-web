@@ -30,19 +30,24 @@ class PostsController extends BaseController
     $this->render('show', $data);
   }*/
   public function createPost(){
-    session_start();
-    if (!isset($_SESSION['username'])) {
-      header('Location: index.php?controller=login&action=index');
-    }
+      isLogin();
 
-    
       require_once('models/createpost.php');
       $this->folder = 'createpost';
       $post = CreatePost::insertPost();
       $data = array('createpost',$post);
       $this->render('createpost',$data);
     }
-    
+}
+function isLogin(){
+  session_start();
+  if (isset($_SESSION['username']) && isset($_SESSION['vai_tro'])) {
+    if ($_SESSION['vai_tro'] == "nguoi_cho_thue"){
+      return true;
+    }
+  }
+  return
+  header('Location: index.php?controller=error');
 }
 
 

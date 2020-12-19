@@ -38,7 +38,7 @@ class Post
                         nguoi_cho_thue.ho, nguoi_cho_thue.ten, 
                         tinh_thanh_pho.name as tentp, quan_huyen.name as tenqh,  xa_phuong_thi_tran.name as tenxp 
                         FROM phong 
-                        inner join nguoi_cho_thue on phong.id_nguoi_cho_thue = nguoi_cho_thue.id_nguoi_cho_thue
+                        inner join nguoi_cho_thue on phong.ten_tai_khoan = nguoi_cho_thue.ten_tai_khoan
                         inner join tinh_thanh_pho on  cast( tinh_thanh_pho.matp as int) = phong.id_tp
                         inner join quan_huyen on cast( quan_huyen.maqh as int) = phong.id_qh
                         inner join xa_phuong_thi_tran on cast( xa_phuong_thi_tran.xaid as int) = phong.id_xa
@@ -71,7 +71,7 @@ class Post
                         nguoi_cho_thue.ho, nguoi_cho_thue.ten, 
                         tinh_thanh_pho.name as tentp, quan_huyen.name as tenqh,  xa_phuong_thi_tran.name as tenxp 
                         FROM phong 
-                        inner join nguoi_cho_thue on phong.id_nguoi_cho_thue = nguoi_cho_thue.id_nguoi_cho_thue
+                        inner join nguoi_cho_thue on phong.ten_tai_khoan = nguoi_cho_thue.ten_tai_khoan
                         inner join tinh_thanh_pho on  cast( tinh_thanh_pho.matp as int) = phong.id_tp
                         inner join quan_huyen on cast( quan_huyen.maqh as int) = phong.id_qh
                         inner join xa_phuong_thi_tran on cast( xa_phuong_thi_tran.xaid as int) = phong.id_xa
@@ -92,6 +92,36 @@ class Post
 
     return $list;
   }
+  static function showByUser($ten_tai_khoan){
+    $list = [];
+    $db = DB::getInstance();
+    $req1 = $db->query("SELECT 
+                        phong.id_phong, phong.tieu_de, phong.gia, phong.loai_phong, phong.dien_tich, 
+                        nguoi_cho_thue.ho, nguoi_cho_thue.ten, 
+                        tinh_thanh_pho.name as tentp, quan_huyen.name as tenqh,  xa_phuong_thi_tran.name as tenxp 
+                        FROM phong 
+                        inner join nguoi_cho_thue on phong.ten_tai_khoan = nguoi_cho_thue.ten_tai_khoan
+                        inner join tinh_thanh_pho on  cast( tinh_thanh_pho.matp as int) = phong.id_tp
+                        inner join quan_huyen on cast( quan_huyen.maqh as int) = phong.id_qh
+                        inner join xa_phuong_thi_tran on cast( xa_phuong_thi_tran.xaid as int) = phong.id_xa
+                        where phong.duoc_duyet=1 and phong.ten_tai_khoan = '$ten_tai_khoan'
+                        LIMIT 20;");
+
+
+    foreach ($req1->fetchAll() as $item) {
+      $req2 = $db->prepare('SELECT * from hinh_anh where id_phong=:id_phong LIMIT 1');
+      $req2->execute(array('id_phong' => $item['id_phong']));
+      $img = $req2->fetch();
+      
+
+      $list[] = new Post($item['id_phong'], $item['tieu_de'],$item['gia'], $item['loai_phong'], $item['dien_tich'], 
+                         $item['ho'], $item['ten'], 
+                         $item['tentp'], $item['tenqh'], $item['tenxp'], $img['ten_hinh_anh']);    // biến $list lưu các giá trị truy vấn 
+    }
+
+    return $list;
+
+  }
 
 }
 function handlingPost($db){
@@ -102,7 +132,7 @@ else {
     foreach($_POST as $posts ){
         
         
-        $query="UPDATE phong SET duoc_duyet = '1' WHERE `phong`.`id_phong` = $posts;";
+        $query="UPDATE phong SET duoc_duyet = '1', thoi_gian_hien_thi=now() WHERE `phong`.`id_phong` = $posts;";
 
         try{
             $db->exec($query);

@@ -36,8 +36,9 @@ class Adminlogin{
                         //lưu vào session
                         session_start();
                         $_SESSION['username']=$admin->ten_tai_khoan;
+                        $_SESSION['vai_tro'] = "admin";
                         echo "đăng nhập thành công";
-                        header('Location: index.php?controller=admin&action=showUncheckUsers');
+                        header('Location: index.php?controller=admin');
                     }
                     else{
                         echo "mat khau ko dung";

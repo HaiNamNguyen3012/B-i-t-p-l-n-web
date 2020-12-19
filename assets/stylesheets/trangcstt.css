@@ -1,0 +1,63 @@
+nav{
+    height: 40px;
+}
+.main-container{
+    background-color: #f1f1f1;
+    line-height: normal;
+    width: 100%;
+   
+}
+.container.cstt{
+    margin-right: auto;
+    margin-left: auto;
+    width: 700px;
+}
+.cstt{
+    background-color: #ffff;
+}
+.title{
+    padding:10px 8px;
+    font-weight: 700;
+    margin-top:0;
+    margin-bottom: 0;
+    border-bottom: 1px solid #ddd;
+    font-size: 20px;
+}
+.information {
+    padding-top:15px;
+}
+.col-xs-12{
+    padding-left:30px ;
+    padding-right: 30px;
+}
+label {
+    font-weight: 700;
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+.form-control:hover{
+    background-color: #e6e6e6;
+}
+.btn{
+    text-align: center;
+    line-height: 1.8;
+    min-width: 14px;
+    border-radius: 20px;
+    padding: 4px 10px;
+    width: 250px;
+    border:1px solid #d7d9dc ;
+    margin-bottom: 40px;
+    margin-left: 200px;
+    margin-top: 20px;
+   
+}
+.col-xs-12.doipassword{
+    padding-top:15px;
+}
+.field-icon{
+    float: right;
+    position: relative;
+    margin-right: 25px;
+    margin-top:-25px;
+    z-index:2;
+}

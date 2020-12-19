@@ -197,6 +197,7 @@
   
                        ';*/?>
                        <?php
+                        var_dump($post_details);
                         echo '
                         <h4>'.$post_details->tieu_de.'</h4>
                         <div class="dientich-va-gia">
@@ -244,7 +245,7 @@
                             </div>
                             <div class="center"><?php echo $post_details->ho.' '.$post_details->ten; ?></div>
                             <div class="right">
-                                <a href="../thongtintk/cstt.html">Xem trang</a>
+                                <a href="./index.php?controller=info&action=showInfo&username=<?php echo $post_details->ten_tai_khoan; ?>">Xem trang</a>
                             </div>
                         </div>
                     </div>

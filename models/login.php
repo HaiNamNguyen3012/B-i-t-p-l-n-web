@@ -45,6 +45,7 @@ class Login{
                         //lưu vào session
                         session_start();
                         $_SESSION['username']=$user->ten_tai_khoan;
+                        $_SESSION['vai_tro'] =$user->vai_tro;
                         echo "đăng nhập thành công";
                         header('Location: index.php?controller=posts');
                     }
