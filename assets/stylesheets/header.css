@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+
+/* header */
+
+
+/* up */
+
+header {
+    height: 125px;
+    background: #FFBA00;
+    text-align: none;
+}
+
+header .up {
+    height: 65px;
+}
+
+header .up .left h1 {
+    padding-top: 10px;
+    text-align: center;
+}
+
+header .up .left h1 a {
+    color: #F2F2F2;
+    text-decoration: none;
+}
+
+header .up .left h1 a:hover {
+    color: #F2F2F2;
+    text-decoration: none;
+}
+
+header .up .right ul {
+    display: flex;
+    flex-direction: row;
+}
+
+header .up .right ul li {
+    padding: 17px 30px;
+    list-style-type: none;
+}
+
+header .up .right ul li a {
+    font-size: 20px;
+    font-weight: 900;
+    color: #0D0D0D;
+}
+
+header .up .right ul li a:hover {
+    font-size: 20px;
+    font-weight: 900;
+    color: #F2F2F2;
+}
+
+
+/* header down */
+
+header .down {
+    height: 60px;
+}
+
+
+/* header down left */
+
+header .down .left #search {
+    width: 90%;
+    padding: 7px;
+    border: none;
+    border-radius: 7px;
+    margin-left: 5%;
+}
+
+header .down .left #search:focus {
+    outline: none;
+}
+
+header .down .left #icon-search {
+    position: absolute;
+    margin-left: -20px;
+    margin-top: 7px;
+}
+
+
+/* header down center */
+
+header .down .center a {
+    color: #0D0D0D;
+    border: 2px solid black;
+    border-radius: 4px;
+    padding: 10px;
+}
+
+header .down .center a:hover {
+    color: #f2f2f2;
+    border: 2px solid #f2f2f2;
+    border-radius: 4px;
+    padding: 10px;
+}
+
+header .down .center a i {
+    margin-top: 13px;
+}
+
+
+/* header down right */
+
+header .down .right {
+    text-align: center;
+    height: 45px;
+    background: #fc9807;
+    padding-top: 7px;
+}
+
+header .down .right a {
+    color: #f2f2f2;
+    font-weight: 900;
+    font-size: 20px;
+}
+
+header .down .right a {
+    color: #f2f2f2;
+    font-weight: 900;
+    font-size: 20px;
+}

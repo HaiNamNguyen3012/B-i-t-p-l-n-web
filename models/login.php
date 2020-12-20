@@ -1,4 +1,3 @@
-#models/login.php</br>
 <?php
 
 class Login{
@@ -43,8 +42,11 @@ class Login{
                 
                     if(password_verify($user->mat_khau,$info['mat_khau'])){
                         //lưu vào session
-                        session_start();
+                        if (session_status() == PHP_SESSION_NONE) {
+                            session_start();
+                        }
                         $_SESSION['username']=$user->ten_tai_khoan;
+                        $_SESSION['vai_tro'] =$user->vai_tro;
                         echo "đăng nhập thành công";
                         header('Location: index.php?controller=posts');
                     }
@@ -67,4 +69,3 @@ function enoughInfo(){
         return (isset($_POST['user-name'])&&isset($_POST['password'])&&isset($_POST['users']));
     }
     ?>
-###models/login.php</br>

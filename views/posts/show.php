@@ -1,4 +1,3 @@
-# views/posts/show.php</br>
 
 <?php
   echo "Tiêu đề: $post->title";
@@ -7,4 +6,4 @@
   echo "</br>";
 ?>
 
-### views/posts/show.php</br>
+

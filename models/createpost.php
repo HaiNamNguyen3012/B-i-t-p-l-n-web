@@ -1,4 +1,3 @@
-#models/createpost.php
 <?php
 
 class CreatePost
@@ -76,7 +75,7 @@ static function insertPost(){
       imageHandling($db,$id);
 
 
-      $query="INSERT INTO phong (id_phong, id_nguoi_cho_thue, dia_chi, id_xa, id_qh, id_tp, gan_dia_diem, loai_phong, so_luong_phong, gia, tinh_theo, dien_tich,
+      $query="INSERT INTO phong (id_phong, ten_tai_khoan, dia_chi, id_xa, id_qh, id_tp, gan_dia_diem, loai_phong, so_luong_phong, gia, tinh_theo, dien_tich,
                            thoi_gian_hien_thi, thoi_gian_dang_bai, duoc_duyet, duoc_thue, tieu_de, noi_dung, 
                            chung_chu, phong_tam_chung, nong_lanh, phong_bep, dieu_hoa, ban_cong, dien_nuoc, tu_lanh, may_giat, giuong_tu) 
                 VALUES (NULL, '$post->nguoi_cho_thue', '$post->dia_chi', '$post->xa_phuong', '$post->quan_huyen', '$post->thanh_pho', '$post->gan_dia_diem', '$post->loai_phong', '$post->so_luong_phong', '$post->gia', '$post->tinh_theo', '$post->dien_tich',
@@ -155,4 +154,3 @@ function insertImageToDb($db,$id_phong,$ten_anh){
 }
 
 ?>
-###models/createpost.php

@@ -1,4 +1,3 @@
-# controllers/post_details_controller.php</br>
 <?php
 require_once('controllers/base_controller.php');
 require_once('models/post_detail.php');
@@ -18,8 +17,10 @@ class PostDetailsController extends BaseController
   }*/
   public function showPost()
   {
+    if (session_status() == PHP_SESSION_NONE) {
+      session_start();
+  }
     
-    echo "id = ".$_GET['id'];
     $post_details = PostDetail::find($_GET['id']);
     $data = array('post_details' => $post_details);
     $this->render('show', $data);
@@ -28,4 +29,3 @@ class PostDetailsController extends BaseController
 
 
 ?>
-### controllers/post_details_controller.php</br>

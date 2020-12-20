@@ -1,4 +1,4 @@
-# controllers/base_controller.php</br>
+
 
 <?php
 class BaseController
@@ -10,7 +10,7 @@ class BaseController
   {
     // Kiểm tra file gọi đến có tồn tại hay không?
     $view_file = 'views/' . $this->folder . '/' . $file . '.php';
-    echo 'view_file='.$view_file.'</br>'; 
+     
     if (is_file($view_file)) {
       // Nếu tồn tại file đó thì tạo ra các biến chứa giá trị truyền vào lúc gọi hàm
       extract($data); // tách array ra thành các biến riêng biệt VD: $data = array('name' =>'Sang Beo','age' =>22); ====> $name='Sang Beo' , $age=22
@@ -30,4 +30,3 @@ class BaseController
 }
 ?>
 
-### controllers/base_controller.php</br>

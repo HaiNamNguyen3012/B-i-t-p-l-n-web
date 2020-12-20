@@ -1,0 +1,92 @@
+/* footer */
+
+footer p {
+    color: #ffffff;
+    text-align: center;
+    font-size: 24px;
+    padding-top: 20px;
+}
+
+footer.container-fluid {
+    width: 100%;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (min-width: 768px) {
+    .appWrapper-DesktopFooter {
+        display: block;
+    }
+}
+
+.appWrapper-DesktopFooter {
+    background-color: #ffff;
+    border-top: 20px solid #f1f1f1;
+    font-size: 12;
+    width: 100%;
+}
+
+.appWrapper-DesktopFooter-container-top {
+    display: grid;
+    grid-template-columns: repeat(3, 2fr);
+    padding: 12px 12px 12px 100px;
+}
+
+.appWrapper-DesktopFooter-heading {
+    font-size: 14px;
+    margin-bottom: 12px;
+    font-weight: bold;
+    font-style: normal;
+    line-height: 1.29;
+    text-transform: uppercase;
+}
+
+.appWrapper-DesktopFooter-item {
+    text-align: left;
+    padding: 20px;
+}
+
+.appWrapper-Footer-ul {
+    list-style-type: none;
+    margin: 0;
+    display: flex;
+    padding: 0;
+    flex-direction: column;
+}
+
+.appWrapper-Footer li {
+    font-size: 14px;
+    margin: 0;
+    line-height: 1.29;
+    padding: 0;
+    margin-bottom: 12px;
+}
+
+.appWrapper-Footer a {
+    color: #4a4a4a;
+    text-decoration: none;
+}
+
+.appWrapper-Footer a:hover {
+    color: black;
+}
+
+.approw {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.appWrapper-Footer-icon {
+    width: 32px;
+    height: 32px;
+    margin-right: 5px;
+}
+
+.appWrapper-DesktopFooter-container-bottom {
+    color: #9b9b9b;
+    line-height: 1.5;
+    text-align: center;
+}

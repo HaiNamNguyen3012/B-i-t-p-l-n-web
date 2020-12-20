@@ -1,4 +1,3 @@
-#controllers/login_controller.php</br>
 
 <?php
 require_once('controllers/base_controller.php');
@@ -22,4 +21,3 @@ class LoginController extends BaseController
 }
 ?>
 
-###controllers/login_controller.php</br>

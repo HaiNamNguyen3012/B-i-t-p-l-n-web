@@ -49,7 +49,7 @@
             </div>
         </section>
     </div>
-    <?php var_dump($_POST);?>
+    
 </body>
 
 </html>

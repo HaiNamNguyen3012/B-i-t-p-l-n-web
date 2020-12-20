@@ -1,4 +1,4 @@
-# connection.php</br>
+
 
 <?php
 class DB // kết nối với database
@@ -21,4 +21,4 @@ class DB // kết nối với database
 
 ?>
 
-### connection.php</br>
+

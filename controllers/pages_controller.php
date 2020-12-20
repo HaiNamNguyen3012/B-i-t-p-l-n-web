@@ -1,4 +1,3 @@
-# controllers/pages_controller.php</br>
 
 <?php
 require_once('controllers/base_controller.php');
@@ -10,14 +9,7 @@ class PagesController extends BaseController
     $this->folder = 'pages';
   }
 
-  public function home()
-  {
-    $data = array(
-      'name' => 'Sang Beo',
-      'age' => 22
-    );
-    $this->render('home', $data);
-  }
+  
 
   public function error()
   {
@@ -25,4 +17,3 @@ class PagesController extends BaseController
   }
 }
 ?>
-### controllers/pages_controller.php</br>

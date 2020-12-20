@@ -1,4 +1,3 @@
-#views/admin/adminlogin.php</br>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -43,4 +42,3 @@
 </body>
 
 </html>
-###views/admin/adminlogin.php</br>

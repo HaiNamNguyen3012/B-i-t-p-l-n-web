@@ -1,4 +1,3 @@
-#models/adminlogin.php</br>
 <?php
 
 class Adminlogin{
@@ -12,7 +11,7 @@ class Adminlogin{
     }    
     static function checkUser(){
         
-        var_dump($_POST);
+        
         if(enoughInfo()){
             $db = DB::getInstance();
            // $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -34,10 +33,13 @@ class Adminlogin{
                         // them mat khau
                         $admin->mat_khau==$info['mat_khau']){
                         //lưu vào session
-                        session_start();
+                        if (session_status() == PHP_SESSION_NONE) {
+                            session_start();
+                        }
                         $_SESSION['username']=$admin->ten_tai_khoan;
+                        $_SESSION['vai_tro'] = "admin";
                         echo "đăng nhập thành công";
-                        header('Location: index.php?controller=admin&action=showUncheckUsers');
+                        header('Location: index.php?controller=admin');
                     }
                     else{
                         echo "mat khau ko dung";
@@ -57,4 +59,3 @@ function enoughInfo(){
         return (isset($_POST['user-name'])&&isset($_POST['password']));
     }
     ?>
-###models/adminlogin.php</br>

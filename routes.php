@@ -1,4 +1,4 @@
-# routes.php</br>
+
 
 <?php
 $controllers = array(
@@ -7,12 +7,13 @@ $controllers = array(
   'post_details' => ['showPost'] ,
   'register' => ['index'],
   'login'  => ['index'],
-  'admin' =>  ['login','showUncheckUsers','index','showUncheckPosts'],
+  'admin' =>  ['login','showUncheckUsers','index','showUncheckPosts','showUncheckComments','showUncheckReports'],
+  'info'  =>  ['editInfo','showInfo'],
+  'signout' => ['index'],
   
   // bổ sung thêm
 ); // Các controllers trong hệ thống và các action có thể gọi ra từ controller đó.
-echo 'controller :'.$controller.'<br>';
-echo 'action :'.$action.'<br>';
+
 // Nếu các tham số nhận được từ URL không hợp lệ (không thuộc list controller và action có thể gọi
 // thì trang báo lỗi sẽ được gọi ra.
 if (!array_key_exists($controller, $controllers) || !in_array($action, $controllers[$controller])) { // !$controller!='home'||!$action!='home','error'
@@ -21,8 +22,7 @@ if (!array_key_exists($controller, $controllers) || !in_array($action, $controll
   $controller = 'pages';
   $action = 'error';
 }
-echo 'controller :'.$controller.'<br>';
-echo 'action :'.$action.'<br>';
+
 
 // Nhúng file định nghĩa controller vào để có thể dùng được class định nghĩa trong file đó
 include_once('controllers/' . $controller . '_controller.php');
@@ -40,4 +40,4 @@ $controller->$action();
 
 ?>
 
-### routes.php</br>
+
