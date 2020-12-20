@@ -16,7 +16,7 @@
         <title>Trang thông tin cá nhân</title>
     </head>
     <body> 
-            <header class="container-fluid">
+         <!--   <header class="container-fluid">
                 <div class="container">
                     <div class="row up">
                         <div class="col-sm-4 left">
@@ -71,6 +71,7 @@
                     </div>
                 </div>
             </header>
+-->
             <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
                 <a class="nav-link" href="../nguoichothue/nguoichothue.html">TT24</a>
                 <a class="nav-link" href="#"> >> Thông tin cá nhân</a>
@@ -85,7 +86,7 @@
                                 <form method="post" action="" class="needs-validation" novalidate>
                                     <div class="form-group">
                                       <label for="ten_tai_khoan">Tên đăng nhập</label>
-                                      <input type="text" class="form-control" id="ten_tai_khoan" name="ten_tai_khoan" value="<?php echo $info->ten_tai_khoan ?>" required>
+                                      <input type="text" class="form-control" id="ten_tai_khoan" name="ten_tai_khoan" value="<?php echo $info->ten_tai_khoan ?>" required readonly>
                                       <div class="valid-feedback">Hợp lệ</div>
                                       <div class="invalid-feedback">Vui lòng nhập thông tin</div>
                                     </div>

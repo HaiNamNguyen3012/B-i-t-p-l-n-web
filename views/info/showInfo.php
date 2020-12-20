@@ -14,7 +14,7 @@
         <title>Trang thông tin cá nhân</title>
     </head>
     <body> 
-            <header class="container-fluid">
+        <!---    <header class="container-fluid">
                 <div class="container">
                     <div class="row up">
                         <div class="col-sm-4 left">
@@ -69,6 +69,7 @@
                     </div>
                 </div>
             </header>
+-->
             <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
                 <a class="nav-link" href="../nguoichothue/nguoichothue.html">TT24</a>
                 <a class="nav-link" href="#"> >> Trang cá nhân của tan</a>
@@ -88,7 +89,9 @@
                         </div>
                         <div class="col-md-9 col-sm-12 info">
                             <?php 
-                            session_start();
+                            if (session_status() == PHP_SESSION_NONE) {
+                                session_start();
+                            }
                             
                             if($info->ten_tai_khoan == $_SESSION['username']){
                                 echo
@@ -154,7 +157,11 @@
                             </div>
                             <a href="./index.php?controller=info&action=editInfo" style=text-decoration:none;>
                                 <button type="button" class="btn btn-block">Chỉnh sửa thông tin</button>
-                            </a>';
+                            </a>
+                            <a href="./index.php?controller=signout" style=text-decoration:none;>
+                                <button type="button" class="btn btn-block">Đăng xuất</button>
+                            </a>'
+                            ;
                             }
                             else{
                                 echo

@@ -1,4 +1,3 @@
-#views/createpost/createpost.php
 
 <!DOCTYPE html>
 <html lang="en">
@@ -210,5 +209,4 @@
 </body>
 
 </html>
-###views/createpost/createpost.php
 

@@ -1,4 +1,4 @@
-#controllers/admin_controller.php</br>
+
 <?php
 require_once('controllers/base_controller.php');
 
@@ -11,7 +11,7 @@ class AdminController extends BaseController
   }
 
   public function index(){
-    session_start();
+    
     isLogin();
 
     $data = array(null) ;
@@ -28,11 +28,11 @@ class AdminController extends BaseController
   }
 
   public function showUncheckUsers(){
-    require_once('models/adminUncheckUsers.php');
+    require_once('models/info.php');
     
     isLogin();
     
-    $uncheckUsers = AdminUnCheck::showAll();
+    $uncheckUsers = Info::showAll();
     $data = array('uncheckUsers'  => $uncheckUsers);
     $this->render('adminUncheckUsers',$data);
   }
@@ -46,17 +46,17 @@ class AdminController extends BaseController
   }
 
   public function showUncheckComments(){
-    require_once('models/adminUncheckComments.php');
+    require_once('models/comments.php');
     isLogin();
-    $uncheckComments = AdminUnCheckComments::showAll();
+    $uncheckComments = Comments::showAll();
     $data = array('uncheckComments'  => $uncheckComments);
     $this->render('adminUncheckComments',$data);
   }
   
   public function showUncheckReports(){
-    require_once('models/adminUncheckReports.php');
+    require_once('models/reports.php');
     isLogin();
-    $uncheckReports = AdminUnCheckReports::showAll();
+    $uncheckReports = Reports::showAll();
     $data = array('uncheckReports'  => $uncheckReports);
     $this->render('adminUncheckReports',$data);
 
@@ -66,7 +66,9 @@ class AdminController extends BaseController
 }
 
 function isLogin(){
+  if (session_status() == PHP_SESSION_NONE) {
     session_start();
+}
     if (isset($_SESSION['username']) && isset($_SESSION['vai_tro'])) {
       if ($_SESSION['username'] == "admin" && $_SESSION['vai_tro'] == "admin"){
         return true;
@@ -76,4 +78,4 @@ function isLogin(){
     header('Location: index.php?controller=admin&action=login');
   }
 ?>
-###controllers/admin_controller.php</br>
+

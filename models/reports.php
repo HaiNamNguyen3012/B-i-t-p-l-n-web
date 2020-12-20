@@ -1,7 +1,6 @@
-#models/adminuncheck.php</br>
 <?php
 
-class AdminUnCheckReports{
+class Reports{
     public $id_bao_cao;
     public $id_nguoi_dung;
     public $id_phong_tro;
@@ -39,7 +38,7 @@ class AdminUnCheckReports{
 
         
         foreach ($req->fetchAll() as $item) {
-            $list[] = new AdminUnCheckReports($item['id_bao_cao'],$item['id_nguoi_dung'], $item['id_phong_tro'],$item['li_do'] ,$item['noi_dung'], 
+            $list[] = new Reports($item['id_bao_cao'],$item['id_nguoi_dung'], $item['id_phong_tro'],$item['li_do'] ,$item['noi_dung'], 
                              $item['thoi_gian_bao_cao']);    // biến $list lưu các giá trị truy vấn 
         }
 
@@ -71,4 +70,3 @@ function handlingReport($db){
     
 }
 ?>
-###models/adminuncheck.php</br>

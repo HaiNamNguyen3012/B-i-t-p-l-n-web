@@ -13,7 +13,7 @@
 </head>
 
 <body>
-    <header class="container-fluid">
+  <!--  <header class="container-fluid">
         <div class="container">
             <div class="row up">
                 <div class="col-sm-4 left">
@@ -66,6 +66,7 @@
             </div>
         </div>
     </header>
+-->
     <div class="content container-fluid">
         <div class="information-header">
             <h4>Thông tin về phòng trọ</h4>
@@ -86,7 +87,7 @@
                                 <div class="numbertext"></div>
                                 <img src="./assets/images/phong_tro/'.$hinh_anh['ten_hinh_anh'].'" alt="">
 
-                                <div class="text">Ảnh '.$i.'</div>
+                                <div class="text">'.$post_details->thoi_gian_hien_thi.' trước</div>
                             </div>';
                             $i++;
                         }
@@ -197,7 +198,7 @@
   
                        ';*/?>
                        <?php
-                        var_dump($post_details);
+                        
                         echo '
                         <h4>'.$post_details->tieu_de.'</h4>
                         <div class="dientich-va-gia">
@@ -252,6 +253,7 @@
                 </div>
             </div>
         </div>
+        <!--
         <footer class="container-fluid">
             <div class="appWrapper-DesktopFooter">
                 <div class="appWrapper-DesktopFooter-container">
@@ -292,6 +294,7 @@
                 </div>
             </div>
         </footer>
+                    -->
         <script src="./assets/javascripts/thongtinphongtronguoichothue.js"></script>
 </body>
 

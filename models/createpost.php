@@ -1,4 +1,3 @@
-#models/createpost.php
 <?php
 
 class CreatePost
@@ -155,4 +154,3 @@ function insertImageToDb($db,$id_phong,$ten_anh){
 }
 
 ?>
-###models/createpost.php

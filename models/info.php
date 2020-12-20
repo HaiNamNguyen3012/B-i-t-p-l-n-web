@@ -1,4 +1,3 @@
-# models/post_detail.php</br>
 <?php
   
     class Info {
@@ -29,12 +28,12 @@
             
             $infoUser = $db->query($query)->fetch();
             
-            if(is_null($infoUser)){
+            if(empty($infoUser)){
                 $query = "SELECT * FROM nguoi_thue_phong WHERE ten_tai_khoan='$username'";
                 
                 $infoUser = $db->query($query)->fetch();
             }
-            var_dump($infoUser);
+            
 
             if(!is_null($infoUser)){
                 return new Info($infoUser['ten_tai_khoan'],$infoUser['ho'],$infoUser['ten'],
@@ -64,6 +63,33 @@
 
             return null;     
         }
+        static function showAll(){          // admin
+      
+            $list = [];
+            $db = DB::getInstance();
+    
+    
+            handlingUser($db);
+    
+    
+            $req = $db->query('SELECT 
+                                *
+                                FROM nguoi_cho_thue 
+                                where duoc_duyet = 0
+                             /*   LIMIT 20  */
+                                ;');
+    
+        
+    
+            
+            foreach ($req->fetchAll() as $item) {
+                $list[] = new Info($item['ten_tai_khoan'],$item['ho'], $item['ten'], $item['so_CCCD'], 
+                                $item['dia_chi'], $item['sdt'], 
+                                $item['email']);    // biến $list lưu các giá trị truy vấn 
+            }
+    
+            return $list;
+            }
         
     }
     
@@ -96,6 +122,27 @@
         $then = mb_substr($string, 1, null, "UTF-8");
         return mb_strtoupper($firstChar, "UTF-8") . $then;
     }
+    function handlingUser($db){
+        if(empty($_POST)){
+            echo "Khong can xu li";
+        }
+        else {
+            foreach($_POST as $user ){
+                
+                $query="UPDATE nguoi_cho_thue SET duoc_duyet = 1 WHERE ten_tai_khoan = '$user';";
+               
+    
+                try{
+                    $db->exec($query);
+                    echo "New record created successfully";
+                  }
+                  catch(PDOException $e){
+                    echo $query . "<br>" . $e->getMessage();
+                  }
+    
+            }
+        }
+        
+    }
 
 ?>
-### models/post_detail.php</br>

@@ -1,4 +1,3 @@
-# controllers/pages_controller.php</br>
 
 <?php
 require_once('controllers/base_controller.php');
@@ -18,4 +17,3 @@ class PagesController extends BaseController
   }
 }
 ?>
-### controllers/pages_controller.php</br>

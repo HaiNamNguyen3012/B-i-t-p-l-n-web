@@ -63,7 +63,6 @@
    
    
    ';
-   var_dump($_POST);
-    var_dump($post_details->cac_hinh_anh);
+   
 ?>
 ###views/post_details_details/show.php

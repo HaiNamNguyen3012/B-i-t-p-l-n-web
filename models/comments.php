@@ -1,7 +1,6 @@
-#models/adminuncheck.php</br>
 <?php
 
-class AdminUnCheckComments{
+class Comments{
  
     public $id_nguoi_dung;
     public $id_binh_luan;
@@ -41,7 +40,7 @@ class AdminUnCheckComments{
 
         
         foreach ($req->fetchAll() as $item) {
-            $list[] = new AdminUnCheckComments($item['id_nguoi_dung'], $item['id_binh_luan'],$item['id_phong_tro'], $item['noi_dung'], $item['duoc_duyet'], 
+            $list[] = new Comments($item['id_nguoi_dung'], $item['id_binh_luan'],$item['id_phong_tro'], $item['noi_dung'], $item['duoc_duyet'], 
                             $item['may_sao'], $item['thoi_gian_binh_luan']);    // biến $list lưu các giá trị truy vấn 
         }
 
@@ -73,4 +72,3 @@ function handlingComment($db){
     
 }
 ?>
-###models/adminuncheck.php</br>

@@ -1,4 +1,3 @@
-# models/post_detail.php</br>
 <?php
     require_once('models/post.php');
     class PostDetail extends Post{
@@ -7,7 +6,7 @@
         public $gan_dia_diem;
         public $so_luong_phong;
         public $tinh_theo;
-        public $thoi_gian_dang_bai;
+        public $thoi_gian_hien_thi;
         public $duoc_thue;
         public $sdt;
         public $ten_tai_khoan;
@@ -24,7 +23,7 @@
         public $cac_hinh_anh=array();
 
         function __construct($id_phong, $tieu_de, $noi_dung, $gia, $loai_phong, $dien_tich, $dia_chi, $gan_dia_diem, 
-                             $so_luong_phong, $tinh_theo, $thoi_gian_dang_bai, $duoc_thue,
+                             $so_luong_phong, $tinh_theo, $thoi_gian_hien_thi, $duoc_thue,
                              $ho,$ten, $sdt, $ten_tai_khoan , $tentp,$tenqh,$tenxp,
                              $chung_chu, $phong_tam_chung,$nong_lanh, $phong_bep, $dieu_hoa, $ban_cong, $dien_nuoc, $tu_lanh, $may_giat, $giuong_tu,
                              $cac_hinh_anh){
@@ -38,7 +37,7 @@
             $this->gan_dia_diem = $gan_dia_diem;
             $this->so_luong_phong = $so_luong_phong;
             $this->tinh_theo = $tinh_theo;
-            $this->thoi_gian_dang_bai = $thoi_gian_dang_bai;
+            $this->thoi_gian_hien_thi = $thoi_gian_hien_thi;
             $this->duoc_thue = $duoc_thue;
             $this->ho = $ho;
             $this->ten = $ten;
@@ -66,7 +65,7 @@
             $req = $db->prepare('SELECT 
                                         phong.id_phong, phong.tieu_de,phong.noi_dung, 
                                         phong.gia, phong.loai_phong, phong.dien_tich, phong.dia_chi,phong.gan_dia_diem,
-                                        phong.so_luong_phong,phong.tinh_theo,phong.thoi_gian_dang_bai,phong.duoc_thue,
+                                        phong.so_luong_phong,phong.tinh_theo,phong.thoi_gian_hien_thi,phong.duoc_thue,
                                         nguoi_cho_thue.ho, nguoi_cho_thue.ten, nguoi_cho_thue.sdt, nguoi_cho_thue.ten_tai_khoan,
                                         tinh_thanh_pho.name as tentp, quan_huyen.name as tenqh,  xa_phuong_thi_tran.name as tenxp,
                                         phong.chung_chu,phong.phong_tam_chung,phong.nong_lanh,phong.phong_bep,phong.dieu_hoa,phong.ban_cong,
@@ -91,7 +90,7 @@
             
             $item = $req->fetch();
             
-            var_dump($item);
+            
 
             if (isset($item['id_phong'])) {
                 $item = handlingRawData($item);
@@ -99,7 +98,7 @@
 
                 return new PostDetail($item['id_phong'], $item['tieu_de'], $item['noi_dung'], 
                             $item['gia'], $item['loai_phong'], $item['dien_tich'], $item['dia_chi'], $item['gan_dia_diem'],
-                            $item['so_luong_phong'], $item['tinh_theo'], $item['thoi_gian_dang_bai'], $item['duoc_thue'],
+                            $item['so_luong_phong'], $item['tinh_theo'], $item['thoi_gian_hien_thi'], $item['duoc_thue'],
                             $item['ho'], $item['ten'], $item['sdt'], $item['ten_tai_khoan'] , $item['tentp'],$item['tenqh'],$item['tenxp'],
                             $item['chung_chu'], $item['phong_tam_chung'],$item['nong_lanh'],$item['phong_bep'],$item['dieu_hoa'],$item['ban_cong'],
                             $item['dien_nuoc'],$item['tu_lanh'],$item['may_giat'],$item['giuong_tu'],$img
@@ -118,7 +117,9 @@
         $item['gan_dia_diem']= mb_ucfirst($item['gan_dia_diem']);
         $item['dien_nuoc'] = "Điện nước: ".mb_ucfirst($item['dien_nuoc']);
         $item['sdt'] = "Số điện thoại: ".$item['sdt'];
-        $item['thoi_gian_dang_bai'];
+
+        $item['thoi_gian_hien_thi'] = handlingTime($item['thoi_gian_hien_thi']);
+        
         
         if($item['chung_chu']==1) $item['chung_chu'] = "Chung chủ";
         else $item['chung_chu'] = "Không chung chủ";
@@ -165,4 +166,3 @@
     }
 
 ?>
-### models/post_detail.php</br>

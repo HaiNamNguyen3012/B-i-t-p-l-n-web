@@ -16,7 +16,7 @@
                 <div class="signup-content">
                     <form action="" method="post" id="signup-form" class="signup-form" name="signup-form">
                         <h1>Đăng ký</h1>
-                        <?php var_dump($_POST); ?>
+                        
                         <div class="form-group">
                             <input type="text" class="form-input info" name="user-name" id="user-name" placeholder="Tên đăng nhập" value="<?php if(isset($_POST['user-name'])) echo htmlspecialchars($_POST['user-name'] ?? '', ENT_QUOTES); ?>" required/>
                             <p id="user-name1"></p>

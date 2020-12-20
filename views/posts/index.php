@@ -14,6 +14,7 @@
 </head>
 
 <body>
+    <!--
     <header class="container-fluid">
         <div class="container">
             <div class="row up">
@@ -67,7 +68,7 @@
             </div>
         </div>
     </header>
-
+-->
     <div class="container-fluid content">
         <div class="container main-content-header">
             <h4>Các phòng tôi cho thuê</h4>
@@ -94,7 +95,7 @@
                         <h4>'.($post->gia/1000000).' triệu</h4>
                         <div id="thong-tin-co-ban1">
                             <p id="infor-owner1">Người đăng: '.$post->ho.' '.$post->ten.'</p>
-                            <p id="time1">Thời gian đăng</p>
+                            <p id="time1">'.$post->thoi_gian_hien_thi.' trước</p>
                             <p id="city1">'.$post->tentp.', '.$post->tenqh.'</p>
                         </div>
                     </div>
@@ -126,6 +127,7 @@
             
         </div>
     </div>
+    <!--
     <footer class="container-fluid">
         <div class="appWrapper-DesktopFooter">
             <div class="appWrapper-DesktopFooter-container">
@@ -166,6 +168,7 @@
             </div>
         </div>
     </footer>
+                -->
 </body>
 
 </html>

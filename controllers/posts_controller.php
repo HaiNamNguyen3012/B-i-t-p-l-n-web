@@ -1,4 +1,3 @@
-# controllers/posts_controller.php</br>
 
 <?php
 require_once('controllers/base_controller.php');
@@ -13,22 +12,15 @@ class PostsController extends BaseController
 
   public function index()
   {
-    session_start();
-    //tiến hành kiểm tra là người dùng đã đăng nhập hay chưa
-    //nếu chưa, chuyển hướng người dùng ra lại trang đăng nhập
- /*   if (!isset($_SESSION['username'])) {
-      header('Location: index.php?controller=login&action=index');
-    }*/
+    if (session_status() == PHP_SESSION_NONE) {
+      session_start();
+  }
+    
     $posts = Post::showAllForUser();
     $data = array('posts' => $posts);
     $this->render('index', $data);
   }
-  /*public function showPost()
-  {
-    $post = Post::find($_GET['id']);
-    $data = array('post' => $post);
-    $this->render('show', $data);
-  }*/
+  
   public function createPost(){
       isLogin();
 
@@ -40,7 +32,9 @@ class PostsController extends BaseController
     }
 }
 function isLogin(){
-  session_start();
+  if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
   if (isset($_SESSION['username']) && isset($_SESSION['vai_tro'])) {
     if ($_SESSION['vai_tro'] == "nguoi_cho_thue"){
       return true;
@@ -58,4 +52,3 @@ function isLogin(){
 
 
 
-### controllers/posts_controller.php</br>

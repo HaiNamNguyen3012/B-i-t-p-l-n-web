@@ -1,4 +1,3 @@
-#controllers/info_controller.php</br>
 <?php
 require_once('controllers/base_controller.php');
 
@@ -35,7 +34,10 @@ class InfoController extends BaseController
 }
 
 function isLogin(){
+  if (session_status() == PHP_SESSION_NONE) {
     session_start();
+}
+    
     if (isset($_SESSION['username']) && isset($_SESSION['vai_tro'])) {
       
         return true;
@@ -45,4 +47,3 @@ function isLogin(){
     header('Location: index.php?controller=error');    
   }
 ?>
-###controllers/info_controller.php</br>

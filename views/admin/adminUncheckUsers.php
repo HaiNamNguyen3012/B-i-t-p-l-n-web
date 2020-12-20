@@ -1,4 +1,3 @@
-#views/admin/adminuncheck.php</br>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,7 +10,7 @@
         <table>
             <tr>
                 <th>Tên tài khoản</th>
-                <th>Mật khẩu</th>
+                
                 <th>Họ</th>
                 <th>Tên</th>
                 <th>Số căn cước công dân</th>
@@ -27,7 +26,7 @@
             echo '
             <tr>
                 <td>'.$uncheckUser->ten_tai_khoan.'</td>
-                <td>'.$uncheckUser->mat_khau.'</td>
+                
                 <td>'.$uncheckUser->ho.'</td>
                 <td>'.$uncheckUser->ten.'</td>
                 <td>'.$uncheckUser->so_CCCD.'</td>
@@ -41,7 +40,7 @@
             ?>
             <tr>
                 <td>huyvip2000ht</td>
-                <td>123123123123123123</td>
+                
                 <td>Trần </td>
                 <td>Huy</td>
                 <td>234567844234567844</td>
@@ -52,7 +51,7 @@
             </tr>
             <tr>
                 <td>huyvip2000ht</td>
-                <td>123123123123123123</td>
+                
                 <td>Trần </td>
                 <td>Huy</td>
                 <td>234567844234567844</td>
@@ -63,7 +62,7 @@
             </tr>
             <tr>
                 <td>huyvip2000ht</td>
-                <td>123123123123123123</td>
+                
                 <td>Trần </td>
                 <td>Huy</td>
                 <td>234567844234567844</td>
@@ -82,4 +81,3 @@
         ?>
 </body>
 </html>
-###views/admin/adminuncheck.php</br>
