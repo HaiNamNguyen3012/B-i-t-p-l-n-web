@@ -11,70 +11,108 @@
     <link rel="stylesheet" href="./assets/stylesheets/nguoichothue.css">
     <link rel="stylesheet" href="./dangtin.html">
     <title>Trang chủ</title>
+    <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+	<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 </head>
 
 <body>
-    <!--
-    <header class="container-fluid">
-        <div class="container">
-            <div class="row up">
-                <div class="col-sm-4 left">
-                    <h1>
-                        <a href="../nguoichothue/nguoichothue.html">TT24H</a>
-                    </h1>
+    <form method="get" action="" id="form">
+        <div class="filter container">
+            <div class="row filter-children">
+                <select id="controller" name="controller" style="display: none;">
+                    <option value="posts"></option>
+                </select>
+               <!-- <div class="col-sm-1 filter-children-children">
+                    <button>
+                        <i class="fas fa-filter"></i>
+                        <p>Lọc</p>
+                    </button>
+                </div>-->
+                
+                    <div class="col-sm-2 city">
+                        <select name="province" id="province" class="province">
+                                <option  style="display:none" disabled selected value>Nhập tỉnh thành phố</option>
+                                    <?php 
+                                    foreach($provinces as $province){
+                                    echo'
+                                    <option value="'.$province->matp.'">'.$province->name.'</option>'; 
+                                    }
+                                    ?>
+                        </select>
+                    </div>
+                    </div>
+                
+                
+                    <div class="col-sm-2 ">
+                        <select name="district" id="district" class ="district" >
+                                <option  style="display:none" disabled selected value>Nhập quận huyện</option>
+                        </select>
+                        
+                    </div>
+                
+                    <div class="col-sm-2 city">
+                        <select name="ward" id="ward" class = "ward">
+                            <option  style="display:none" disabled selected value>Nhập xã phường</option>
+                        </select>
+                        
+                    </div>
+                
+                <div class="col-sm-1 price">
+                    <select name="price" id="price">
+                        <option  style="display:none" disabled selected value>Nhập giá phòng</option>
+                        <option value="1">< 1 triệu</option>
+                        <option value="2">1 -> 2 triệu</option>
+                        <option value="3">2 -> 3 triệu</option>
+                        <option value="4">3 -> 4 triệu</option>
+                        <option value="5">4 -> 5 triệu</option>
+                        <option value="7">5 -> 7 triệu</option>
+                        <option value="10">7 -> 10 triệu</option>
+                        <option value="15">10 -> 15 triệu</option>
+                        <option value="25">15 -> 25 triệu</option>
+                        <option value="30">> 25 triệu</option>
+
+                    </select>
                 </div>
-                <div class="col-sm-8 right">
-                    <ul>
-                        <li>
-                            <a href="../nguoichothue/nguoichothue.html">
-                                <i class="fas fa-home">Trang chủ</i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="fas fa-pen-square">Chỉnh sửa bài đăng</i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="fas fa-comment-alt">Nhắn tin</i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="fas fa-bell">Thông báo</i>
-                            </a>
-                        </li>
-                    </ul>
+                <div class="col-sm-1 square">
+                    <select name="square" id="square">
+                        <option  style="display:none" disabled selected value>Nhập diện tích</option>
+                        <option value="10">< 10 m</option>
+                        <option value="12">10 -> 12 m</option>
+                        <option value="15">12 -> 15 m</option>
+                        <option value="20">15 -> 20 m</option>
+                        <option value="25">20 -> 25 m</option>
+                        <option value="30">25 -> 30 m</option>
+                        <option value="40">30 -> 40 m</option>
+                        <option value="50">40 -> 50 m</option>
+                        <option value="75">50 -> 75 m</option>
+                        <option value="100">> 75 m</option>
+
+                    </select>
                 </div>
-            </div>
-            <div class="row down">
-                <div class="col-sm-6 left">
-                    <input type="search" name="search" id="search" placeholder="Tìm kiếm">
-                    <span id="icon-search">
-                        <i class="fas fa-search"></i>
-                    </span>
+                <div class="col-sm-2 type-room">
+                    <select name="type_room" id="type_room">
+                        <option  style="display:none" disabled selected value>Nhập loại phòng</option>
+                        
+                        <option value="Phòng trọ">Phòng trọ</option>
+                        <option value="Chung cư mini">Chung cư mini</option>
+                        <option value="Nhà nguyên căn">Nhà nguyên căn</option>
+                        <option value="Chung cư nguyên căn">Chung cư nguyên căn</option>
+                    </select>
                 </div>
-                <div class="col-sm-2 center">
-                    <a href="../dangnhap/dangnhap.html">
-                        <i class="fas fa-user">Đăng nhập</i>
-                    </a>
-                </div>
-                <div class="col-sm-2 right">
-                    <a href="./dangtin.html">
-                        <i class="far fa-edit">Đăng tin</i>
-                    </a>
+                <div class="col-sm-2 submit">
+                    <input type="submit">
                 </div>
             </div>
         </div>
-    </header>
--->
-    <div class="container-fluid content">
+    </form>
+    <div class="container-fluid content"><!--
         <div class="container main-content-header">
             <h4>Các phòng tôi cho thuê</h4>
-        </div>
+        </div>  -->
         <div class="container main-content">
         <?php
+            $i = 0;
+            if(count($posts) > 1){
             foreach ($posts as $post) {
             
                 echo 
@@ -100,75 +138,100 @@
                         </div>
                     </div>
                 </div>';
+                    
+                        if (++$i == (count($posts)-1)) break;
                     }
+                }
+                else {
+                    echo "Không có phòng nào phù hợp yêu cầu của bạn !!!";
+                }
+
+                   
             ?>
-            <!--
-            <div id="phong1">
-                <div class="left">Ảnh</div>
-                <div class="right">
-                    <div class="description-and-link-to-information-of-room">
-                        <div class="description">
-                            <h4>Miêu tả</h4>
-                        </div>
-                        <div class="link-to-information-of-room">
-                            <a href="../thongtinphongtro/thongtinphongtronguoichothue.html">Thông tin về phòng</a>
-                        </div>
-                    </div>
-                    <p>Diện tích</p>
-                    <h4>Giá</h4>
-                    <div id="thong-tin-co-ban1">
-                        <p id="infor-owner1">Người đăng</p>
-                        <p id="time1">Thời gian đăng</p>
-                        <p id="city1">Tỉnh thành phố phòng cho thuê</p>
-                    </div>
-                </div>
-            </div>
-            -->
             
         </div>
     </div>
-    <!--
-    <footer class="container-fluid">
-        <div class="appWrapper-DesktopFooter">
-            <div class="appWrapper-DesktopFooter-container">
-                <section class="appWrapper-DesktopFooter-container-top">
-                    <div class="appWrapper-DesktopFooter-item">
-                        <p class="appWrapper-DesktopFooter-heading">Hỗ trợ khách hàng</p>
-                        <ul class="appWrapper-Footer-ul">
-                            <li class="appWrapper-Footer"><a href="#">Trung tâm trợ giúp</a></li>
-                            <li class="appWrapper-Footer"><a href="#">An toàn giao dịch</a></li>
-                            <li class="appWrapper-Footer"><a href="#">Quy định và quyền lợi</a></li>
-                            <li class="appWrapper-Footer"><a href="#">Liên hệ hỗ trợ</a></li>
-                        </ul>
+    <div class="pagination">
+           <?php 
+           
+            $current_page = $posts[count($posts)-1]['current_page'];
+            $total_page = $posts[count($posts)-1]['total_page'];
+            // nếu current_page > 1 và total_page > 1 mới hiển thị nút prev
+            if ($current_page > 1 && $total_page > 1){
+                echo '<a href="index.php?controller=posts&page='.($current_page-1).'">Prev</a> | ';
+            }
+ 
+            // Lặp khoảng giữa
 
-                    </div>
-                    <div class="appWrapper-DesktopFooter-item">
-                        <p class="appWrapper-DesktopFooter-heading">TT24</p>
-                        <ul class="appWrapper-Footer-ul">
-                            <li class="appWrapper-Footer"><a href="/gioithieu/gioithieu.html">Giới thiệu</a></li>
-                            <li class="appWrapper-Footer"><a href="#">Truyền thông</a></li>
-                        </ul>
+            if($current_page<=2){
+                $start=1;
+            }
+            else{
+                $start = $current_page -2;
 
-                    </div>
-                    <div class="appWrapper-DesktopFooter-item-col">
-                        <div class="appWrapper-DesktopFooter-item">
-                            <p class="appWrapper-DesktopFooter-heading">Liên hệ</p>
-                            <ul class="appWrapper-Footer-ul approw">
-                                <li class="appWrapper-Footer-icon"><img src="https://static.chotot.com/storage/default/facebook.svg"></li>
-                                <li class="appWrapper-Footer-icon"><img src="https://static.chotot.com/storage/default/google.svg"></li>
-                                <li class="appWrapper-Footer-icon"><img src="https://static.chotot.com/storage/default/youtube.svg"></li>
-                            </ul>
+            }
+            if($current_page <= $total_page - 2){
+                $finish = $current_page + 2;
 
-                        </div>
-                    </div>
-                </section>
-                <section class="appWrapper-DesktopFooter-container-bottom">
-                    <p>Trang web được thiết kế bởi Huy Trần, Trọng Tấn, Hải Nam</p>
-                </section>
-            </div>
+            }
+            else{
+                $finish = $total_page;
+            }
+
+
+            for ($i = 1; $i <= $total_page; $i++){
+                // Nếu là trang hiện tại thì hiển thị thẻ span
+                // ngược lại hiển thị thẻ a
+                if ($i == $current_page){
+                    echo '<span>'.$i.'</span> | ';
+                }
+                else{
+                    echo '<a href="index.php?controller=posts&page='.$i.'">'.$i.'</a> | ';
+                }
+            }
+ 
+            // nếu current_page < $total_page và total_page > 1 mới hiển thị nút prev
+            if ($current_page < $total_page && $total_page > 1){
+                echo '<a href="index.php?controller=posts&'.($current_page+1).'">Next</a> | ';
+            }
+           ?>
         </div>
-    </footer>
-                -->
+    
+
+
+        <script type="text/javascript">
+		$("#province").change(function(){
+			$.ajax({
+				method: "POST",// phương thức dữ liệu được truyền đi
+				url: "show_data.php",// gọi đến file server show_data.php để xử lý
+				data: $("#form").serialize(),//lấy toàn thông tin các fields trong form bằng hàm serialize của jquery
+				success : function(response){//kết quả trả về từ server nếu gửi thành công
+                  //  console.log(response);
+                    $('#district').children().not(':first').remove();
+                    $('#district').children().replaceWith(response);
+                   
+                    $('#ward').children().not(':first').remove();
+                    $('#ward').children().replaceWith('<option  style="display:none" disabled selected value>Nhập xã phường</option>');
+                  //  console.log('okokoko');
+				}
+			});
+        });
+        $("#district").change(function(){
+			$.ajax({
+				method: "POST",// phương thức dữ liệu được truyền đi
+				url: "show_data_ward.php",// gọi đến file server show_data.php để xử lý
+				data: $("#form").serialize(),//lấy toàn thông tin các fields trong form bằng hàm serialize của jquery
+				success : function(response){//kết quả trả về từ server nếu gửi thành công
+                  //  console.log(response);
+                    $('#ward').children().not(':first').remove();
+                    $('#ward').children().replaceWith(response);
+                  //  console.log('nonono');
+				}
+			});
+        });
+        
+		
+</script>
 </body>
 
 </html>

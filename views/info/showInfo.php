@@ -212,69 +212,7 @@
                             ';
                             }
                             ?>
-                            <!--<div class="col-xs-12">
-                                <ul>
-                                    <li>
-                                        <div class="item1">
-                                            <span>Tên đăng nhập</span>
-                                        </div>
-                                        <div class="item2">
-                                            <span>tan</span>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="item1">
-                                            <span>Họ</span>
-                                        </div>
-                                        <div class="item2">
-                                            <span>Phạm</span>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="item1">
-                                            <span>Tên</span>
-                                        </div>
-                                        <div class="item2">
-                                            <span>tan</span>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="item1">
-                                            <span>Số điện thoại</span>
-                                        </div>
-                                        <div class="item2">
-                                            <span>0123456789</span>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="item1">
-                                            <span>Email</span>
-                                        </div>
-                                        <div class="item2">
-                                            <span class="item3" title="abc@gmail.com">abc@gmail.com</span>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="item1">
-                                            <span>Địa chỉ</span>
-                                        </div>
-                                        <div class="item2">
-                                            <span>Hà nội</span>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="item1">
-                                            <span>Chứng minh thư</span>
-                                        </div>
-                                        <div class="item2">
-                                            <span>0123456789</span>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                            <a href="./trangcstt.html" style=text-decoration:none;>
-                                <button type="button" class="btn btn-block">Chỉnh sửa thông tin</button>
-                            </a>    -->
+                            
                         </div>
                         <?php
                         

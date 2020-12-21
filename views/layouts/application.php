@@ -52,10 +52,13 @@
                 </div>
                 <div class="row down">
                     <div class="col-sm-6 left">
-                        <input type="search" name="search" id="search" placeholder="Tìm kiếm">
-                        <span id="icon-search">
-                            <i class="fas fa-search"></i>
-                        </span>
+                        <form id="searchform">
+                            <input type="search" name="search" id="search" placeholder="Tìm kiếm">
+                            
+                            <span id="icon-search">
+                                <i class="fas fa-search"></i>
+                            </span>
+                        </form>
                     </div>
                     <div class="col-sm-2 center">
                         <?php 
@@ -100,6 +103,7 @@
                 </div>
             </div>
         </header>
+        
         <?= @$content ?>
         <footer class="container-fluid">
                 <div class="appWrapper-DesktopFooter">

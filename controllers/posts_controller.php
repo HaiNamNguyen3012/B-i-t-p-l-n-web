@@ -10,14 +10,15 @@ class PostsController extends BaseController
     $this->folder = 'posts';
   }
 
-  public function index()
-  {
+  public function index(){
     if (session_status() == PHP_SESSION_NONE) {
       session_start();
   }
+    require_once('models/province.php');
     
     $posts = Post::showAllForUser();
-    $data = array('posts' => $posts);
+    $provinces = Province::show();
+    $data = array('posts' => $posts , 'provinces' => $provinces );
     $this->render('index', $data);
   }
   
