@@ -5,14 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./assets/stylesheets/dangnhap.css">        
+    <link rel="stylesheet" href="./assets/stylesheets/dangnhap.css?v=<?php echo time(); ?>">        
     <title>Đăng nhập</title>
 </head>
 
 <body>
     <div class="main">
         <section class="signin">
-            <div class="container">
+            <div class="container-1">
                 <div class="signin-content">
                     <form action="" method="post" id="signin-form" class="signin-form" onsubmit="return validate()">
                         <h1>Đăng nhập</h1>
