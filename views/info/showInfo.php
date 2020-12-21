@@ -10,7 +10,7 @@
         <link rel="stylesheet" href="./icon/css/all.min.css">
         <link rel="stylesheet" href="./assets/stylesheets/nguoichothue.css">
         <link rel="stylesheet" href="./dangtin.html">
-        <link rel="stylesheet" href="./assets/stylesheets/ttcn.css">
+        <link rel="stylesheet" href="./assets/stylesheets/ttcn.css?v=<?php echo time(); ?>">
         <title>Trang thông tin cá nhân</title>
     </head>
     <body> 
@@ -277,28 +277,33 @@
                             </a>    -->
                         </div>
                         <?php
+                        
             foreach ($posts as $post) {
-            
                 echo 
-                '<div id="phong1">
-                    <div class="left">
-                        <img src="./assets/images/phong_tro/'.$post->ten_hinh_anh.'" alt="'.$post->ten_hinh_anh.'" width="140" height="140"> 
-                    </div>
-                    <div class="right">
-                        <div class="description-and-link-to-information-of-room">
-                            <div class="description">
-                                <h4>' . $post->tieu_de . '</h4>
-                            </div>
-                            <div class="link-to-information-of-room">
-                                <a href="index.php?controller=post_details&action=showPost&id=' . $post->id_phong . '">Thông tin về phòng</a>
-                            </div>
+                ' <div>
+                    <h4>Phòng đang cho thuê</h4>
+                    <div id="phong1">
+                        <div class="left">
+                            <img src="./assets/images/phong_tro/'.$post->ten_hinh_anh.'" alt="'.$post->ten_hinh_anh.'" width="140" height="140"> 
                         </div>
-                        <p>'.$post->dien_tich.' m<sup>2</sup></p>
-                        <h4>'.($post->gia/1000000).' triệu</h4>
-                        <div id="thong-tin-co-ban1">
-                            <p id="infor-owner1">Người đăng: '.$post->ho.' '.$post->ten.'</p>
-                            <p id="time1">Thời gian đăng</p>
-                            <p id="city1">'.$post->tentp.', '.$post->tenqh.'</p>
+                        <div class="right">
+                            <div class="description-and-link-to-information-of-room">
+                                <div class="description">
+                                    <h4>' . $post->tieu_de . '</h4>
+                                </div>
+                                <div class="link-to-information-of-room">
+                                    <a href="index.php?controller=post_details&action=showPost&id=' . $post->id_phong . '">Thông tin về phòng</a>
+                                </div>
+                            </div>
+                            <div class="dientich-va-gia">
+                                <h4>'.($post->gia/1000000).' triệu</h4>
+                                <p>'.$post->dien_tich.' m<sup>2</sup></p>
+                            </div>
+                            <div id="thong-tin-co-ban1">
+                                <p id="infor-owner1">Người đăng: '.$post->ho.' '.$post->ten.'</p>
+                                <p id="time1">Thời gian đăng:</p>
+                                <p id="city1">'.$post->tentp.', '.$post->tenqh.'</p>
+                            </div>
                         </div>
                     </div>
                 </div>';
