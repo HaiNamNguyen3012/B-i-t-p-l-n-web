@@ -1,0 +1,37 @@
+.content{
+    width: 100%;
+    background: #e6e6e6;
+}
+.page-title{
+    padding-left:40px;
+    padding-bottom: 20px;
+}
+.one{
+    margin-left: 40px;
+}
+.ab{
+    width: 350px;
+}
+.table td,.table th{
+    text-align: center;
+}
+.form-group{
+    padding-left: 40px;
+    padding-top: 40px;
+}
+.form-control{
+    display: inline-block;
+    width: 150px;
+}
+.mn1{
+    margin-left: 50px;
+}
+.mn2{
+    margin-left: 20px;
+}
+.mn3{
+    width: 400px;
+    margin-top: 10px;
+    margin-left: 40px;
+    margin-bottom: 20px;
+}
