@@ -26,3 +26,17 @@ function showSlides(n) {
     slides[slideIndex - 1].style.display = "block";
     dots[slideIndex - 1].className += " active";
 }
+// button luu tin
+$(".saveHome").click(function() {
+    $(".stackIcons i").toggleClass("hide");
+});
+
+// report form
+function hideAndUnhideFormReport() {
+    var x = document.querySelector('.form-report');
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
