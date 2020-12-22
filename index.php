@@ -17,6 +17,7 @@
   }
   require_once('routes.php');////////////////
 
+  echo $_GET['controller'].'  '.$action;
 ?>
 
 

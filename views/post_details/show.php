@@ -7,8 +7,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./icon/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-    <link rel="stylesheet" href="./assets/stylesheets/thongtinphongtronguoichothue.css">
-    <script src="../lib/jquery-3.5.1.min.js"></script>
+    <link rel="stylesheet" href="./assets/stylesheets/thongtinphongtronguoichothue.css?v=<?php echo time(); ?>">
+    <!-- <script src="../../assets/javascripts/lib/jquery-3.5.1.min.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>Thông tin về phòng trọ</title>
 </head>
 
@@ -208,9 +209,16 @@
                             </div>
                             <div class="right">
                                 <div class="statistivs">
-                                    <i class="far fa-heart"></i>
-                                    <p>69</p>
-                                    <p>Lượt lưu tin</p>
+                                    <button class="saveHome hoverPulse pan typeReversed">
+                                        <span class="stackIcons left">
+                                            <i class="iconHeartEmpty typeReversed iconOnly far fa-heart"></i>
+                                            <i class="iconHeartActive iconOnly hide fas fa-heart"></i>
+                                        </span>
+                                        <div class="right">
+                                            <p>69</p>
+                                            <p>Lượt lưu tin</p>
+                                        </div>
+                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -225,20 +233,64 @@
                                 <p>'.$post_details->chung_chu.'</p>
                                 <p>'.$post_details->phong_bep.'</p>
                                 <p>'.$post_details->phong_tam_chung.'</p>
+                                <p>'.$post_details->dieu_hoa.'</p>
                             </div>
                             <div class="right">
-                                <p>'.$post_details->dieu_hoa.'</p>
+                                
                                 <p>'.$post_details->ban_cong.'</p>
                                 <p>'.$post_details->nong_lanh.'</p>
                                 <p>'.$post_details->dien_nuoc.'</p>
                                 <p>Tiện ích khác: '.$post_details->tu_lanh.' '.$post_details->may_giat.' '.$post_details->giuong_tu.'</p>            <!-- cần sửa lại    --> 
                             </div>
                         </div>';
-                        
+                    
                         
                         ?>
                     </div>
+                    
+                    <div class="report">
+                        <div class="button-report">
+                            <button onclick="hideAndUnhideFormReport();">Báo cáo phòng</button>
+                        </div>
+                        <div class="form-report">
+                            <form action="" method="post">
+                                <h3>Form báo cáo phòng</h3>
+                                <div class="reason">
+                                    <p>Lý do bạn báo cáo</p>
+                                    <input type="checkbox" id="reason1" name="reason1" value="tin dang het han">
+                                    <label for="reason1"> Tin đăng hết hạn</label><br>
+                                    <input type="checkbox" id="reason2" name="reason2" value="phong khong dung thong tin">
+                                    <label for="reason2"> Phòng không đúng thông tin</label><br>
+                                    <textarea name="another-reason" id="another-reason" cols="30" rows="10" placeholder="Lý do khác"></textarea><br>
+                                    <input type="submit" value="Gửi">
+                                </div>
+                            </form>
+                        </div>
+                        <div class="comment">
+                            <div class="form">
+                                <textarea name="" id="bodyText" cols="30" rows="10" placeholder="Đánh giá của bạn về phòng"></textarea>
+                                <br>
+                                <input type="button" id="addComent" value="Add Comment" />
+                            </div>
+                            <div class="user-comment">
+                                <div id="user-comment-1">
+                                    <b>Tên đăng nhập</b>
+                                    <p>Bình luận 1</p>
+                                </div>
+                                <div id="user-comment-2">
+                                    <b>Tên đăng nhập</b>
+                                    <p>Bình luận 2</p>
+                                </div>
+                                <div id="user-comment-3">
+                                    <b>Tên đăng nhập</b>
+                                    <p>Bình luận 3</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
                 </div>
+
                 <div class="right col-sm-3">
                     <div class="person-information">
                         <div class="up">
@@ -250,6 +302,7 @@
                             </div>
                         </div>
                     </div>
+                    
                 </div>
             </div>
         </div>
@@ -295,7 +348,7 @@
             </div>
         </footer>
                     -->
-        <script src="./assets/javascripts/thongtinphongtronguoichothue.js"></script>
+        <script src="./assets/javascripts/thongtinphongtronguoichothue.js?v=<?php echo time(); ?>"></script>
 </body>
 
 </html>

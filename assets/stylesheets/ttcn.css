@@ -1,7 +1,8 @@
-nav{
+nav {
     height: 40px;
 }
-.file-upload{
+
+.file-upload {
     height: 50px;
     width: 50px;
     border-radius: 25px;
@@ -16,8 +17,9 @@ nav{
     transition: all 1s;
     color: #FFFFFF;
     font-size: 25px;
-    margin-left:70px;
-  }
+    margin-left: 70px;
+}
+
 .file-upload input[type='file'] {
     height: 50px;
     width: 50px;
@@ -26,57 +28,67 @@ nav{
     left: 0;
     opacity: 0;
     cursor: pointer;
-  }
+}
+
 .file-upload:hover {
     background-position: 0 -100%;
     color: #2590EB;
-  }
+}
 
-.main-container{
+.main-container {
     background-color: #f1f1f1;
     line-height: normal;
     width: 100%;
-   
 }
-.container.cstt{
+
+.container.cstt {
     margin-right: auto;
     margin-left: auto;
     width: 900px;
 }
-.cstt{
+
+.cstt {
     background-color: #ffff;
 }
-.title{
-    padding:10px 8px;
+
+.title {
+    padding: 10px 8px;
     font-weight: 700;
-    margin-top:0;
+    margin-top: 0;
     margin-bottom: 0;
     border-bottom: 1px solid #ddd;
     font-size: 20px;
 }
-.pull{
+
+.pull {
     padding-top: 15px;
 }
-.img{
+
+.img {
     text-align: center;
 }
-.col-xs-12{
+
+.col-xs-12 {
     width: 90%;
 }
+
 .col-xs-12 ul {
     list-style: none;
     padding-left: 0;
 }
-ul li{
+
+ul li {
     margin-bottom: 10px;
-    margin-top:0;
+    margin-top: 0;
 }
-.info ul li .item1{
+
+.info ul li .item1 {
     font-weight: 700;
     margin-bottom: 5px;
     font-size: 16px;
 }
-.info ul li .item2 span{
+
+.info ul li .item2 span {
     display: block;
     height: 35px;
     line-height: 35px;
@@ -87,21 +99,96 @@ ul li{
     font-size: 14px;
     white-space: nowrap;
     overflow: hidden;
-    padding-right: 40px ;
+    padding-right: 40px;
 }
-.btn{
+
+.btn {
     text-align: center;
     line-height: 1.8;
     min-width: 14px;
     border-radius: 20px;
     padding: 4px 10px;
     width: 250px;
-    border:1px solid #d7d9dc ;
+    border: 1px solid #d7d9dc;
     margin-bottom: 20px;
     margin-left: auto;
     margin-right: auto;
     margin-top: 30px;
 }
-.btn:hover{
-    background-color: #c0c0c0;   
+
+.btn:hover {
+    background-color: #c0c0c0;
+}
+
+#phong1 {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    width: 100%;
+    height: 200px;
+    border: 1px solid black;
+    margin-bottom: 10px;
+}
+
+#phong1 .left {
+    width: 180px;
+    height: 185px;
+    margin: 5px 5px 0 5px;
+}
+
+#phong1 .left img {
+    width: 100%;
+    height: 100%;
+}
+
+#phong1 .right {
+    width: calc(100% - 150px);
+}
+
+#phong1 .right .description-and-link-to-information-of-room {
+    width: 100%;
+    height: 50px;
+    display: flex;
+}
+
+#phong1 .right .description-and-link-to-information-of-room .description {
+    width: 70%;
+}
+
+#phong1 .right .description-and-link-to-information-of-room .link-to-information-of-room {
+    width: 150px;
+    margin-top: 10px;
+}
+
+#phong1 .right .dientich-va-gia {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+#phong1 .right .dientich-va-gia p {
+    margin-bottom: 0;
+    margin-top: 6px;
+    margin-left: 6px;
+}
+
+#phong1 .right .description-and-link-to-information-of-room .link-to-information-of-room a {
+    text-decoration: none;
+    border: 1px solid red;
+    border-radius: 4px;
+    color: red;
+    padding: 5px;
+}
+
+#phong1 .right #thong-tin-co-ban1 {
+    width: 100%;
+    height: 50px;
+}
+
+#phong1 .right #thong-tin-co-ban1 {
+    padding-right: 5px;
+    font-size: 18px;
+    font-weight: 700;
 }

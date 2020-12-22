@@ -15,7 +15,7 @@ class Login{
     
     static function checkUser(){
         
-        var_dump($_POST);
+       
         if(enoughInfo()){
             $db = DB::getInstance();
            // $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -32,7 +32,6 @@ class Login{
             
 
             
-            echo $query;
             
             $req = $db->query($query);
             $info= $req->fetch();
@@ -60,7 +59,7 @@ class Login{
             }
         }
         else{
-            echo "vui long nhap du thong tin";
+            //echo "vui long nhap du thong tin";
         }
     }
   

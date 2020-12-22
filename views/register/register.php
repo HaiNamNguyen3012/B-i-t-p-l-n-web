@@ -5,14 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./assets/stylesheets/dangky.css">
+    <link rel="stylesheet" href="./assets/stylesheets/dangky.css?v=<?php echo time(); ?>">
     <title>Đăng ký</title>
 </head>
 
 <body>
     <div class="main">
         <section class="signup">
-            <div class="container">
+            <div class="container-1">
                 <div class="signup-content">
                     <form action="" method="post" action="index.php?controller=posts" id="signup-form" class="signup-form" name="signup-form">
                         <h1>Đăng ký</h1>

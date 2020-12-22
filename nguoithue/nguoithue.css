@@ -1,0 +1,500 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+header {
+    height: 125px;
+    background: #FFBA00;
+    text-align: none;
+}
+
+header .up {
+    height: 65px;
+}
+
+header .up .left h1 {
+    padding-top: 10px;
+    text-align: center;
+}
+
+header .up .left h1 a {
+    color: #F2F2F2;
+    text-decoration: none;
+}
+
+header .up .left h1 a:hover {
+    color: #F2F2F2;
+    text-decoration: none;
+}
+
+header .up .right ul {
+    display: flex;
+    flex-direction: row;
+}
+
+header .up .right ul li {
+    padding: 17px 30px;
+    list-style-type: none;
+}
+
+header .up .right ul li a {
+    font-size: 20px;
+    font-weight: 900;
+    color: #0D0D0D;
+}
+
+header .up .right ul li a:hover {
+    font-size: 20px;
+    font-weight: 900;
+    color: #F2F2F2;
+}
+
+
+/* header down */
+
+header .down {
+    height: 60px;
+}
+
+
+/* header down left */
+
+header .down .left #search {
+    width: 90%;
+    padding: 7px;
+    border: none;
+    border-radius: 7px;
+    margin-left: 5%;
+    margin-top: 3px;
+}
+
+header .down .left #search:focus {
+    outline: none;
+}
+
+header .down .left #icon-search {
+    position: absolute;
+    margin-left: -20px;
+    margin-top: 10px;
+}
+
+header .down .center a {
+    color: #0D0D0D;
+    border: 2px solid black;
+    border-radius: 4px;
+    padding: 10px;
+}
+
+header .down .center a:hover {
+    color: #f2f2f2;
+    border: 2px solid #f2f2f2;
+    border-radius: 4px;
+    padding: 10px;
+}
+
+header .down .center a i {
+    margin-top: 13px;
+}
+
+.filter {
+    height: 50px;
+}
+
+.filter .filter-children {
+    height: 100%;
+    align-items: center;
+}
+
+.filter .filter-children .filter-children-children button {
+    width: 80px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    background: #ffffff;
+    border: 1.5px solid black;
+    border-radius: 4px;
+}
+
+.filter .filter-children .filter-children-children button i {
+    width: 45px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.filter .filter-children .filter-children-children button p {
+    margin: 0;
+}
+
+.filter .filter-children .city #city {
+    width: 75%;
+    height: 36px;
+    margin-left: 12px;
+    padding: 5px;
+    border: 1.5px solid black;
+    border-radius: 4px;
+}
+
+.filter .filter-children .price #price {
+    width: 70px;
+    height: 36px;
+    background: #ffffff;
+    border: 1.5px solid black;
+    border-radius: 4px;
+}
+
+.filter .filter-children .square #square {
+    width: 70px;
+    height: 36px;
+    background: #ffffff;
+    border: 1.5px solid black;
+    border-radius: 4px;
+}
+
+.filter .filter-children .type-room #type-room {
+    width: 125px;
+    height: 36px;
+    margin-left: 12px;
+    padding: 5px;
+    border: 1.5px solid black;
+    border-radius: 4px;
+}
+
+
+/* content */
+
+.content {
+    background-color: #f2f2f2;
+    margin-top: 10px;
+}
+
+.content .main-content {
+    width: 100%;
+}
+
+.main-content .main-content-header {
+    width: 100%;
+    height: 70px;
+}
+
+.main-content .main-content-header h4 {
+    margin-top: 10px;
+}
+
+.content .main-content #phong1,
+.content .main-content #phong2,
+.content .main-content #phong3,
+.content .main-content #phong4,
+.content .main-content #phong5,
+.content .main-content #phong6,
+.content .main-content #phong7,
+.content .main-content #phong8,
+.content .main-content #phong9,
+.content .main-content #phong10 {
+    width: 55%;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #000000;
+}
+
+.content .main-content #phong11 {
+    width: 55%;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin-top: 10px;
+    border: 1px solid #000000;
+}
+
+.content .main-content #phong1 .left,
+.content .main-content #phong2 .left,
+.content .main-content #phong3 .left,
+.content .main-content #phong4 .left,
+.content .main-content #phong5 .left,
+.content .main-content #phong6 .left,
+.content .main-content #phong7 .left,
+.content .main-content #phong8 .left,
+.content .main-content #phong9 .left,
+.content .main-content #phong10 .left,
+.content .main-content #phong11 .left {
+    width: 140px;
+    height: 140px;
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color: #f2f2f2;
+}
+
+.main-content #phong1 .right .description-and-link-to-information-of-room,
+.main-content #phong2 .right .description-and-link-to-information-of-room,
+.main-content #phong3 .right .description-and-link-to-information-of-room,
+.main-content #phong4 .right .description-and-link-to-information-of-room,
+.main-content #phong5 .right .description-and-link-to-information-of-room,
+.main-content #phong6 .right .description-and-link-to-information-of-room,
+.main-content #phong7 .right .description-and-link-to-information-of-room,
+.main-content #phong8 .right .description-and-link-to-information-of-room,
+.main-content #phong9 .right .description-and-link-to-information-of-room,
+.main-content #phong10 .right .description-and-link-to-information-of-room,
+.main-content #phong11 .right .description-and-link-to-information-of-room {
+    width: 100%;
+    display: flex;
+}
+
+.main-content #phong1 .right .description-and-link-to-information-of-room .description,
+.main-content #phong2 .right .description-and-link-to-information-of-room .description,
+.main-content #phong3 .right .description-and-link-to-information-of-room .description,
+.main-content #phong4 .right .description-and-link-to-information-of-room .description,
+.main-content #phong5 .right .description-and-link-to-information-of-room .description,
+.main-content #phong6 .right .description-and-link-to-information-of-room .description,
+.main-content #phong7 .right .description-and-link-to-information-of-room .description,
+.main-content #phong8 .right .description-and-link-to-information-of-room .description,
+.main-content #phong9 .right .description-and-link-to-information-of-room .description,
+.main-content #phong10 .right .description-and-link-to-information-of-room .description,
+.main-content #phong11 .right .description-and-link-to-information-of-room .description {
+    width: 60%;
+}
+
+.main-content #phong1 .right .description-and-link-to-information-of-room h4,
+.main-content #phong2 .right .description-and-link-to-information-of-room h4,
+.main-content #phong3 .right .description-and-link-to-information-of-room h4,
+.main-content #phong4 .right .description-and-link-to-information-of-room h4,
+.main-content #phong5 .right .description-and-link-to-information-of-room h4,
+.main-content #phong6 .right .description-and-link-to-information-of-room h4,
+.main-content #phong7 .right .description-and-link-to-information-of-room h4,
+.main-content #phong8 .right .description-and-link-to-information-of-room h4,
+.main-content #phong9 .right .description-and-link-to-information-of-room h4,
+.main-content #phong10 .right .description-and-link-to-information-of-room h4,
+.main-content #phong11 .right .description-and-link-to-information-of-room h4 {
+    margin-right: 5px;
+    margin-top: 6px;
+}
+
+.main-content #phong1 .right .description-and-link-to-information-of-room .link-to-information-of-room,
+.main-content #phong2 .right .description-and-link-to-information-of-room .link-to-information-of-room,
+.main-content #phong3 .right .description-and-link-to-information-of-room .link-to-information-of-room,
+.main-content #phong4 .right .description-and-link-to-information-of-room .link-to-information-of-room,
+.main-content #phong5 .right .description-and-link-to-information-of-room .link-to-information-of-room,
+.main-content #phong6 .right .description-and-link-to-information-of-room .link-to-information-of-room,
+.main-content #phong7 .right .description-and-link-to-information-of-room .link-to-information-of-room,
+.main-content #phong8 .right .description-and-link-to-information-of-room .link-to-information-of-room,
+.main-content #phong9 .right .description-and-link-to-information-of-room .link-to-information-of-room,
+.main-content #phong10 .right .description-and-link-to-information-of-room .link-to-information-of-room,
+.main-content #phong11 .right .description-and-link-to-information-of-room .link-to-information-of-room {
+    margin-top: 10px;
+}
+
+.main-content #phong1 .right .description-and-link-to-information-of-room a,
+.main-content #phong2 .right .description-and-link-to-information-of-room a,
+.main-content #phong3 .right .description-and-link-to-information-of-room a,
+.main-content #phong4 .right .description-and-link-to-information-of-room a,
+.main-content #phong5 .right .description-and-link-to-information-of-room a,
+.main-content #phong6 .right .description-and-link-to-information-of-room a,
+.main-content #phong7 .right .description-and-link-to-information-of-room a,
+.main-content #phong8 .right .description-and-link-to-information-of-room a,
+.main-content #phong9 .right .description-and-link-to-information-of-room a,
+.main-content #phong10 .right .description-and-link-to-information-of-room a,
+.main-content #phong11 .right .description-and-link-to-information-of-room a {
+    margin-left: 5px;
+    padding: 5px;
+    border: 2px solid red;
+    border-radius: 7px;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: 700;
+    color: red;
+}
+
+.content .main-content #phong1 .right #thong-tin-co-ban1,
+.content .main-content #phong2 .right #thong-tin-co-ban2,
+.content .main-content #phong3 .right #thong-tin-co-ban3,
+.content .main-content #phong4 .right #thong-tin-co-ban4,
+.content .main-content #phong5 .right #thong-tin-co-ban5,
+.content .main-content #phong6 .right #thong-tin-co-ban6,
+.content .main-content #phong7 .right #thong-tin-co-ban7,
+.content .main-content #phong8 .right #thong-tin-co-ban8,
+.content .main-content #phong9 .right #thong-tin-co-ban9,
+.content .main-content #phong10 .right #thong-tin-co-ban10,
+.content .main-content #phong11 .right #thong-tin-co-ban11 {
+    display: flex;
+}
+
+.content .main-content #phong1 .right #thong-tin-co-ban1 p,
+.content .main-content #phong2 .right #thong-tin-co-ban2 p,
+.content .main-content #phong3 .right #thong-tin-co-ban3 p,
+.content .main-content #phong4 .right #thong-tin-co-ban4 p,
+.content .main-content #phong5 .right #thong-tin-co-ban5 p,
+.content .main-content #phong6 .right #thong-tin-co-ban6 p,
+.content .main-content #phong7 .right #thong-tin-co-ban7 p,
+.content .main-content #phong8 .right #thong-tin-co-ban8 p,
+.content .main-content #phong9 .right #thong-tin-co-ban9 p,
+.content .main-content #phong10 .right #thong-tin-co-ban10 p,
+.content .main-content #phong11 .right #thong-tin-co-ban11 p {
+    padding-left: 0;
+    padding-right: 10px;
+}
+
+.content .main-content #phong1 .right #thong-tin-co-ban1 button,
+.content .main-content #phong2 .right #thong-tin-co-ban2 button,
+.content .main-content #phong3 .right #thong-tin-co-ban3 button,
+.content .main-content #phong4 .right #thong-tin-co-ban4 button,
+.content .main-content #phong5 .right #thong-tin-co-ban5 button,
+.content .main-content #phong6 .right #thong-tin-co-ban6 button,
+.content .main-content #phong7 .right #thong-tin-co-ban7 button,
+.content .main-content #phong8 .right #thong-tin-co-ban8 button,
+.content .main-content #phong9 .right #thong-tin-co-ban9 button,
+.content .main-content #phong10 .right #thong-tin-co-ban10 button,
+.content .main-content #phong11 .right #thong-tin-co-ban11 button {
+    width: 40px;
+    height: 25px;
+    background-color: #ffffff;
+    border: 2px solid red;
+    border-radius: 4px;
+}
+
+.content .main-content #phong1 .right #thong-tin-co-ban1 button:focus,
+.content .main-content #phong2 .right #thong-tin-co-ban2 button:focus,
+.content .main-content #phong3 .right #thong-tin-co-ban3 button:focus,
+.content .main-content #phong4 .right #thong-tin-co-ban4 button:focus,
+.content .main-content #phong5 .right #thong-tin-co-ban5 button:focus,
+.content .main-content #phong6 .right #thong-tin-co-ban6 button:focus,
+.content .main-content #phong7 .right #thong-tin-co-ban7 button:focus,
+.content .main-content #phong8 .right #thong-tin-co-ban8 button:focus,
+.content .main-content #phong9 .right #thong-tin-co-ban9 button:focus,
+.content .main-content #phong10 .right #thong-tin-co-ban10 button:focus,
+.content .main-content #phong11 .right #thong-tin-co-ban11 button:focus {
+    width: 40px;
+    height: 25px;
+    background-color: #ffffff;
+    border: 2px solid red;
+    border-radius: 4px;
+    outline: none;
+}
+
+.content .main-content #phong1 .right #thong-tin-co-ban1 button i,
+.content .main-content #phong2 .right #thong-tin-co-ban2 button i,
+.content .main-content #phong3 .right #thong-tin-co-ban3 button i,
+.content .main-content #phong4 .right #thong-tin-co-ban4 button i,
+.content .main-content #phong5 .right #thong-tin-co-ban5 button i,
+.content .main-content #phong6 .right #thong-tin-co-ban6 button i,
+.content .main-content #phong7 .right #thong-tin-co-ban7 button i,
+.content .main-content #phong8 .right #thong-tin-co-ban8 button i,
+.content .main-content #phong9 .right #thong-tin-co-ban9 button i,
+.content .main-content #phong10 .right #thong-tin-co-ban10 button i,
+.content .main-content #phong11 .right #thong-tin-co-ban11 button i {
+    color: red;
+}
+
+.content .main-content #phong1 .right #thong-tin-co-ban1 button i.hide,
+.content .main-content #phong2 .right #thong-tin-co-ban2 button i.hide,
+.content .main-content #phong3 .right #thong-tin-co-ban3 button i.hide,
+.content .main-content #phong4 .right #thong-tin-co-ban4 button i.hide,
+.content .main-content #phong5 .right #thong-tin-co-ban5 button i.hide,
+.content .main-content #phong6 .right #thong-tin-co-ban6 button i.hide,
+.content .main-content #phong7 .right #thong-tin-co-ban7 button i.hide,
+.content .main-content #phong8 .right #thong-tin-co-ban8 button i.hide,
+.content .main-content #phong9 .right #thong-tin-co-ban9 button i.hide,
+.content .main-content #phong10 .right #thong-tin-co-ban10 button i.hide,
+.content .main-content #phong11 .right #thong-tin-co-ban11 button i.hide {
+    color: red;
+    display: none;
+}
+
+
+/* footer */
+
+footer p {
+    color: #ffffff;
+    text-align: center;
+    font-size: 24px;
+    padding-top: 20px;
+}
+
+footer.container-fluid {
+    width: 100%;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (min-width: 768px) {
+    .appWrapper-DesktopFooter {
+        display: block;
+    }
+}
+
+.appWrapper-DesktopFooter {
+    background-color: #ffff;
+    border-top: 20px solid #f1f1f1;
+    font-size: 12;
+    width: 100%;
+}
+
+.appWrapper-DesktopFooter-container-top {
+    display: grid;
+    grid-template-columns: repeat(3, 2fr);
+    padding: 12px 12px 12px 100px;
+}
+
+.appWrapper-DesktopFooter-heading {
+    font-size: 14px;
+    margin-bottom: 12px;
+    font-weight: bold;
+    font-style: normal;
+    line-height: 1.29;
+    text-transform: uppercase;
+}
+
+.appWrapper-DesktopFooter-item {
+    text-align: left;
+    padding: 20px;
+}
+
+.appWrapper-Footer-ul {
+    list-style-type: none;
+    margin: 0;
+    display: flex;
+    padding: 0;
+    flex-direction: column;
+}
+
+.appWrapper-Footer li {
+    font-size: 14px;
+    margin: 0;
+    line-height: 1.29;
+    padding: 0;
+    margin-bottom: 12px;
+}
+
+.appWrapper-Footer a {
+    color: #4a4a4a;
+    text-decoration: none;
+}
+
+.appWrapper-Footer a:hover {
+    color: black;
+}
+
+.approw {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.appWrapper-Footer-icon {
+    width: 32px;
+    height: 32px;
+    margin-right: 5px;
+}
+
+.appWrapper-DesktopFooter-container-bottom {
+    color: #9b9b9b;
+    line-height: 1.5;
+    text-align: center;
+}

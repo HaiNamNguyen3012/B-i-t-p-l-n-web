@@ -251,7 +251,7 @@ header .down .right a {
 
 .information .dientich-va-gia {
     width: 100%;
-    height: 60px;
+    height: 150px;
     display: flex;
 }
 
@@ -279,9 +279,9 @@ header .down .right a {
     height: 100%;
 }
 
-.information .dientich-va-gia .statistivs {
+.information .dientich-va-gia .statistivs button {
     display: flex;
-    width: 135px;
+    width: 150px;
     height: 40px;
     border: 2px solid red;
     border-radius: 20px;
@@ -289,17 +289,32 @@ header .down .right a {
     background-color: #fff;
 }
 
-.information .dientich-va-gia .statistivs i {
-    margin-left: 9px;
-    margin-right: 5px;
+.information .dientich-va-gia .right .statistivs .left {
+    align-items: center;
+    width: 15%;
+    height: 100%;
+}
+
+.information .dientich-va-gia .right .statistivs .left i {
+    margin: 0 5px;
     color: red;
 }
 
-.information .dientich-va-gia .statistivs p {
-    margin: 0;
-    font-size: 14px;
-    padding: 3px;
+.information .dientich-va-gia .right .statistivs .left i.hide {
+    display: none;
+}
+
+.information .dientich-va-gia .right .statistivs .right {
+    width: 85%;
+    height: 100%;
+    display: flex;
+}
+
+.information .dientich-va-gia .right .statistivs .right p {
     color: red;
+    font-size: 18px;
+    padding: 0 5px;
+    padding-top: 5px;
 }
 
 .information .condition {
@@ -355,6 +370,93 @@ header .down .right a {
 .content .right .person-information .up .right a {
     color: red;
     text-decoration: none;
+}
+
+.report {
+    width: 60%;
+}
+
+.report .button-report button {
+    width: 160px;
+    height: 40px;
+    border: none;
+    border-radius: 4px;
+    background-image: linear-gradient(to left, #74ebd5, #9face6);
+    margin-bottom: 5px;
+}
+
+.report .form-report {
+    display: none;
+    margin: 5px 0 15px 0;
+    width: 100%;
+    border: 2px solid black;
+    border-radius: 4px;
+}
+
+.report .form-report .reason {
+    padding-left: 5px;
+}
+
+.report .form-report .reason textarea {
+    width: calc(100% - 9px);
+    height: 150px;
+    padding: 5px;
+    margin: 5px 0;
+    border: 2px solid black;
+    border-radius: 4px;
+}
+
+.report .form-report .reason textarea:focus {
+    outline: none;
+}
+
+.report .form-report .reason input[type=submit] {
+    width: calc(100% - 9px);
+    height: 40px;
+    margin: 5px 0;
+    border: none;
+    border-radius: 4px;
+    background-image: linear-gradient(to left, #74ebd5, #9face6);
+}
+
+.report .form-report h3 {
+    text-align: center;
+    margin: 5px 0;
+}
+
+.comment {
+    width: 100%;
+}
+
+.comment .form {
+    width: 100%;
+}
+
+.comment .form textarea {
+    width: 100%;
+    height: 100px;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+
+.comment .form #addComent {
+    width: 100%;
+    height: 45px;
+    border: none;
+    border-radius: 4px;
+    background-image: linear-gradient(to left, #74ebd5, #9face6);
+}
+
+.comment .user-comment #user-comment-1,
+.comment .user-comment #user-comment-2,
+.comment .user-comment #user-comment-3 {
+    width: 100%;
+    /* height: 60px; */
+    border: 2px solid black;
+    border-radius: 5px;
+    margin: 5px 0;
+    padding: 5px;
+    background: #f2f2f2;
 }
 
 

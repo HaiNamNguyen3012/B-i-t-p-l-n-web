@@ -34,22 +34,39 @@ class Reports{
                          /*   LIMIT 20  */
                             ;');
 
-    
-
-        
         foreach ($req->fetchAll() as $item) {
             $list[] = new Reports($item['id_bao_cao'],$item['id_nguoi_dung'], $item['id_phong_tro'],$item['li_do'] ,$item['noi_dung'], 
                              $item['thoi_gian_bao_cao']);    // biến $list lưu các giá trị truy vấn 
         }
 
         return $list;
-        }
-  
     }
+    
+    static function sendReport($id_user,$id_room,$reason,$content){
+        
+            $db = DB::getInstance();
+            $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    
+            $query="INSERT INTO bao_cao (id_bao_cao, id_nguoi_dung, id_phong_tro, li_do, noi_dung, thoi_gian_bao_cao) 
+                    VALUES (NULL, '$id_user', $id_room, '$reason', '$content', now())";
+            echo $query;
+        
+            try{
+                $db->exec($query);
+                echo "New record created successfully";
+            }
+            catch(PDOException $e){
+                echo $query . "<br>" . $e->getMessage();
+            } 
+      
+        
+    }
+  
+}
 
 function handlingReport($db){
     if(empty($_POST)){
-        echo "Khong can xu li";
+      //  echo "Khong can xu li";
     }
     else {
         foreach($_POST as $report ){
