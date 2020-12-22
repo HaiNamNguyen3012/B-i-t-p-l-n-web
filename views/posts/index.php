@@ -30,7 +30,7 @@
                 </div>-->
                 
                     <div class="col-sm-2 city">
-                        <select name="province" id="province" class="province">
+                        <select name="thanh_pho" id="province" class="province">
                                 <option  style="display:none" disabled selected value>Nhập tỉnh thành phố</option>
                                     <?php 
                                     foreach($provinces as $province){
@@ -44,14 +44,14 @@
                 
                 
                     <div class="col-sm-2 ">
-                        <select name="district" id="district" class ="district" >
+                        <select name="quan_huyen" id="district" class ="district" >
                                 <option  style="display:none" disabled selected value>Nhập quận huyện</option>
                         </select>
                         
                     </div>
                 
                     <div class="col-sm-2 city">
-                        <select name="ward" id="ward" class = "ward">
+                        <select name="xa_phuong" id="ward" class = "ward">
                             <option  style="display:none" disabled selected value>Nhập xã phường</option>
                         </select>
                         

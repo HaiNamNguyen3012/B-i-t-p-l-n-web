@@ -78,7 +78,7 @@ class Comments{
 
 function handlingComment($db){
     if(empty($_POST)){
-        echo "Khong can xu li";
+        //echo "Khong can xu li";
     }
     else {
         foreach($_POST as $comment ){

@@ -95,7 +95,7 @@
     
     function handlingInfo($db,$vai_tro,$username){
         if(empty($_POST)){
-            echo "Khong can xu li";
+            //echo "Khong can xu li";
         }
         else {
             
@@ -124,7 +124,7 @@
     }
     function handlingUser($db){
         if(empty($_POST)){
-            echo "Khong can xu li";
+            //echo "Khong can xu li";
         }
         else {
             foreach($_POST as $user ){

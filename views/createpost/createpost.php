@@ -9,6 +9,8 @@
     
     <link rel="stylesheet" href="./assets/stylesheets/dangtin.css">
     <title>Thông tin về phòng cần cho thuê</title>
+    <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+	<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 </head>
 
 <body>
@@ -16,31 +18,32 @@
         <section class="dangtin">
             <div class="container">
                 <div class="dangtin-content">
-                    <form action="" method="post" id="formchothuephong" class="formchothuephong" enctype="multipart/form-data">
+                    <form action="" method="post" id="form" class="formchothuephong" enctype="multipart/form-data">
                         <h1>Thông tin về phòng cần cho thuê</h1>
-
+                        
                         <!-- địa chỉ -->
 
                         <div class="form-group">
                             <label for="dia_chi" id="lb-diachi">Địa chỉ phòng thuê<sup2>*</sup2></label> <br>
                             <input type="text" name="dia_chi" class="form-input" id="diachi" placeholder="Địa chỉ(Số nhà - Tên đường)" required>
-                            <select name="thanh_pho" id="thanh-pho" class="form-input" required>
-                                <option  style="display:none" disabled selected value>Tỉnh/Thành phố</option>
-                                <option value="01">Hà Nội</option>
+                            <select name="thanh_pho" id="thanh_pho" class="form-input" required>
+                                <option  style="display:none" disabled selected value>Nhập tỉnh thành phố</option>
+                                <?php 
+                                    foreach($provinces as $province){
+                                    echo'
+                                    <option value="'.$province->matp.'">'.$province->name.'</option>'; 
+                                    }
+                                    ?>
                             </select>
-                            <select name="quan_huyen" id="quan" class="form-input" required>
-                                <option  style="display:none" disabled selected value>Quận Huyện</option>
-                                <option value="001">Ba Đình</option>
-                                <option value="021">Bắc Từ Liêm</option>
-                                <option value="250">Mê Linh</option>
+                            <select name="quan_huyen" id="quan_huyen" class="form-input" required>
+                                <option  style="display:none" disabled selected value>Nhập quận huyện</option>
+                                
                                 
 
                             </select>
-                            <select name="xa_phuong" id="phuong" class="form-input" required>
-                                <option  style="display:none" disabled selected value>Phường Xã</option>
-                                <option value="00001">Phúc Xá</option>
-                                <option value="00004">Trúc Bạch</option>
-                                <option value="00006">Vĩnh Phúc</option>
+                            <select name="xa_phuong" id="xa_phuong" class="form-input" required>
+                                <option  style="display:none" disabled selected value>Nhập phường xã</option>
+                                
                             </select>
                         </div>
 
@@ -92,7 +95,21 @@
                             
                         </div>
 
+                        <!-- chung với chủ -->
 
+                        <div  class="form-group">
+                            <h4 class="chung-chu-hay-khong">Chung với chủ<sup2>*</sup2></h4>
+                            <br/>
+                            <input type="radio" id="chung_chu1" name="chung_chu" value="1" checked>
+                            <label for="chung_chu1" id="lb-chung-chu">Chung</label>
+                            <input type="radio" id="chung_chu2" name="chung_chu" value="0">
+                            <label for="chung_chu2" id="lb-khong-chung">Không chung</label>
+                        </div>
+                        <div class="form-group">
+                            <label for="dien_nuoc" >Giá điện nước<sup2>*</sup2></label>
+                            <br/>
+                            <input type="text" name="dien_nuoc"  class="form-input" placeholder="Tính theo giá dân /4 nghìn một số điện" required>
+                        </div>
                         <div class="form-group">
                             <label for="tieu_de" >Tiêu đề<sup2>*</sup2></label>
                             <br/>
@@ -105,9 +122,16 @@
                             <input type="text" name="noi_dung"  class="form-input" placeholder="Nội dung" required>
                     
                         </div>
-
+                        <div class="form-group">
+                            <label  >Thời gian đăng bài<sup2>*</sup2></label>
+                            <div class="slidecontainer">
+                                <input name="thoi_han_dang_bai" type="range" min="1" step="1" max="8" value="4" class="slider" id="nhap_thoi_gian_dang_bai">
+                                <p>Thời gian đăng bài: <span id="thoi_gian_dang_bai"></span> tuần</p>
+                                <p>Giá đăng bài: <span id="gia_dang_bai"></span> nghìn đồng</p>
+                            </div>
+                        </div>
                         <!-- chung với chủ -->
-
+                        <!--
                         <div  class="form-group">
                             <h4 class="chung-chu-hay-khong">Chung với chủ<sup2>*</sup2></h4>
                             <br/>
@@ -116,7 +140,7 @@
                             <input type="radio" id="chung_chu2" name="chung_chu" value="0">
                             <label for="chung_chu2" id="lb-khong-chung">Không chung</label>
                         </div>
-
+                            -->
                         <!-- Điều kiện vật chất -->
 
                         <div class="form-group">
@@ -172,11 +196,11 @@
                                 <label for="ban_cong2" id="lb-khong-ban-cong">Không có ban công</label>
                             </div>
 
-                            <div class="form-group">
+                         <!--   <div class="form-group">
                             <label for="dien_nuoc" >Giá điện nước<sup2>*</sup2></label>
                             <br/>
                             <input type="text" name="dien_nuoc"  class="form-input" placeholder="Tính theo giá dân /4 nghìn một số điện" required>
-                    
+-->
                         </div>
 
                             <!-- Tiện ích khác -->
@@ -189,14 +213,14 @@
                             <label for="giuong-tu" id="lb-giuong-tu"> Giường tủ </label>
 
                             <!-- Ảnh -->
-                            
-                            <label >Chọn ảnh (tối thiểu 3 ảnh): <sup2>*</sup2></label>
+                            </br>
+                            <label >Chọn ảnh (tối thiểu 3 ảnh, tối đa 10 ảnh): <sup2>*</sup2></label>
                             <input  id="files" name="cac_anh[]" accept="image/*" type="file" multiple/> 
                             
                             <output id='result'>
                             
                             <input type="submit" name="submit" id="submit" class="form-submit" value="Đăng tin"/>
-
+                            
                         </div>
                     </form>
 
@@ -207,6 +231,55 @@
     
     <script src="./assets/javascripts/dangtin.js"></script>
 </body>
+<script>
+    $(function(){
+        $("input[type='submit']").click(function(){
+            var $fileUpload = $("input[type='file']");
+            if (parseInt($fileUpload.get(0).files.length) < 3 || parseInt($fileUpload.get(0).files.length) > 10 ){
+            alert("Tối thiểu 3 ảnh, tối đa 10 ảnh");
+            }
+        });    
+    });
+    $("#thanh_pho").change(function(){
+			$.ajax({
+				method: "POST",// phương thức dữ liệu được truyền đi
+				url: "show_data.php",// gọi đến file server show_data.php để xử lý
+				data: $("#form").serialize(),//lấy toàn thông tin các fields trong form bằng hàm serialize của jquery
+				success : function(response){//kết quả trả về từ server nếu gửi thành công
+                  //  console.log(response);
+                    $('#quan_huyen').children().not(':first').remove();
+                    $('#quan_huyen').children().replaceWith(response);
+                   
+                    $('#xa_phuong').children().not(':first').remove();
+                    $('#xa_phuong').children().replaceWith('<option  style="display:none" disabled selected value>Nhập xã phường</option>');
+                  //  console.log('okokoko');
+				}
+			});
+        });
+        $("#quan_huyen").change(function(){
+			$.ajax({
+				method: "POST",// phương thức dữ liệu được truyền đi
+				url: "show_data_ward.php",// gọi đến file server show_data.php để xử lý
+				data: $("#form").serialize(),//lấy toàn thông tin các fields trong form bằng hàm serialize của jquery
+				success : function(response){//kết quả trả về từ server nếu gửi thành công
+                  //  console.log(response);
+                    $('#xa_phuong').children().not(':first').remove();
+                    $('#xa_phuong').children().replaceWith(response);
+                  //  console.log('nonono');
+				}
+			});
+        });
+        var slider = document.getElementById("nhap_thoi_gian_dang_bai");
+        var output_time = document.getElementById("thoi_gian_dang_bai");
+        var output_price = document.getElementById("gia_dang_bai");
 
+        output_time.innerHTML = slider.value;
+        output_price.innerHTML = slider.value * 100;
+
+        slider.oninput = function() {
+        output_time.innerHTML = this.value;
+        output_price.innerHTML = this.value * 100;
+        }
+</script>
 </html>
 

@@ -214,12 +214,14 @@
                             ?>
                             
                         </div>
+                        <h4>Đang bán</h4>
                         <?php
-                        
+            $i = 0;
+            if(count($posts) > 1){            
             foreach ($posts as $post) {
                 echo 
                 ' <div>
-                    <h4>Phòng đang cho thuê</h4>
+                    
                     <div id="phong1">
                         <div class="left">
                             <img src="./assets/images/phong_tro/'.$post->ten_hinh_anh.'" alt="'.$post->ten_hinh_anh.'" width="140" height="140"> 
@@ -245,7 +247,13 @@
                         </div>
                     </div>
                 </div>';
+
+                if (++$i == (count($posts)-1)) break;
                     }
+                }
+                else{
+                    
+                }
             ?>
                     </div>
                 </div>

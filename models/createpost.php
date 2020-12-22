@@ -14,6 +14,7 @@ class CreatePost
   public $gia;
   public $tinh_theo;
   public $dien_tich;
+  public $thoi_han_dang_bai;
   public $tieu_de;
   public $noi_dung;
   public $chung_chu;
@@ -43,6 +44,7 @@ class CreatePost
         $this->gia = $_POST['gia'];
         $this->tinh_theo = $_POST['tinh_theo'];
         $this->dien_tich = $_POST['dien_tich'];
+        $this->thoi_han_dang_bai = $_POST['thoi_han_dang_bai'];
         $this->tieu_de = $_POST['tieu_de'];
         $this->noi_dung = $_POST['noi_dung'];
         $this->chung_chu = $_POST['chung_chu'];
@@ -76,10 +78,10 @@ static function insertPost(){
 
 
       $query="INSERT INTO phong (id_phong, ten_tai_khoan, dia_chi, id_xa, id_qh, id_tp, gan_dia_diem, loai_phong, so_luong_phong, gia, tinh_theo, dien_tich,
-                           thoi_gian_hien_thi, thoi_gian_dang_bai, duoc_duyet, duoc_thue, tieu_de, noi_dung, 
+                           thoi_gian_hien_thi, thoi_gian_dang_bai,thoi_han_dang_bai, duoc_duyet, duoc_thue, tieu_de, noi_dung, 
                            chung_chu, phong_tam_chung, nong_lanh, phong_bep, dieu_hoa, ban_cong, dien_nuoc, tu_lanh, may_giat, giuong_tu) 
                 VALUES (NULL, '$post->nguoi_cho_thue', '$post->dia_chi', '$post->xa_phuong', '$post->quan_huyen', '$post->thanh_pho', '$post->gan_dia_diem', '$post->loai_phong', '$post->so_luong_phong', '$post->gia', '$post->tinh_theo', '$post->dien_tich',
-                          '', now(), '0', '0', '$post->tieu_de', '$post->noi_dung', 
+                          '', now(), $post->thoi_han_dang_bai ,'0', '0', '$post->tieu_de', '$post->noi_dung', 
                             '$post->chung_chu', '$post->phong_tam_chung', '$post->nong_lanh', '$post->phong_bep', '$post->dieu_hoa', '$post->ban_cong', '$post->dien_nuoc', '$post->tu_lanh', '$post->may_giat', '$post->giuong_tu')";
       echo $query;
    
@@ -147,9 +149,10 @@ function insertImageToDb($db,$id_phong,$ten_anh){
   try{
     $db->exec($query);
     echo "New record created successfully";
+    echo $ten_anh."</br>";
   }
   catch(PDOException $e){
-    echo $query . "<br>" . $e->getMessage();
+    echo $query . "</br>" . $e->getMessage();
   } 
 }
 

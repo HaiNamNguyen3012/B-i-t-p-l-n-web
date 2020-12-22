@@ -26,9 +26,11 @@ class PostsController extends BaseController
       isLogin();
 
       require_once('models/createpost.php');
+      require_once('models/province.php');
       $this->folder = 'createpost';
       $post = CreatePost::insertPost();
-      $data = array('createpost',$post);
+      $provinces = Province::show();
+      $data = array('createpost' => $post , 'provinces' => $provinces);
       $this->render('createpost',$data);
     }
 }

@@ -66,7 +66,7 @@ class Reports{
 
 function handlingReport($db){
     if(empty($_POST)){
-        echo "Khong can xu li";
+      //  echo "Khong can xu li";
     }
     else {
         foreach($_POST as $report ){
