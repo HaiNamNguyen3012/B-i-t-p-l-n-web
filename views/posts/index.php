@@ -8,7 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <script src="../lib/jquery-3.5.1.min.js"></script>
     <link rel="stylesheet" href="./icon/css/all.min.css">
-    <link rel="stylesheet" href="./assets/stylesheets/nguoichothue.css">
+    <link rel="stylesheet" href="./assets/stylesheets/nguoichothue.css?v=<?php echo time(); ?>">
     <link rel="stylesheet" href="./dangtin.html">
     <title>Trang chủ</title>
     <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
@@ -29,35 +29,22 @@
                     </button>
                 </div>-->
                 
-                    <div class="col-sm-2 city">
-                        <select name="thanh_pho" id="province" class="province">
-                                <option  style="display:none" disabled selected value>Nhập tỉnh thành phố</option>
-                                    <?php 
-                                    foreach($provinces as $province){
-                                    echo'
-                                    <option value="'.$province->matp.'">'.$province->name.'</option>'; 
-                                    }
-                                    ?>
-                        </select>
-                    </div>
-                    </div>
-                
-                
-                    <div class="col-sm-2 ">
-                        <select name="quan_huyen" id="district" class ="district" >
-                                <option  style="display:none" disabled selected value>Nhập quận huyện</option>
-                        </select>
-                        
-                    </div>
-                
-                    <div class="col-sm-2 city">
-                        <select name="xa_phuong" id="ward" class = "ward">
-                            <option  style="display:none" disabled selected value>Nhập xã phường</option>
-                        </select>
-                        
-                    </div>
-                
-                <div class="col-sm-1 price">
+                <div class="col-sm-10 select">
+                    <select name="thanh_pho" id="province" class="province">
+                        <option  style="display:none" disabled selected value>Nhập tỉnh thành phố</option>
+                            <?php 
+                                foreach($provinces as $province){
+                                echo'
+                                <option value="'.$province->matp.'">'.$province->name.'</option>'; 
+                                }
+                            ?>
+                    </select>
+                    <select name="quan_huyen" id="district" class ="district" >
+                            <option  style="display:none" disabled selected value>Nhập quận huyện</option>
+                    </select>  
+                    <select name="xa_phuong" id="ward" class = "ward">
+                        <option  style="display:none" disabled selected value>Nhập xã phường</option>
+                    </select>
                     <select name="price" id="price">
                         <option  style="display:none" disabled selected value>Nhập giá phòng</option>
                         <option value="1">< 1 triệu</option>
@@ -70,10 +57,7 @@
                         <option value="15">10 -> 15 triệu</option>
                         <option value="25">15 -> 25 triệu</option>
                         <option value="30">> 25 triệu</option>
-
                     </select>
-                </div>
-                <div class="col-sm-1 square">
                     <select name="square" id="square">
                         <option  style="display:none" disabled selected value>Nhập diện tích</option>
                         <option value="10">< 10 m</option>
@@ -86,20 +70,16 @@
                         <option value="50">40 -> 50 m</option>
                         <option value="75">50 -> 75 m</option>
                         <option value="100">> 75 m</option>
-
                     </select>
-                </div>
-                <div class="col-sm-2 type-room">
                     <select name="type_room" id="type_room">
                         <option  style="display:none" disabled selected value>Nhập loại phòng</option>
-                        
                         <option value="Phòng trọ">Phòng trọ</option>
                         <option value="Chung cư mini">Chung cư mini</option>
                         <option value="Nhà nguyên căn">Nhà nguyên căn</option>
                         <option value="Chung cư nguyên căn">Chung cư nguyên căn</option>
                     </select>
                 </div>
-                <div class="col-sm-2 submit">
+                <div class="col-sm-1 submit">
                     <input type="submit">
                 </div>
             </div>
@@ -151,14 +131,14 @@
             
         </div>
     </div>
-    <div class="pagination">
+    <div class="pagination text-xs-center">
            <?php 
            
             $current_page = $posts[count($posts)-1]['current_page'];
             $total_page = $posts[count($posts)-1]['total_page'];
             // nếu current_page > 1 và total_page > 1 mới hiển thị nút prev
             if ($current_page > 1 && $total_page > 1){
-                echo '<a href="index.php?controller=posts&page='.($current_page-1).'">Prev</a> | ';
+                echo '<a href="index.php?controller=posts&page='.($current_page-1).'" class="text-center" >Prev</a>  ';
             }
  
             // Lặp khoảng giữa
@@ -183,16 +163,16 @@
                 // Nếu là trang hiện tại thì hiển thị thẻ span
                 // ngược lại hiển thị thẻ a
                 if ($i == $current_page){
-                    echo '<span>'.$i.'</span> | ';
+                    echo '<span>'.$i.'</span> ';
                 }
                 else{
-                    echo '<a href="index.php?controller=posts&page='.$i.'">'.$i.'</a> | ';
+                    echo '<a href="index.php?controller=posts&page='.$i.'" class="text-center">'.$i.'</a>';
                 }
             }
  
             // nếu current_page < $total_page và total_page > 1 mới hiển thị nút prev
             if ($current_page < $total_page && $total_page > 1){
-                echo '<a href="index.php?controller=posts&'.($current_page+1).'">Next</a> | ';
+                echo '<a href="index.php?controller=posts&page='.($current_page+1).'" class="text-center">Next</a> ';
             }
            ?>
         </div>
