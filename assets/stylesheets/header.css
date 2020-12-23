@@ -37,6 +37,7 @@ header .up .left h1 a:hover {
 }
 
 header .up .right ul {
+    margin-top: 10px;
     display: flex;
     flex-direction: row;
 }
@@ -127,4 +128,247 @@ header .down .right a {
     color: #f2f2f2;
     font-weight: 900;
     font-size: 20px;
+}
+
+@media(min-width:768px) and (max-width: 991.98px) {
+    header {
+        height: 125px;
+        background: #FFBA00;
+        text-align: none;
+    }
+    header .up {
+        width: 100%;
+        height: 65px;
+    }
+    header .up .left {
+        width: 100%;
+        height: 100%;
+    }
+    header .up .left h1 {
+        padding-top: 10px;
+        text-align: center;
+    }
+    header .up .left h1 a {
+        color: #F2F2F2;
+        text-decoration: none;
+    }
+    header .up .left h1 a:hover {
+        color: #F2F2F2;
+        text-decoration: none;
+    }
+    header .up .right {
+        width: 0;
+    }
+    header .up .right ul {
+        display: none;
+        flex-direction: row;
+    }
+    header .up .right ul li {
+        display: none;
+        list-style-type: none;
+    }
+    header .up .right ul li a {
+        font-size: 20px;
+        font-weight: 900;
+        color: #0D0D0D;
+    }
+    header .up .right ul li a:hover {
+        font-size: 20px;
+        font-weight: 900;
+        color: #F2F2F2;
+    }
+    header .down .left #search {
+        width: 90%;
+        padding: 7px;
+        border: none;
+        border-radius: 7px;
+        margin-left: 5%;
+    }
+    header .down .left #search:focus {
+        outline: none;
+    }
+    header .down .left #icon-search {
+        position: absolute;
+        margin-left: -20px;
+        margin-top: 7px;
+    }
+    /* header down center */
+    header .down .center a {
+        color: #0D0D0D;
+        border: 2px solid black;
+        border-radius: 4px;
+        padding: 10px;
+    }
+    header .down .center a:hover {
+        color: #f2f2f2;
+        border: 2px solid #f2f2f2;
+        border-radius: 4px;
+        padding: 10px;
+    }
+    header .down .center a i {
+        margin-top: 13px;
+    }
+}
+
+@media (min-width:576px) and (max-width:767.98px) {
+    header {
+        height: 125px;
+        background: #FFBA00;
+        text-align: none;
+    }
+    header .up {
+        width: 100%;
+        height: 65px;
+    }
+    header .up .left {
+        width: 100%;
+        height: 100%;
+    }
+    header .up .left h1 {
+        padding-top: 10px;
+        text-align: center;
+        margin-left: 10px;
+    }
+    header .up .left h1 a {
+        color: #F2F2F2;
+        text-decoration: none;
+    }
+    header .up .left h1 a:hover {
+        color: #F2F2F2;
+        text-decoration: none;
+    }
+    header .up .right {
+        width: 0;
+    }
+    header .up .right ul {
+        display: none;
+        flex-direction: row;
+    }
+    header .up .right ul li {
+        display: none;
+        list-style-type: none;
+    }
+    header .up .right ul li a {
+        font-size: 20px;
+        font-weight: 900;
+        color: #0D0D0D;
+    }
+    header .up .right ul li a:hover {
+        font-size: 20px;
+        font-weight: 900;
+        color: #F2F2F2;
+    }
+    header .down {
+        width: 100%;
+        height: 60px;
+    }
+    header .down .left #search {
+        width: 90%;
+        padding: 7px;
+        border: none;
+        border-radius: 7px;
+        margin-left: 5%;
+    }
+    /* header down center */
+    header .down .center {
+        margin-right: 25px;
+    }
+    header .down .center a {
+        color: #0D0D0D;
+        border: 2px solid black;
+        border-radius: 4px;
+        padding: 10px;
+    }
+    header .down .center a:hover {
+        color: #f2f2f2;
+        border: 2px solid #f2f2f2;
+        border-radius: 4px;
+        padding: 10px;
+    }
+    header .down .center a i {
+        margin-top: 13px;
+    }
+}
+
+@media(max-width:575.98px) {
+    header {
+        height: 250px;
+        background: #FFBA00;
+        text-align: none;
+    }
+    header .up {
+        width: 100%;
+        height: 55px;
+    }
+    header .up .left {
+        width: 100%;
+        height: 100%;
+    }
+    header .up .left h1 {
+        padding-top: 10px;
+        text-align: center;
+        margin-left: 10px;
+    }
+    header .up .left h1 a {
+        color: #F2F2F2;
+        text-decoration: none;
+    }
+    header .up .left h1 a:hover {
+        color: #F2F2F2;
+        text-decoration: none;
+    }
+    header .up .right {
+        width: 0;
+    }
+    header .up .right ul {
+        display: none;
+        flex-direction: row;
+    }
+    header .up .right ul li {
+        display: none;
+        list-style-type: none;
+    }
+    header .up .right ul li a {
+        font-size: 20px;
+        font-weight: 900;
+        color: #0D0D0D;
+    }
+    header .up .right ul li a:hover {
+        font-size: 20px;
+        font-weight: 900;
+        color: #F2F2F2;
+    }
+    header .down {
+        width: 100%;
+        height: 125px;
+    }
+    header .down .left {
+        width: 50%;
+    }
+    header .down .left #search {
+        width: 90%;
+        padding: 7px;
+        border: none;
+        border-radius: 7px;
+        margin-left: 5%;
+    }
+    /* header down center */
+    header .down .center {
+        margin-right: 25px;
+    }
+    header .down .center a {
+        color: #0D0D0D;
+        border: 2px solid black;
+        border-radius: 4px;
+        padding: 10px;
+    }
+    header .down .center a:hover {
+        color: #f2f2f2;
+        border: 2px solid #f2f2f2;
+        border-radius: 4px;
+        padding: 10px;
+    }
+    header .down .center a i {
+        margin-top: 13px;
+    }
 }
