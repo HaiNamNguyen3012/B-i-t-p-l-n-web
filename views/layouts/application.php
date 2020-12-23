@@ -20,12 +20,12 @@
     <header class="container-fluid">
             <div class="container">
                 <div class="row up">
-                    <div class="col-sm-4 left">
+                    <div class="col-sm-2  left">
                         <h1>
                             <a href="./index.php?controller=posts">TT24H</a>
                         </h1>
                     </div>
-                    <div class="col-sm-8 right">
+                    <div class="col-sm-10 right">
                         <ul>
                             <li>
                                 <a href="./index.php?controller=posts">
@@ -147,4 +147,3 @@
             </footer>
   </body>
 </html>
-
