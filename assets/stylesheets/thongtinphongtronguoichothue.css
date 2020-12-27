@@ -410,7 +410,7 @@ header .down .right a {
     outline: none;
 }
 
-.report .form-report .reason input[type=submit] {
+.report .form-report .reason input[type=button] {
     width: calc(100% - 9px);
     height: 40px;
     margin: 5px 0;
@@ -428,18 +428,18 @@ header .down .right a {
     width: 100%;
 }
 
-.comment .form {
+.comment .form_comment {
     width: 100%;
 }
 
-.comment .form textarea {
+.comment .form_comment textarea {
     width: 100%;
     height: 100px;
     margin-bottom: 10px;
     margin-top: 20px;
 }
 
-.comment .form #addComent {
+.comment .form_comment #addComment {
     width: 100%;
     height: 45px;
     border: none;

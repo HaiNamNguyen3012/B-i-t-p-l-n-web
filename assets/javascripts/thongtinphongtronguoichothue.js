@@ -27,9 +27,7 @@ function showSlides(n) {
     dots[slideIndex - 1].className += " active";
 }
 // button luu tin
-$(".saveHome").click(function() {
-    $(".stackIcons i").toggleClass("hide");
-});
+
 
 // report form
 function hideAndUnhideFormReport() {

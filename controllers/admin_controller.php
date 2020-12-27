@@ -15,7 +15,7 @@ class AdminController extends BaseController
     isLogin();
 
     $data = array(null) ;
-    $this->render('adminIndex',$data);
+    $this->adminRender('adminIndex',$data);
   }
 
 
@@ -34,7 +34,7 @@ class AdminController extends BaseController
     
     $uncheckUsers = Info::showAll();
     $data = array('uncheckUsers'  => $uncheckUsers);
-    $this->render('adminUncheckUsers',$data);
+    $this->adminRender('adminUncheckUsers',$data);
   }
 
   public function showUncheckPosts(){
@@ -42,23 +42,23 @@ class AdminController extends BaseController
     isLogin();
     $posts = Post::showAllForAdmin();
     $data = array('posts' => $posts);
-    $this->render('adminUncheckPosts', $data);
+    $this->adminRender('adminUncheckPosts', $data);
   }
 
   public function showUncheckComments(){
-    require_once('models/comments.php');
+    require_once('models/comment.php');
     isLogin();
-    $uncheckComments = Comments::showAll();
+    $uncheckComments = Comment::showAll();
     $data = array('uncheckComments'  => $uncheckComments);
-    $this->render('adminUncheckComments',$data);
+    $this->adminRender('adminUncheckComments',$data);
   }
   
   public function showUncheckReports(){
-    require_once('models/reports.php');
+    require_once('models/report.php');
     isLogin();
-    $uncheckReports = Reports::showAll();
+    $uncheckReports = Report::showAll();
     $data = array('uncheckReports'  => $uncheckReports);
-    $this->render('adminUncheckReports',$data);
+    $this->adminRender('adminUncheckReports',$data);
 
   }
 

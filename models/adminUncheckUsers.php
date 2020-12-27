@@ -64,7 +64,7 @@ function handlingUser($db){
 
             try{
                 $db->exec($query);
-                echo "New record created successfully";
+            //    echo "New record created successfully";
               }
               catch(PDOException $e){
                 echo $query . "<br>" . $e->getMessage();

@@ -346,18 +346,20 @@ header .down .right a {
 
 /* pagination */
 
-.pagination {
+.paginations {
+    margin-left:500px;
+    width: 100%;
     display: flex;
     align-items: center;
+    text-align: center;
+    
+  
+}
+.paginations a, .paginations span{
+    margin-left: 30px;
+    margin-right: 30px;
 }
 
-.pagination a {
-    text-decoration: none;
-    border: none;
-    text-align: center;
-    color: #000000;
-    padding: 8px 16px;
-}
 
 
 /* footer */

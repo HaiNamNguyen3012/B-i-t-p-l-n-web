@@ -14,60 +14,7 @@
 </head>
 
 <body>
-  <!--  <header class="container-fluid">
-        <div class="container">
-            <div class="row up">
-                <div class="col-sm-4 left">
-                    <h1>
-                        <a href="../nguoichothue/nguoichothue.html">TT24H</a>
-                    </h1>
-                </div>
-                <div class="col-sm-8 right">
-                    <ul>
-                        <li>
-                            <a href="../nguoichothue/nguoichothue.html">
-                                <i class="fas fa-home">Trang chủ</i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="fas fa-pen-square">Chỉnh sửa bài đăng</i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="fas fa-comment-alt">Nhắn tin</i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="fas fa-bell">Thông báo</i>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="row down">
-                <div class="col-sm-6 left">
-                    <input type="search" name="search" id="search" placeholder="Tìm kiếm">
-                    <span id="icon-search">
-                        <i class="fas fa-search"></i>
-                    </span>
-                </div>
-                <div class="col-sm-2 center">
-                    <a href="../dangnhap/dangnhap.html">
-                        <i class="fas fa-user">Đăng nhập</i>
-                    </a>
-                </div>
-                <div class="col-sm-2 right">
-                    <a href="../nguoichothue/dangtin.html">
-                        <i class="fas fa-pen-square">Đăng tin</i>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </header>
--->
+    <!--              HINH ANH          -->
     <div class="content container-fluid">
         <div class="information-header">
             <h4>Thông tin về phòng trọ</h4>
@@ -110,96 +57,12 @@
                         
                     ?> 
                     </div>
-                    <!--
-                    <div class="image">
-                        <div class="slideshow-container">
-                            <div class="mySlides">
-                                <div class="numbertext">1/3</div>
-                                <img src="./assets/images/phong_tro/dog.jpg" alt="">
-                                <div class="text">Ảnh Một</div>
-                            </div>
-                            <div class="mySlides">
-                                <div class="numbertext">2/3</div>
-                                <img src="./image/2.jpg" alt="">
-                                <div class="text">Ảnh Hai</div>
-                            </div>
-                            <div class="mySlides">
-                                <div class="numbertext">3/3</div>
-                                <img src="./image/3.jpg" alt="">
-                                <div class="text">Ảnh Ba</div>
-                            </div>
-                            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                            <a class="next" onclick="plusSlides(1)">&#10095;</a>
-                        </div>
-                        <div style="text-align:center">
-                            <span class="dot" onclick="currentSlide(1)"></span>
-                            <span class="dot" onclick="currentSlide(2)"></span>
-                            <span class="dot" onclick="currentSlide(3)"></span>
-                        </div>
-
-                    </div>  -->
+                   <!--              THONG TIN PHONG          -->  
                     <div class="information">
-                        <?php
-                       /* echo 
-                        'Tiêu đề: '.$post_details->tieu_de.'/////
-                        </br>;
-                        Nội dung: '.$post_details->noi_dung.'/////
-                        </br>
-                        Giá: '.$post_details->gia.'////
-                        </br>
-                        Loại phòng: '.$post_details->loai_phong.'
-                        </br>
-                        Diện tích: '.$post_details->dien_tich.' m<sup>2</sup>///
-                        </br>
-                        Địa chỉ:'.$post_details->dia_chi.'//
-                        </br>
-                        '.$post_details->tentp.'//
-                        </br>
-                        '.$post_details->tenqh.'//
-                        </br>
-                        '.$post_details->tenxp.'//
-                        </br>
-                        Gần địa điểm: '.$post_details->gan_dia_diem.'//
-                        </br>
-                        Số lượng phòng: '.$post_details->so_luong_phong.' ////
-                        </br>
-                        Tính tiền theo từng '.$post_details->tinh_theo.'
-                        </br>
-                        
-                        Thời gian đăng bài: '.$post_details->thoi_gian_dang_bai.'
-                        </br>
-                        Được thuê: '.$post_details->duoc_thue.'
-                        </br>
-                        Đăng bởi: '.$post_details->ho.' '.$post_details->ten.'//
-                        </br>
-                        Số điện thoại: '.$post_details->sdt.'//
-                        </br>
-                        Chung chủ:'.$post_details->chung_chu.'//
-                        </br>
-                        Phòng tắm chung: '.$post_details->phong_tam_chung.'///
-                        </br>
-                        Bình nóng lạnh: '.$post_details->nong_lanh.'
-                        </br>
-                        Phòng bếp: '.$post_details->phong_bep.'///
-                        </br>
-                        Điều hòa: '.$post_details->dieu_hoa.'///
-                        </br>
-                        Ban công: '.$post_details->ban_cong.'///
-                        </br>
-                        Điện nước: '.$post_details->dien_nuoc.'/////
-                        </br>
-                        Tủ lanh: '.$post_details->tu_lanh.'
-                        </br>
-                        Máy giặt: '.$post_details->may_giat.'
-                        </br>
-                        Giường tủ: '.$post_details->giuong_tu.'
-                        </br>
-                        Ảnh: '.$post_details->cac_hinh_anh[0]['ten_hinh_anh'].''. sua lai sau'.
-                        </br>
-  
-                       ';*/?>
+                       
+                      
                        <?php
-                        
+                       
                         echo '
                         <h4>'.$post_details->tieu_de.'</h4>
                         <div class="dientich-va-gia">
@@ -207,21 +70,31 @@
                                 <p id="price">'.$post_details->gia.'</p>
                                 <p id="square">'.$post_details->dien_tich.' m<sup>2</sup></p>
                             </div>
-                            <div class="right">
-                                <div class="statistivs">
-                                    <button class="saveHome hoverPulse pan typeReversed">
-                                        <span class="stackIcons left">
-                                            <i class="iconHeartEmpty typeReversed iconOnly far fa-heart"></i>
-                                            <i class="iconHeartActive iconOnly hide fas fa-heart"></i>
-                                        </span>
-                                        <div class="right">
-                                            <p>69</p>
-                                            <p>Lượt lưu tin</p>
-                                        </div>
-                                    </button>
+                            '.(isset($_SESSION['username']) ? '' : '<a href="./index.php?controller=login" style="text-decoration:none">').'
+                                <div class="right">
+                                
+                                    <div class="statistivs">
+                                        
+                                            <button class="saveHome hoverPulse pan typeReversed">
+                                                <span class="stackIcons left">
+                                                    <i class="iconHeartEmpty typeReversed iconOnly far fa-heart"></i>
+                                                    <i class="iconHeartActive iconOnly hide fas fa-heart"></i>
+                                                </span>
+                                                <div class="right">
+                                                    <p class=""total">'.$save_post['tong'].'</p>
+                                                    <p>lượt lưu tin</p>
+                                                </div>
+                                            </button>
+                                        
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
+                                '.(isset($_SESSION['username']) ? '' : '</a>').'
+                        </div>';
+
+                     
+
+
+                        echo '
                         <div class="description">
                             <h4>'.$post_details->so_luong_phong.' phòng '.$post_details->loai_phong.', '.$post_details->dia_chi.', '.$post_details->tenxp.', '.$post_details->tenqh.', '.$post_details->tentp.'</h4>
                             <h4> Gần '.$post_details->gan_dia_diem.'</h4>   <!-- mới thêm-->
@@ -247,50 +120,79 @@
                         
                         ?>
                     </div>
-                    
+                     <!--              BAO CAO          -->
                     <div class="report">
+                        <?php
+                        echo'
+                        '.(isset($_SESSION['username']) ? '' : '<a href="./index.php?controller=login" style="text-decoration:none">').'
                         <div class="button-report">
                             <button onclick="hideAndUnhideFormReport();">Báo cáo phòng</button>
                         </div>
-                        <div class="form-report">
-                            <form action="" method="post">
+                        '.(isset($_SESSION['username']) ? '' : '</a>');
+                        ?>
+                        <div class="form-report" style="display: none;">
+                            <form class="form_report">
                                 <h3>Form báo cáo phòng</h3>
                                 <div class="reason">
                                     <p>Lý do bạn báo cáo</p>
-                                    <input type="checkbox" id="reason1" name="reason1" value="tin dang het han">
-                                    <label for="reason1"> Tin đăng hết hạn</label><br>
-                                    <input type="checkbox" id="reason2" name="reason2" value="phong khong dung thong tin">
-                                    <label for="reason2"> Phòng không đúng thông tin</label><br>
-                                    <textarea name="another-reason" id="another-reason" cols="30" rows="10" placeholder="Lý do khác"></textarea><br>
-                                    <input type="submit" value="Gửi">
+                                    <input type="radio" id="reason1" class="report_reason" name="report_reason" value="Tin đăng hết hạn">
+                                    <label for="reason1">Tin đăng hết hạn</label><br>
+                                    
+                                    <input type="radio" id="reason2" class="report_reason"  name="report_reason" value="Phòng không đúng thông tin">
+                                    <label for="reason2">Phòng không đúng thông tin</label><br>
+
+                                    <input type="radio" id="reason3" class="report_reason"  name="report_reason" value="Lừa đảo">
+                                    <label for="reason3">Lừa đảo</label><br>
+
+                                    <input type="radio" id="reason4" class="report_reason"  name="report_reason" value="Trùng lặp">
+                                    <label for="reason4">Trùng lặp</label><br>
+
+                                    <input type="radio" id="reason5" class="report_reason"  name="report_reason" value="Không liên lạc được">
+                                    <label for="reason5">Không liên lạc được</label><br>
+
+                                    <textarea  name="report_content" class="report_content" id="another-reason" cols="30" rows="10" placeholder="Nội dung"></textarea><br>
+                                    
+                                    <input type="button" id="addReport" value="Gửi báo cáo">
+                                    <p id="report_alert" style="display: none;">Báo cáo của bạn đã được gửi đi</p>
                                 </div>
                             </form>
                         </div>
+                         <!--              BINH LUAN          -->
                         <div class="comment">
-                            <div class="form">
-                                <textarea name="" id="bodyText" cols="30" rows="10" placeholder="Đánh giá của bạn về phòng"></textarea>
-                                <br>
-                                <input type="button" id="addComent" value="Add Comment" />
+                            <?php
+                            echo'
+                            '.(isset($_SESSION['username']) ? '' : '<a href="./index.php?controller=login" style="text-decoration:none">').'
+                            <div class="form_comment">
+                                <form id = "comment_form">
+                                    <textarea name="comment_content" class="comment_content" id="bodyText" cols="30" rows="10" placeholder="Đánh giá của bạn về phòng"></textarea>
+                                    <br>
+                                    <input type="button" id="addComment" value="Thêm bình luận" />
+                                    <p id="alert" style="display: none;">Bình luận của bạn đang được duyệt</p>
+                                </form>
                             </div>
+                            '.(isset($_SESSION['username']) ? '' : '</a>');
+                            ?>
                             <div class="user-comment">
-                                <div id="user-comment-1">
-                                    <b>Tên đăng nhập</b>
-                                    <p>Bình luận 1</p>
-                                </div>
-                                <div id="user-comment-2">
-                                    <b>Tên đăng nhập</b>
-                                    <p>Bình luận 2</p>
-                                </div>
-                                <div id="user-comment-3">
-                                    <b>Tên đăng nhập</b>
-                                    <p>Bình luận 3</p>
-                                </div>
+                                <?php
+                                $i=1;
+                                    foreach($comments as $comment){
+                                        echo '
+                                        <div id="user-comment-'.$i.'">
+                                            <b>'.($comment->id_nguoi_dung == $post_details->ten_tai_khoan ? $comment->id_nguoi_dung.' (chủ phòng )' : $comment->id_nguoi_dung).'</b>
+                                            <p>'.$comment->noi_dung.'</p>
+                                            <p>'.$comment->thoi_gian_binh_luan.' trước </p>
+                                        </div>';
+                                        $i++;
+                                    }
+                                ?>
+
+                                
                             </div>
                         </div>
                     </div>
                     
                 </div>
-
+                     <!--              NGUOI DANG          -->
                 <div class="right col-sm-3">
                     <div class="person-information">
                         <div class="up">
@@ -306,49 +208,107 @@
                 </div>
             </div>
         </div>
-        <!--
-        <footer class="container-fluid">
-            <div class="appWrapper-DesktopFooter">
-                <div class="appWrapper-DesktopFooter-container">
-                    <section class="appWrapper-DesktopFooter-container-top">
-                        <div class="appWrapper-DesktopFooter-item">
-                            <p class="appWrapper-DesktopFooter-heading">Hỗ trợ khách hàng</p>
-                            <ul class="appWrapper-Footer-ul">
-                                <li class="appWrapper-Footer"><a href="#">Trung tâm trợ giúp</a></li>
-                                <li class="appWrapper-Footer"><a href="#">An toàn giao dịch</a></li>
-                                <li class="appWrapper-Footer"><a href="#">Quy định và quyền lợi</a></li>
-                                <li class="appWrapper-Footer"><a href="#">Liên hệ hỗ trợ</a></li>
-                            </ul>
-
-                        </div>
-                        <div class="appWrapper-DesktopFooter-item">
-                            <p class="appWrapper-DesktopFooter-heading">TT24</p>
-                            <ul class="appWrapper-Footer-ul">
-                                <li class="appWrapper-Footer"><a href="/gioithieu/gioithieu.html">Giới thiệu</a></li>
-                                <li class="appWrapper-Footer"><a href="#">Truyền thông</a></li>
-                            </ul>
-
-                        </div>
-                        <div class="appWrapper-DesktopFooter-item-col">
-                            <div class="appWrapper-DesktopFooter-item">
-                                <p class="appWrapper-DesktopFooter-heading">Liên hệ</p>
-                                <ul class="appWrapper-Footer-ul approw">
-                                    <li class="appWrapper-Footer-icon"><img src="https://static.chotot.com/storage/default/facebook.svg"></li>
-                                    <li class="appWrapper-Footer-icon"><img src="https://static.chotot.com/storage/default/google.svg"></li>
-                                    <li class="appWrapper-Footer-icon"><img src="https://static.chotot.com/storage/default/youtube.svg"></li>
-                                </ul>
-
-                            </div>
-                        </div>
-                    </section>
-                    <section class="appWrapper-DesktopFooter-container-bottom">
-                        <p>Trang web được thiết kế bởi Huy Trần, Trọng Tấn, Hải Nam</p>
-                    </section>
-                </div>
-            </div>
-        </footer>
-                    -->
+        
         <script src="./assets/javascripts/thongtinphongtronguoichothue.js?v=<?php echo time(); ?>"></script>
+        <script type="text/javascript">
+            $("#addComment").on("click" , function(){
+                if($(".comment_content").val() == ""){
+                    alert("Vui lòng nhập đủ bình luận");
+                }
+                else{
+                    $.ajax({
+                        method: "POST",// phương thức dữ liệu được truyền đi
+                        url: "ajax/send_comment.php",// gọi đến file server show_data.php để xử lý
+                        data: { comment_content : $(".comment_content").val() , id_room :<?php echo json_encode($_GET['id']); ?>},//lấy toàn thông tin các fields trong form bằng hàm serialize của jquery
+                        success : function(response){//kết quả trả về từ server nếu gửi thành công
+                            $("#bodyText").val('');
+                            $("#alert").show();
+                        
+                            
+                        }, 
+                    });
+                }
+            });
+            $("#addReport").on("click" , function(){
+                if($(".report_content").val() == "" || !$(".report_content").val() || 
+                    $(".report_reason").val() == "" || !$(".report_reason").val() /*|| !$(".report_reason").is("checked")*/){
+                    alert($(".report_reason").val());
+                    //alert("Vui lòng nhập đủ thông tin báo cáo");
+                }
+                else{
+                    $.ajax({
+                        method: "POST",// phương thức dữ liệu được truyền đi
+                        url: "ajax/send_report.php",// gọi đến file server show_data.php để xử lý
+                        data: { content : $(".report_content").val() , reason : $(".report_reason:checked").val() , id_room :<?php echo json_encode($_GET['id']); ?>},//lấy toàn thông tin các fields trong form bằng hàm serialize của jquery
+                        success : function(response){//kết quả trả về từ server nếu gửi thành công
+                            $(".report_content").val('');
+                            $("#report_alert").show();
+                        
+                            
+                        }, 
+                    });
+                }
+            });
+        </script>
+        <script>
+            $(".saveHome").click(function() {
+            $(".stackIcons i").toggleClass("hide");
+            });
+        </script>
+        <?php
+            if($is_save){
+                echo 
+            '<script>
+                $(".saveHome").click();
+                var $is_save = true;
+            </script>
+            ';
+            }
+            else{
+                echo
+                '<script>
+                var $is_save = false;
+                </script>';
+            }
+        ?>
+
+        <script>
+            $(".saveHome").on("click" , function(){
+                if($is_save){
+                    console.log('bo luu');
+                    
+                    $.ajax({
+                        method: "POST",// phương thức dữ liệu được truyền đi
+                        url: "ajax/send_unsave_post.php",// gọi đến file server show_data.php để xử lý
+                        data: { id_room :<?php echo json_encode($_GET['id']); ?>},//lấy toàn thông tin các fields trong form bằng hàm serialize của jquery
+                        success : function(response){//kết quả trả về từ server nếu gửi thành công
+                           console.log(response);
+                            
+                           console.log($(".total").html());
+                        
+                            
+                        }, 
+                    });
+
+                    $is_save = false;
+                }
+                else{
+                    console.log('luu');
+                    
+                    $.ajax({
+                        method: "POST",// phương thức dữ liệu được truyền đi
+                        url: "ajax/send_save_post.php",// gọi đến file server show_data.php để xử lý
+                        data: { id_room :<?php echo json_encode($_GET['id']); ?>},//lấy toàn thông tin các fields trong form bằng hàm serialize của jquery
+                        success : function(response){//kết quả trả về từ server nếu gửi thành công
+                           
+                            console.log(response);
+                            console.log($(".total").html());
+                        }, 
+                    });
+                    $is_save = true;
+                }
+            });
+        </script>
 </body>
 
 </html>

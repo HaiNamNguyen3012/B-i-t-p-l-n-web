@@ -21,7 +21,7 @@ class Login{
            // $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             $user = new Login();
 
-            echo "vai tro".$user->vai_tro;
+          //  echo "vai tro".$user->vai_tro;
 
             if($user->vai_tro == "nguoi_cho_thue"){
                 $query="SELECT * , count(*) as tong from $user->vai_tro where ten_tai_khoan='$user->ten_tai_khoan' and duoc_duyet=1";
@@ -46,16 +46,16 @@ class Login{
                         }
                         $_SESSION['username']=$user->ten_tai_khoan;
                         $_SESSION['vai_tro'] =$user->vai_tro;
-                        echo "đăng nhập thành công";
+                     //   echo "đăng nhập thành công";
                         header('Location: index.php?controller=posts');
                     }
                     else{
-                        echo "mat khau ko dung";
+                    //    echo "mat khau ko dung";
                     }
                 
             }
             else{
-                echo "ten dang nhap khong dung";
+             //   echo "ten dang nhap khong dung";
             }
         }
         else{

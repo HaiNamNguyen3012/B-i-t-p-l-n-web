@@ -12,7 +12,7 @@
             $db = DB::getInstance();
     
             $query = "SELECT * FROM xa_phuong_thi_tran where maqh = '$maqh'";
-            echo $query;
+          //  echo $query;
             $req = $db->query($query);
      
             foreach ($req->fetchAll() as $item) {

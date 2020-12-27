@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
     
-    <link rel="stylesheet" href="./assets/stylesheets/dangtin.css">
-    <title>Thông tin về phòng cần cho thuê</title>
+    <link rel="stylesheet" href="./assets/stylesheets/dangtin.css?v=<?php echo time(); ?>">
+    <title>Đăng bài</title>
     <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
 	<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 </head>
@@ -90,7 +90,8 @@
                         <div class="form-group">
                             <label for="dien_tich" id="lb-dientich">Diện tích<sup2>*</sup2></label>
                             <br/>
-                            <input type="text" name="dien_tich" id="dientich" class="form-input" placeholder="Diện tích" required>m2
+                            <input type="text" name="dien_tich" id="dientich" class="form-input" placeholder="Diện tích" required>
+                            m2
                             <!-- <p id="unit">m2</p> -->
                             
                         </div>
@@ -98,7 +99,7 @@
                         <!-- chung với chủ -->
 
                         <div  class="form-group">
-                            <h4 class="chung-chu-hay-khong">Chung với chủ<sup2>*</sup2></h4>
+                            <label id="chung-chu-name" class="chung-chu-hay-khong">Chung với chủ<sup2>*</sup2></label>
                             <br/>
                             <input type="radio" id="chung_chu1" name="chung_chu" value="1" checked>
                             <label for="chung_chu1" id="lb-chung-chu">Chung</label>
@@ -106,41 +107,32 @@
                             <label for="chung_chu2" id="lb-khong-chung">Không chung</label>
                         </div>
                         <div class="form-group">
-                            <label for="dien_nuoc" >Giá điện nước<sup2>*</sup2></label>
+                            <label for="dien_nuoc" id="lb-dien-nuoc" >Giá điện nước<sup2>*</sup2></label>
                             <br/>
                             <input type="text" name="dien_nuoc"  class="form-input" placeholder="Tính theo giá dân /4 nghìn một số điện" required>
                         </div>
                         <div class="form-group">
-                            <label for="tieu_de" >Tiêu đề<sup2>*</sup2></label>
+                            <label for="tieu_de" id="lb-tieu-de" >Tiêu đề<sup2>*</sup2></label>
                             <br/>
-                            <input type="text" name="tieu_de"  class="form-input" placeholder="Tiêu đề" required>
+                            <input type="text" id="tieu_de" name="tieu_de"  class="form-input" placeholder="Tiêu đề" required>
                     
                         </div>
                         <div class="form-group">
-                            <label for="noi_dung" >Nội dung<sup2>*</sup2></label>
+                            <label for="noi_dung" id="lb-noi-dung">Nội dung<sup2>*</sup2></label>
                             <br/>
-                            <input type="text" name="noi_dung"  class="form-input" placeholder="Nội dung" required>
+                            <textarea id="noi_dung" name="noi_dung"  class="form-input" placeholder="Nội dung" required></textarea>
                     
                         </div>
                         <div class="form-group">
-                            <label  >Thời gian đăng bài<sup2>*</sup2></label>
+                            <label for="thoi_han_dang_bai" id="lb-thoi-gian" >Thời gian đăng bài<sup2>*</sup2></label>
                             <div class="slidecontainer">
                                 <input name="thoi_han_dang_bai" type="range" min="1" step="1" max="8" value="4" class="slider" id="nhap_thoi_gian_dang_bai">
-                                <p>Thời gian đăng bài: <span id="thoi_gian_dang_bai"></span> tuần</p>
-                                <p>Giá đăng bài: <span id="gia_dang_bai"></span> nghìn đồng</p>
+                                <p id="lb-thoi-gian-dang-bai">Thời gian đăng bài: <span id="thoi_gian_dang_bai"></span> tuần</p>
+                                <p id="lb-gia-dang-bai">Giá đăng bài: <span id="gia_dang_bai"></span> nghìn đồng</p>
                             </div>
                         </div>
-                        <!-- chung với chủ -->
-                        <!--
-                        <div  class="form-group">
-                            <h4 class="chung-chu-hay-khong">Chung với chủ<sup2>*</sup2></h4>
-                            <br/>
-                            <input type="radio" id="chung_chu1" name="chung_chu" value="1" checked>
-                            <label for="chung_chu1" id="lb-chung-chu">Chung</label>
-                            <input type="radio" id="chung_chu2" name="chung_chu" value="0">
-                            <label for="chung_chu2" id="lb-khong-chung">Không chung</label>
-                        </div>
-                            -->
+                        
+                        
                         <!-- Điều kiện vật chất -->
 
                         <div class="form-group">
@@ -204,6 +196,7 @@
                         </div>
 
                             <!-- Tiện ích khác -->
+                        <div class="form-group">
                             <h4 class="other">Tiện ích khác</h4>
                             <input type="checkbox" id="tu-lanh" name="tu_lanh" value="1">
                             <label for="tu-lanh" id="lb-tu-lanh"> Tủ lạnh </label>
@@ -211,17 +204,19 @@
                             <label for="may-giat" id="lb-may-giat"> Máy giặt </label>
                             <input type="checkbox" id="giuong-tu" name="giuong_tu" value="1">
                             <label for="giuong-tu" id="lb-giuong-tu"> Giường tủ </label>
-
+                        </div>
                             <!-- Ảnh -->
+
+                        <div class="form-group">  
                             </br>
-                            <label >Chọn ảnh (tối thiểu 3 ảnh, tối đa 10 ảnh): <sup2>*</sup2></label>
+                            <label for="cac_anh[]" id="lb-hinh-anh">Chọn ảnh (tối thiểu 3 ảnh, tối đa 10 ảnh): <sup2>*</sup2></label>
                             <input  id="files" name="cac_anh[]" accept="image/*" type="file" multiple/> 
                             
                             <output id='result'>
-                            
+                        </div>
                             <input type="submit" name="submit" id="submit" class="form-submit" value="Đăng tin"/>
                             
-                        </div>
+                        
                     </form>
 
                 </div>
@@ -243,10 +238,10 @@
     $("#thanh_pho").change(function(){
 			$.ajax({
 				method: "POST",// phương thức dữ liệu được truyền đi
-				url: "show_data.php",// gọi đến file server show_data.php để xử lý
+				url: "ajax/show_data.php",// gọi đến file server show_data.php để xử lý
 				data: $("#form").serialize(),//lấy toàn thông tin các fields trong form bằng hàm serialize của jquery
 				success : function(response){//kết quả trả về từ server nếu gửi thành công
-                  //  console.log(response);
+                    console.log(response);
                     $('#quan_huyen').children().not(':first').remove();
                     $('#quan_huyen').children().replaceWith(response);
                    
@@ -259,10 +254,10 @@
         $("#quan_huyen").change(function(){
 			$.ajax({
 				method: "POST",// phương thức dữ liệu được truyền đi
-				url: "show_data_ward.php",// gọi đến file server show_data.php để xử lý
+				url: "ajax/show_data_ward.php",// gọi đến file server show_data.php để xử lý
 				data: $("#form").serialize(),//lấy toàn thông tin các fields trong form bằng hàm serialize của jquery
 				success : function(response){//kết quả trả về từ server nếu gửi thành công
-                  //  console.log(response);
+                    console.log(response);
                     $('#xa_phuong').children().not(':first').remove();
                     $('#xa_phuong').children().replaceWith(response);
                   //  console.log('nonono');

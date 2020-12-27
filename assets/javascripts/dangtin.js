@@ -14,7 +14,7 @@ window.onload = function() {
           picReader.addEventListener("load", function(event) {
             var picFile = event.target;
             var div = document.createElement("div");
-            div.innerHTML = "<img class='thumbnail' src='" + picFile.result + "'" +
+            div.innerHTML = "<img style='max-width: 100%' class='thumbnail' src='" + picFile.result + "'" +
               "title='" + picFile.name + "'/>";
             output.insertBefore(div, null);
           });

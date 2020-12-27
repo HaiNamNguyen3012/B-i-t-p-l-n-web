@@ -20,7 +20,7 @@ class Adminlogin{
            
 
             $query="SELECT * , count(*) as tong from admin where ten_tai_khoan='$admin->ten_tai_khoan'";
-            echo $query;//////////////////////// loi loi
+            //echo $query;//////////////////////// loi loi
             
             $req = $db->query($query);
             $info= $req->fetch();
@@ -28,29 +28,26 @@ class Adminlogin{
 
             if($info['tong']==1){
                 
-                    if(/*password_verify($admin->mat_khau,$info['mat_khau'])*/
-
-                        // them mat khau
-                        $admin->mat_khau==$info['mat_khau']){
+                    if(password_verify($admin->mat_khau,$info['mat_khau'])){
                         //lưu vào session
                         if (session_status() == PHP_SESSION_NONE) {
                             session_start();
                         }
                         $_SESSION['username']=$admin->ten_tai_khoan;
                         $_SESSION['vai_tro'] = "admin";
-                        echo "đăng nhập thành công";
-                        header('Location: index.php?controller=admin');
+                     //   echo "đăng nhập thành công";
+                        header('Location: index.php?controller=admin&action=showUncheckUsers');
                     }
                     else{
-                        echo "mat khau ko dung";
+                    //    echo "mat khau ko dung";
                     }
             }
             else{
-                echo "ten dang nhap khong dung";
+            //    echo "ten dang nhap khong dung";
             }
         }
         else{
-            echo "vui long nhap du thong tin";
+         //   echo "vui long nhap du thong tin";
         }
     }
   

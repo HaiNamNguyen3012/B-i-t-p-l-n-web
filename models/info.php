@@ -53,7 +53,7 @@
             
             $query = "SELECT * FROM $vai_tro WHERE ten_tai_khoan='$username'";
             $infoUser = $db->query($query)->fetch();
-            var_dump($infoUser);
+           
             
 
             if(!is_null($infoUser)){
@@ -103,11 +103,11 @@
                 $query="UPDATE $vai_tro SET ho= '{$_POST['ho']}' , ten= '{$_POST['ten']}' , so_CCCD= {$_POST['so_CCCD']} ,
                         dia_chi= '{$_POST['dia_chi']}' , sdt = '{$_POST['sdt']}' ,email= '{$_POST['email']}'  
                         WHERE ten_tai_khoan = '$username';";
-                echo $query;
+            //    echo $query;
     
                 try{
                     $db->exec($query);
-                    echo "New record created successfully";
+              //      echo "New record created successfully";
                   }
                   catch(PDOException $e){
                     echo $query . "<br>" . $e->getMessage();
@@ -134,7 +134,7 @@
     
                 try{
                     $db->exec($query);
-                    echo "New record created successfully";
+             //       echo "New record created successfully";
                   }
                   catch(PDOException $e){
                     echo $query . "<br>" . $e->getMessage();

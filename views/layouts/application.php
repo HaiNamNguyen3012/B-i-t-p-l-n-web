@@ -10,45 +10,23 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
  <!--   <link rel="stylesheet" href="./assets/stylesheets/thongtinphongtronguoichothue.css">    -->
    
-    <link rel="stylesheet" href="./assets/stylesheets/header.css">
+    <link rel="stylesheet" href="./assets/stylesheets/header.css?v=<?php echo time(); ?>">
     <link rel="stylesheet" href="./assets/stylesheets/footer.css">
 
 
     <script src="../lib/jquery-3.5.1.min.js"></script>
-  </head>
-  <body>
+</head>
+<body>
+    
     <header class="container-fluid">
             <div class="container">
                 <div class="row up">
-                    <div class="col-sm-4 left">
+                    <div class="col-sm-2 left">
                         <h1>
                             <a href="./index.php?controller=posts">TT24H</a>
                         </h1>
                     </div>
-                    <div class="col-sm-8 right">
-                        <ul>
-                            <li>
-                                <a href="./index.php?controller=posts">
-                                    <i class="fas fa-home">Trang chủ</i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <i class="fas fa-pen-square">Chỉnh sửa bài đăng</i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <i class="fas fa-comment-alt">Nhắn tin</i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <i class="fas fa-bell">Thông báo</i>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
+                  
                 </div>
                 <div class="row down">
                     <div class="col-sm-6 left">
@@ -60,15 +38,18 @@
                             </span>
                         </form>
                     </div>
-                    <div class="col-sm-2 center">
+                    <div class="col-sm-4 center">
                         <?php 
                         if (session_status() == PHP_SESSION_NONE) {
                             session_start();
                         }
                         if(isset($_SESSION['username'])){
                             echo '
-                        <a href="./index.php?controller=info&action=showInfo&username='.$_SESSION['username'].'">
-                        <i class="fas fa-user">'.$_SESSION['username'].'</i>
+                        <a href="./index.php?controller=info&action=showInfo&username='.$_SESSION['username'].'" style="text-decoration:none">
+                        <i class="fas fa-user">  '.$_SESSION['username'].'</i>
+                        </a>
+                        <a href="./index.php?controller=signout" style="text-decoration:none;margin-left:10px">
+                        <i class="fas "> Đăng xuất </i>
                         </a>';
                         }
                         else{
@@ -89,7 +70,7 @@
                                     echo '
                     <div class="col-sm-2 right">
                         <a href="./index.php?controller=posts&action=createPost">
-                        <i class="fas fa-pen-square">Đăng tin</i>
+                        <i class="fas fa-pen-square dangtin">Đăng tin</i>
                         </a>
                     </div>';
 

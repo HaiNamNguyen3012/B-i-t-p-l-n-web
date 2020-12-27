@@ -46,7 +46,7 @@ static function insertdb(){
 
           if($db->query("SELECT count(*) from nguoi_cho_thue where ten_tai_khoan = '$user->ten_tai_khoan'")->fetchColumn()>0
           || $db->query("SELECT count(*) from nguoi_thue_phong where ten_tai_khoan = '$user->ten_tai_khoan'")->fetchColumn()>0 ){
-            echo "Tài khoản đã có người dùng";
+       //     echo "Tài khoản đã có người dùng";
           }
 
 //................................................. them cac dieu kien dam bao
@@ -79,7 +79,7 @@ static function insertdb(){
             } 
             try{
               $db->exec($addUser);
-              echo "New record created successfully";
+     //         echo "New record created successfully";
             }
             catch(PDOException $e){
               echo $addUser . "<br>" . $e->getMessage();

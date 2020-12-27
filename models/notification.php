@@ -35,11 +35,11 @@ class Notification{
 
         $query="INSERT INTO thong_bao (id_thong_bao, ten_nguoi_nhan, id_phong_tro, id_trang_thai, thoi_gian_thong_bao) 
                 VALUES (NULL, '$username', '$id_room', '$id_status', now());";
-        echo $query;
+      //  echo $query;
     
         try{
             $db->exec($query);
-            echo "New record created successfully";
+       //     echo "New record created successfully";
         }
         catch(PDOException $e){
             echo $query . "<br>" . $e->getMessage();

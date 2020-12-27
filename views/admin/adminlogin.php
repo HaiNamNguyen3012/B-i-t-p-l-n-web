@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/stylesheets/dangnhap.css">        
-    <title>Đăng nhập</title>
+    <title>Đăng nhập Admin</title>
 </head>
 
 <body>
@@ -38,7 +38,7 @@
             </div>
         </section>
     </div>
-    <?php var_dump($_POST);?>
+   
 </body>
 
 </html>

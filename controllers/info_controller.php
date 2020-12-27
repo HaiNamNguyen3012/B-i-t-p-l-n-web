@@ -26,7 +26,8 @@ class InfoController extends BaseController
     $info = Info::show($_GET['username']);
     
     $posts = Post::showByUser($_GET['username']);
-    $data = array('info' => $info, 'posts' => $posts);
+    $saveposts = Post::showAllSavePost($_GET['username']);
+    $data = array('info' => $info, 'posts' => $posts, 'saveposts' => $saveposts);
     $this->render('showInfo', $data);
   }
   

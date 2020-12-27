@@ -12,13 +12,20 @@ body {
     line-height: 1.8;
     color: #222;
     font-weight: 400;
-    background-color: #2F2F2F;
+  /*  background-color: #2F2F2F;
+  */
 }
-
-.container {
-    width: 660px;
+sup2{
+    color: red;
+}
+.dangtin .container {
+    width: 800px;
     position: relative;
     margin: 100px auto;
+}
+h1 a {
+    padding-top: 10px;
+    text-align: center;
 }
 
 h1 {
@@ -33,6 +40,7 @@ h1 {
     text-align: center;
     margin-bottom: 30px;
 }
+
 
 
 /* Form thông tin */
@@ -76,7 +84,15 @@ h1 {
 .form-group #lb-diachi,
 .form-group #lb-loaiphong,
 .form-group #lb-price,
-.form-group #lb-dientich {
+.form-group #lb-dientich, 
+.form-group #lb-tieu-de,
+.form-group #lb-noi-dung,
+.form-group #lb-dien-nuoc,
+.form-group #chung-chu-name,
+.form-group #lb-thoi-gian
+
+
+{
     text-transform: uppercase;
     font-size: 21px;
     padding: 20px 5px;
@@ -89,7 +105,25 @@ h1 {
     width: 99.5%;
     margin-bottom: 7px;
 }
+#thanh_pho{
+    width: 34%;
+}
+#quan_huyen{
+    width: 33%;
+}
+#xa_phuong{
+    width: 31%;
+}
 
+#tieu_de{
+    width: 100%;
+    
+}
+
+#noi_dung{
+    width: 100%;
+    height:200px;
+}
 .form-group #loaiphong {
     width: 63%;
     margin-right: 0.1%;
@@ -111,7 +145,8 @@ h1 {
 }
 
 .form-group #dientich {
-    width: 99.5%;
+    width: 90%;
+    margin-right: 1%;
 }
 
 .form-group #unit {
@@ -136,7 +171,12 @@ h1 {
 .form-group #lb-khong-ban-cong,
 .form-group #lb-tu-lanh,
 .form-group #lb-may-giat,
-.form-group #lb-giuong-tu {
+.form-group #lb-giuong-tu,
+.form-group #lb-thoi-gian-dang-bai,
+.form-group #lb-gia-dang-bai,
+.form-group #lb-hinh-anh
+
+{
     font-size: 20px;
     padding-right: 4%;
     padding-left: 2%;
@@ -181,6 +221,11 @@ h1 {
     font-weight: 350;
     padding-top: 15px;
 }
+
+output img{
+    max-width: 100%;
+}
+
 
 .form-submit {
     width: 100%;

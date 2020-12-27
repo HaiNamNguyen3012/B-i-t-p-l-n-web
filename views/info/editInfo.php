@@ -13,69 +13,15 @@
         <link rel="stylesheet" href="./assets/stylesheets/nguoichothue.css">
         <link rel="stylesheet" href="./dangtin.html">
         <link rel="stylesheet" href="./assets/stylesheets/trangcstt.css">
-        <title>Trang thông tin cá nhân</title>
+        <title>Sửa trang thông tin cá nhân</title>
     </head>
-    <body> 
-         <!--   <header class="container-fluid">
-                <div class="container">
-                    <div class="row up">
-                        <div class="col-sm-4 left">
-                            <h1>
-                                <a href="../nguoichothue/nguoichothue.html">TT24H</a>
-                            </h1>
-                        </div>
-                        <div class="col-sm-8 right">
-                            <ul>
-                              <li>
-                                  <a href="../nguoichothue/nguoichothue.html">
-                                      <i class="fas fa-home">Trang chủ</i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <i class="fas fa-shopping-cart"> Tôi cho thuê </i>
-                                    </a>    
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <i class="fas fa-comment-alt">Nhắn tin</i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <i class="fas fa-bell">Thông báo</i>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="row down">
-                        <div class="col-sm-6 left">
-                            <input type="search" name="search" id="search" placeholder="Tìm kiếm">
-                            <span id="icon-search">
-                                <i class="fas fa-search"></i>
-                            </span>
-                        </div>
-                        <div class="col-sm-3 center">
-                            <a href="../dangnhap/dangnhap.html">
-                                <i class="fas fa-user-secret"> 
-                                    Đăng nhập
-                                </i>
-                            </a>
-                        </div>
-                        <div class="col-sm-2 right">
-                            <a href="../nguoichothue/dangtin.html">
-                                <i class="far fa-edit">Đăng tin</i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </header>
--->
-            <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <body>
+         
+
+          <!--  <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
                 <a class="nav-link" href="../nguoichothue/nguoichothue.html">TT24</a>
                 <a class="nav-link" href="#"> >> Thông tin cá nhân</a>
-            </nav>
+            </nav>-->
             <div class="main-container">
                 <div class="container cstt">
                     <div class="newtitle">
@@ -130,7 +76,7 @@
                             </form>
                         </div>
                     </div>
-                    <?php var_dump($_POST); ?>
+                   <!--
                     <div class="newpassword" >
                          <div class="title">Thay đổi mật khẩu</div>
                          <div class="col-xs-12 doipassword">
@@ -162,7 +108,7 @@
                             </form>
                          </div>
                     </div>
-                            
+-->
                          
                 
                 </div>

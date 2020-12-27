@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+body {
+    font-size: 14px;
+    line-height: 1.8;
+    color: #222;
+    font-weight: 400;
+    background-color: #2F2F2F;
+}
+
+.container {
+    width: 660px;
+    position: relative;
+    margin: 100px auto;
+}
+
+h1 {
+    /* line-height: 1.66; */
+    margin: 0;
+    padding: 0;
+    font-weight: 900;
+    color: #222;
+    font-family: 'Montserrat';
+    font-size: 24px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.signin-content {
+    background: #fff;
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -o-border-radius: 10px;
+    -ms-border-radius: 10px;
+    padding: 50px 85px;
+}
+
+.form-group {
+    overflow: auto;
+    margin-bottom: 20px;
+}
+
+.form-input {
+    width: 100%;
+    border: 1px solid #ebebeb;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -o-border-radius: 5px;
+    -ms-border-radius: 5px;
+    padding: 17px 20px;
+    box-sizing: border-box;
+    font-size: 14px;
+    font-weight: 500;
+    color: #222;
+}
+
+.loginhere {
+    color: #555;
+    font-weight: 500;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 5px;
+}
+
+.signuphere-link {
+    font-weight: 700;
+    color: #2f2f2f;
+    background-color: #F2921D;
+    padding: 7px;
+    text-decoration: none;
+}
+
+.signuphere-link:hover {
+    font-weight: 700;
+    background-color: #2f2f2f;
+    color: #F2921D;
+    padding: 7px;
+    text-decoration: none;
+}
+
+.form-submit {
+    width: 100%;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: 700;
+    padding: 17px 20px;
+    color: #fff;
+    text-transform: uppercase;
+    border: none;
+    background-image: linear-gradient(to left, #74ebd5, #9face6);
+}

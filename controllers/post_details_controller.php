@@ -9,20 +9,24 @@ class PostDetailsController extends BaseController
     $this->folder = 'post_details';
   }
 
- /* public function index()
-  {
-    $posts = Post::all();
-    $data = array('posts' => $posts);
-    $this->render('index', $data);
-  }*/
+ 
   public function showPost()
   {
     if (session_status() == PHP_SESSION_NONE) {
       session_start();
   }
-    
+    require_once('models/comment.php');
+    require_once('models/savepost.php');
+    $comments = Comment::showByRoom($_GET['id']);
     $post_details = PostDetail::find($_GET['id']);
-    $data = array('post_details' => $post_details);
+    $save_post = SavePost::showNumberSave($_GET['id']);
+    if(isset($_SESSION['username'])){
+      $is_save = SavePost::isSave($_GET['id']);
+    }
+    else{
+      $is_save = "";
+    }
+    $data = array('post_details' => $post_details , 'comments' => $comments, 'save_post' => $save_post , 'is_save' => $is_save);
     $this->render('show', $data);
   }
 }

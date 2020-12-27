@@ -60,13 +60,13 @@ class CreatePost
         $this->cac_anh = $_FILES['cac_anh'];
 
         
-   //     echo "TẠO CONSTRUCT REGISTER";
+ 
     }
 
     
 static function insertPost(){
-    var_dump($_SESSION);
-    echo $_SESSION['username'];
+   
+   // echo $_SESSION['username'];
   if(enoughInfo()){
       $db = DB::getInstance();
       $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -83,11 +83,11 @@ static function insertPost(){
                 VALUES (NULL, '$post->nguoi_cho_thue', '$post->dia_chi', '$post->xa_phuong', '$post->quan_huyen', '$post->thanh_pho', '$post->gan_dia_diem', '$post->loai_phong', '$post->so_luong_phong', '$post->gia', '$post->tinh_theo', '$post->dien_tich',
                           '', now(), $post->thoi_han_dang_bai ,'0', '0', '$post->tieu_de', '$post->noi_dung', 
                             '$post->chung_chu', '$post->phong_tam_chung', '$post->nong_lanh', '$post->phong_bep', '$post->dieu_hoa', '$post->ban_cong', '$post->dien_nuoc', '$post->tu_lanh', '$post->may_giat', '$post->giuong_tu')";
-      echo $query;
+   
    
       try{
         $db->exec($query);
-        echo "New record created successfully";
+     //   echo "New record created successfully";
       }
       catch(PDOException $e){
         echo $query . "<br>" . $e->getMessage();
@@ -96,11 +96,52 @@ static function insertPost(){
 
     }
     else{
-      echo "Vui lòng nhập số liệu";
+   //   echo "Vui lòng nhập số liệu";
     }
   }
+
+  static function insertPostForAdmin(){
+   
+    // echo $_SESSION['username'];
+   if(enoughInfo()){
+       $db = DB::getInstance();
+       $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+       $post = new CreatePost();
+       
+       
+       $id = getId($db);
+       imageHandling($db,$id);
+ 
+ 
+       $query="INSERT INTO phong (id_phong, ten_tai_khoan, dia_chi, id_xa, id_qh, id_tp, gan_dia_diem, loai_phong, so_luong_phong, gia, tinh_theo, dien_tich,
+                            thoi_gian_hien_thi, thoi_gian_dang_bai,thoi_han_dang_bai, duoc_duyet, duoc_thue, tieu_de, noi_dung, 
+                            chung_chu, phong_tam_chung, nong_lanh, phong_bep, dieu_hoa, ban_cong, dien_nuoc, tu_lanh, may_giat, giuong_tu) 
+                 VALUES (NULL, '$post->nguoi_cho_thue', '$post->dia_chi', '$post->xa_phuong', '$post->quan_huyen', '$post->thanh_pho', '$post->gan_dia_diem', '$post->loai_phong', '$post->so_luong_phong', '$post->gia', '$post->tinh_theo', '$post->dien_tich',
+                           now(), now(), $post->thoi_han_dang_bai ,'1', '0', '$post->tieu_de', '$post->noi_dung', 
+                             '$post->chung_chu', '$post->phong_tam_chung', '$post->nong_lanh', '$post->phong_bep', '$post->dieu_hoa', '$post->ban_cong', '$post->dien_nuoc', '$post->tu_lanh', '$post->may_giat', '$post->giuong_tu')";
+    
+    
+       try{
+         $db->exec($query);
+      //   echo "New record created successfully";
+       }
+       catch(PDOException $e){
+         echo $query . "<br>" . $e->getMessage();
+       } 
+ 
+ 
+     }
+     else{
+    //   echo "Vui lòng nhập số liệu";
+     }
+   }
+   
+ 
   
 }
+
+
+
 
 function enoughInfo(){
   return (isset($_POST['dia_chi'])); 
@@ -128,13 +169,13 @@ function imageHandling($db,$id_phong){
       if(in_array($ext,$extension)) {
           if(!file_exists("assets/images/phong_tro/".$file_name)) {
               move_uploaded_file($file_tmp=$_FILES["cac_anh"]["tmp_name"][$key],"assets/images/phong_tro/".$file_name);
-              echo "filename".$file_name;
+          //    echo "filename".$file_name;
               insertImageToDb($db,$id_phong,$file_name);
           }
           else {
               $filename=basename($file_name,$ext);
               $newFileName=$filename.time().".".$ext;
-              echo "newfilename".$newFileName;
+           //   echo "newfilename".$newFileName;
               move_uploaded_file($file_tmp=$_FILES["cac_anh"]["tmp_name"][$key],"assets/images/phong_tro/".$newFileName);
               insertImageToDb($db,$id_phong,$newFileName);
           }
@@ -148,8 +189,8 @@ function insertImageToDb($db,$id_phong,$ten_anh){
   $query = "INSERT INTO hinh_anh (id_hinh_anh, ten_hinh_anh, id_phong) VALUES (NULL, '$ten_anh', '$id_phong')";
   try{
     $db->exec($query);
-    echo "New record created successfully";
-    echo $ten_anh."</br>";
+ //   echo "New record created successfully";
+ //   echo $ten_anh."</br>";
   }
   catch(PDOException $e){
     echo $query . "</br>" . $e->getMessage();

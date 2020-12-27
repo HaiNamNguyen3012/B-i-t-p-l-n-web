@@ -8,6 +8,7 @@ class Post
   public $loai_phong;
   public $dien_tich;
   public $thoi_gian_hien_thi;
+  public $thoi_gian_dang_bai;
   public $thoi_han_dang_bai;
   public $ho;
   public $ten;
@@ -16,13 +17,14 @@ class Post
   public $tenxp;
   public $ten_hinh_anh;
 
-  function __construct($id_phong, $tieu_de, $gia, $loai_phong, $dien_tich,$thoi_gian_hien_thi,$thoi_han_dang_bai, $ho,$ten,$tentp,$tenqh,$tenxp,$ten_hinh_anh){
+  function __construct($id_phong, $tieu_de, $gia, $loai_phong, $dien_tich,$thoi_gian_hien_thi,$thoi_gian_dang_bai,$thoi_han_dang_bai, $ho,$ten,$tentp,$tenqh,$tenxp,$ten_hinh_anh){
     $this->id_phong = $id_phong;    
     $this->tieu_de = $tieu_de;
     $this->gia= $gia;
     $this->loai_phong=$loai_phong;
     $this->dien_tich = $dien_tich;
     $this->thoi_gian_hien_thi = $thoi_gian_hien_thi;
+    $this->thoi_gian_dang_bai = $thoi_gian_dang_bai;
     $this->thoi_han_dang_bai = $thoi_han_dang_bai;
     $this->ho = $ho;
     $this->ten = $ten;
@@ -151,8 +153,14 @@ class Post
     handlingPost($db);
     return showPosts("where phong.duoc_duyet = 0 ");
   }
+  
   static function showByUser($ten_tai_khoan){
-    return showPosts("where phong.duoc_duyet= 1 and phong.ten_tai_khoan = '$ten_tai_khoan' and TIMESTAMPDIFF (MINUTE , now() , phong.thoi_gian_hien_thi) <= 10080 * phong.thoi_han_dang_bai F");
+    return showPosts(" where phong.duoc_duyet= 1 and phong.ten_tai_khoan = '$ten_tai_khoan' and TIMESTAMPDIFF (MINUTE , now() , phong.thoi_gian_hien_thi) <= 10080 * phong.thoi_han_dang_bai ");
+  }
+
+  static function showAllSavePost($ten_tai_khoan){
+    return showPosts(" inner join phong_tro_nguoi_luu on phong_tro_nguoi_luu.id_phong_tro = phong.id_phong
+    WHERE phong_tro_nguoi_luu.id_nguoi_luu_bai = '$ten_tai_khoan' ");
   }
 
 }
@@ -163,7 +171,7 @@ function showPosts($where_query){  // $where_query dạng "where duoc_duyet=1 "
   $list = [];
   $db = DB::getInstance();
   $query = "SELECT 
-            phong.id_phong, phong.tieu_de, phong.gia, phong.loai_phong, phong.dien_tich, phong.thoi_gian_hien_thi, phong.thoi_han_dang_bai ,
+            phong.id_phong, phong.tieu_de, phong.gia, phong.loai_phong, phong.dien_tich, phong.thoi_gian_hien_thi, phong.thoi_gian_dang_bai,  phong.thoi_han_dang_bai ,
             nguoi_cho_thue.ho, nguoi_cho_thue.ten, 
             tinh_thanh_pho.name as tentp, quan_huyen.name as tenqh,  xa_phuong_thi_tran.name as tenxp 
             FROM phong 
@@ -176,8 +184,8 @@ function showPosts($where_query){  // $where_query dạng "where duoc_duyet=1 "
   $limit_query = "LIMIT $pagination->start, $pagination->limit";
  // echo $limit_query;
 
-  $query = "$query $where_query ORDER BY phong.thoi_gian_hien_thi DESC $limit_query";  // SELECT ..... FROM phong.... where.... limit...
- // echo $query;
+  $query = "$query $where_query ORDER BY phong.thoi_gian_hien_thi DESC, phong.thoi_gian_dang_bai DESC  $limit_query";  // SELECT ..... FROM phong.... where.... limit...
+  //echo $query;
   $req1 = $db->query($query);
 
 
@@ -185,9 +193,11 @@ function showPosts($where_query){  // $where_query dạng "where duoc_duyet=1 "
     $req2 = $db->prepare('SELECT * from hinh_anh where id_phong=:id_phong LIMIT 1');
     $req2->execute(array('id_phong' => $item['id_phong']));
     $img = $req2->fetch();
-    
+   // echo "thoi gian dang bai".$item['thoi_gian_dang_bai'];
     $item['thoi_gian_hien_thi'] = handlingTime($item['thoi_gian_hien_thi']);
-    $list[] = new Post($item['id_phong'], $item['tieu_de'],$item['gia'], $item['loai_phong'], $item['dien_tich'],  $item['thoi_gian_hien_thi'] ,$item['thoi_han_dang_bai'], 
+    $item['thoi_gian_dang_bai'] = handlingTime($item['thoi_gian_dang_bai']);
+  //  echo "thoi gian dang bai".$item['thoi_gian_dang_bai'];
+    $list[] = new Post($item['id_phong'], $item['tieu_de'],$item['gia'], $item['loai_phong'], $item['dien_tich'],  $item['thoi_gian_hien_thi'] , $item['thoi_gian_dang_bai'] ,$item['thoi_han_dang_bai'], 
                        $item['ho'], $item['ten'], 
                        $item['tentp'], $item['tenqh'], $item['tenxp'], $img['ten_hinh_anh']);    // biến $list lưu các giá trị truy vấn 
   }
@@ -195,7 +205,7 @@ function showPosts($where_query){  // $where_query dạng "where duoc_duyet=1 "
 
   $list[] = array('start' => $pagination->start, 'limit' => $pagination->limit , 'current_page' =>$pagination->current_page , 'total_page' => $pagination->total_page);
   
-  
+
   return $list;
 
 }
@@ -252,7 +262,7 @@ else {
 
         try{
             $db->exec($query);
-            echo "New record created successfully";
+         //   echo "New record created successfully";
           }
           catch(PDOException $e){
             echo $query . "<br>" . $e->getMessage();

@@ -53,7 +53,7 @@
 
                         <div class="form-group">
                             <input type="password" class="form-input info required" name="password" id="password" pattern=".{8,12}" placeholder="Password" />
-                            <input type="checkbox" onclick="showPassword()" id="showpwd"> Hiển thị mật khẩu
+                          <!--  <input type="checkbox" onclick="showPassword()" id="showpwd"> Hiển thị mật khẩu -->
                             <p id="password1"></p>
                         </div>
 
@@ -88,5 +88,4 @@
 </body>
 
 </html>
-<?php
-var_dump($_POST);
+
